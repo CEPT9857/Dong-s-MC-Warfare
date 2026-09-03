@@ -36,6 +36,16 @@
         {
             "type":"plain_message",
             "contents":{
+                "translate": "djzc.dialog.eula_translate",
+                "fallback":"如果你看到了不认识的东方文字，说明我们还没有翻译好|If you see unfamiliar Eastern scripts, it means we haven't translated them yet",
+                "color":"red",
+                "bold": true
+            },
+            "width": 300
+        },
+        {
+            "type":"plain_message",
+            "contents":{
                 "translate": "djzc.dialog.wiki.before_play.body1",
                 "fallback":"温馨提示：冬季战场的大多数用户操作基于对话框系统，如果出现了对话框被截断等问题，请调整游戏视频设置，将界面大小控制在您的屏幕以内",
                 "color":"yellow"
