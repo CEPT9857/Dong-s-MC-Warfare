@@ -1,1 +1,1 @@
-give @p minecraft:crossbow[enchantments={infinity:1,quick_charge:5},unbreakable={},custom_name={translate:"djzc.heavy_pistol",fallback:"近战手枪"}]
+give @p minecraft:crossbow[enchantments={infinity:1,quick_charge:5},unbreakable={},custom_name={translate:"djzc.heavy_pistol",fallback:"近战手枪"},lore=[{translate:"djzc.heavy_pistol.desc1",fallback:"双枪会给出答案"},{translate:"djzc.heavy_pistol.desc2"},{translate:djzc.heavy_pistol.desc3}]]

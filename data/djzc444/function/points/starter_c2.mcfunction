@@ -1,5 +1,6 @@
 effect clear @e[tag=c2]
-#清除C2的高亮
+attribute @e[tag=c2,limit=1] waypoint_transmit_range base set 0
+#清除C2的高亮和定位栏
 execute if score C2 djzc.gameflow matches 0 run playsound entity.ender_dragon.growl music @a[team=CT] -368.54 62.77 -760.00 100
 execute if score C2 djzc.gameflow matches 0 run playsound entity.player.levelup music @a[team=T] -369.00 62.91 -758.53 1000
 #音效

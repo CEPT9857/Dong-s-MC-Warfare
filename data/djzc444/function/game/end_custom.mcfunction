@@ -15,6 +15,7 @@ advancement revoke @a from djzc444:tool/root
 execute as @a run spawnpoint @s -245 65 -630
 gamerule command_block_output true
 #提示游戏结束
+tellraw @a "——————"
 tellraw @a [{translate:"djzc.msg.end",fallback:"游戏已结束！",color:"green"}]
 tellraw @a [{translate:"djzc.msg.play_again",fallback:"点此再玩一局",color:"red",hover_event:{action:"show_text",value:{translate:"djzc.msg.play_again.desc",fallback:"进入准备状态"}},click_event:{action:"run_command",command:"trigger djzc.prepare set 1"}}]
 

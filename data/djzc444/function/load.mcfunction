@@ -80,7 +80,7 @@ scoreboard players set 1 djzc.gameflow 1
 #常量设置
 
 team add starter
-team modify starter color red
+team modify starter color white
 team add T
 team modify T color dark_red
 team add CT

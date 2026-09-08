@@ -1,4 +1,5 @@
 effect clear @e[tag=d2]
+attribute @e[tag=d2,limit=1] waypoint_transmit_range base set 0
 #清除D2的高亮
 execute if score D2 djzc.gameflow matches 0 run playsound entity.ender_dragon.growl music @a[team=CT] -368.54 62.77 -760.00 100
 execute if score D2 djzc.gameflow matches 0 run playsound entity.player.levelup music @a[team=T] -369.00 62.91 -758.53 1000

@@ -8,8 +8,9 @@
 ### 一、项目简介
 
 **栋记（冬季）战场（Dong's MC Warfare）** 是一个基于《我的世界》Java版 1.21.11 的多人对抗数据包。它不是小游戏插件，不是命令方块堆砌的临时娱乐——它是一个从命令方块项目转化而来、由数据驱动、支持多语言与主题包的**完整对战平台**。
+
 取名为*栋记*战场，是为了以此纪念为《冬季战场》开发提供宝贵支持的Minecraft超级栋服腐竹**GNOD728**，没有超级栋服的支持，我们做不出来这个小东西。
-当然，我们*号为张楚*也是经过了GNOD728本人的允许，也欢迎大家去玩他做的*冬季战场：极地潜兵*
+当然，我们*号为张楚*也是经过了GNOD728本人的允许，也欢迎大家去玩他做的*冬季战场：极地潜兵*。
 
 ~~其实本来叫Winter Battlefield的，但是这和EA的Battlefield太像了，所以改成现在的名字，大家感觉我们的谐音梗水平怎么样呢？~~
 
@@ -127,6 +128,34 @@
   - 腐竹再也不用担心玩家到处乱跑了！
 - **防破坏**：所有生存模式玩家进入服务器自动设为冒险模式，无法破坏方块。
 
+#### 版本规划
+[这是更新日志](CHAGELOG.md)
+
+1.0.6 Ultimate（当前）
+- [x] 初步适配 English
+- [x] 进一步整理现有代码架构
+- [x] 修复一些BUG
+
+1.0.7 【整装待发】（2026年Q4）
+- [ ] 迁移到 Minecraft 26.3
+- [ ] 在代码中解耦游戏地图，并增加一个新地图
+- [ ] 加入地图边界检测系统，防止玩家迷路
+- [ ] 重制航空兵的**雷枪**
+- [ ] 性能优化
+- [ ] 小bug修复
+
+1.1 【新航线】（2027年Q1）
+- [ ] 海战系统！
+- [ ] BOT系统（第一版）
+- [ ] 新手教程
+- [ ] 修复因为适配26.3产生的BUG
+
+1.1.1 【无人智胜】（2027年Q2）
+- [ ] 彻底移除**赐福系统的残余部分**，然后加入**战场支援系统**
+- [x] 加入一些无人装备
+……
+
+
 ## 繁體中文
 希望使用繁體的同胞們看得舒服一點！
 ---
@@ -134,6 +163,7 @@
 ### 一、項目簡介
 
 **棟記（冬季）戰場（Dong's MC Warfare）** 是一個基於《我的世界》Java 版 1.21.11 的多人對抗資料包。它不是小遊戲插件，不是命令方塊堆砌的臨時娛樂，而是一個由資料驅動、支援多語言與主題包的**完整對戰平台**。
+
 取名為*棟記*戰場，是為了紀念為《冬季戰場》開發提供寶貴支援的 Minecraft 超級棟服腐竹**GNOD728**。沒有超級棟服的支援，我們做不出這個小東西。
 當然，我們*號為張楚*也是經過了 GNOD728 本人的允許，也歡迎大家去玩他製作的*冬季戰場：極地潛兵*。
 
@@ -253,6 +283,32 @@
   - 腐竹再也不用擔心玩家到處亂跑了！
 - **防破壞**：所有生存模式玩家進入伺服器後自動設為冒險模式，無法破壞方塊。
 
+#### 版本規劃
+[這是更新日誌](CHAGELOG.md)
+1.0.6 Ultimate（當前）
+- [x] 初步適配 English
+- [x] 進一步整理現有程式碼架構
+- [x] 修復一些 BUG
+
+1.0.7 【整裝待發】（2026 年 Q4）
+- [ ] 遷移到 Minecraft 26.3
+- [ ] 在程式碼中解耦遊戲地圖，並增加一個新地圖
+- [ ] 加入地圖邊界檢測系統，防止玩家迷路
+- [ ] 重製航空兵的**雷槍**
+- [ ] 效能優化
+- [ ] 小 bug 修復
+
+1.1 【新航線】（2027 年 Q1）
+- [ ] 海戰系統！
+- [ ] BOT 系統（第一版）
+- [ ] 新手教學
+- [ ] 修復因適配 26.3 產生的 BUG
+
+1.1.1 【無人智勝】（2027 年 Q2）
+- [ ] 徹底移除**賜福系統的殘餘部分**，然後加入**戰場支援系統**
+- [x] 加入一些無人裝備
+……
+
 ## English
 Don't worry, we're saving up token money for translation.
 ---
@@ -260,8 +316,9 @@ Don't worry, we're saving up token money for translation.
 ### I. Project Overview
 
 **Dong's MC Warfare** is a multiplayer combat data pack based on Minecraft Java Edition 1.21.11. It is not a mini-game plugin or a temporary command-block contraption. It is a **complete combat platform** converted from a command-block project, driven by data, and supporting multiple languages and themed resource packs.
+
 The name *Dong's MC Warfare* commemorates **GNOD728**, the owner of **Super Dong Server**, whose valuable support helped develop the original Dong's MC Warfare project. Without Super Dong Server's support, we could not have made this little project.
-Of course, the name *Zhang Chu* was also used with GNOD728's permission. You are also welcome to try his project, *Dong's MC Warfare: Polar Diver Pack*.
+Of course, brrowing his name was also used with GNOD728's permission. You are also welcome to try his project, *Dong's MC Warfare: Polar Diver Pack*.
 
 ~~It was originally going to be called Winter Battlefield, but that sounded too much like EA's Battlefield, so we changed it to its current name. What do you think of our pun?~~
 
@@ -378,3 +435,29 @@ Using our first map, **Dong's MC Warfare**, as an example:
   - When the game ends, it is moved near the team selector.
   - The server owner no longer has to worry about players running all over the place!
 - **Block protection**: all players in Survival mode are automatically set to Adventure mode when they enter the server and cannot break blocks.
+
+#### Version Roadmap
+[This is changelog](CHAGELOG.md)
+1.0.6 Ultimate (current)
+- [x] Initial English adaptation
+- [x] Further organization of the existing code architecture
+- [x] Fixed some bugs
+
+1.0.7 [On the Verge of Release] (Q4 2026)
+- [ ] Migrate to Minecraft 26.3
+- [ ] Decouple the game map from the code and add a new map
+- [ ] Add a map boundary detection system to prevent players from getting lost
+- [ ] Rebuild the Air Force's **Lightning Spear**
+- [ ] Performance optimization
+- [ ] Minor bug fixes
+
+1.1 [New Route] (Q1 2027)
+- [ ] Naval combat system!
+- [ ] BOT system (first version)
+- [ ] Beginner tutorial
+- [ ] Fix bugs caused by adapting to 26.3
+
+1.1.1 [Unmanned Victory] (Q2 2027)
+- [ ] Completely remove the remaining parts of the **Blessing system**, then add a **Warfare support system**
+- [x] Add some unmanned equipment
+……
