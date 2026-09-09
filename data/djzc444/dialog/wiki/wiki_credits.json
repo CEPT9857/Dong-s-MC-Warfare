@@ -184,6 +184,23 @@
             }
         },
         {
+            "type": "item",
+            "description": {
+                "translate": "djzc.dialog.wiki.credits.woefuilist1256",
+                "fallback": "文化顾问：WoefuIList1256"
+            },
+            "item": {
+                "id": "player_head",
+                "components": {
+                    "profile": "WoefuIList1256",
+                    "custom_name": {
+                        "translate": "djzc.dialog.wiki.credits.woefuilist1256_model",
+                        "fallback": "WoefuIList1256的手办"
+                    }
+                }
+            }
+        },
+        {
             "type": "plain_message",
             "contents": {
                 "translate": "djzc.dialog.wiki.credits.1_0_6_1st_test",

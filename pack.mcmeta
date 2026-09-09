@@ -2,6 +2,9 @@
 	"pack": {
 		"min_format": [94,1],
 		"max_format": [101,1],
-		"description": "datapack for winter battlefield v1.0.6"
+		"description": {
+			"translate": "djzc.datapack.mcmeta.desc",
+			"fallback": "冬季战场的数据包部分"
+		}
 	}
 }
