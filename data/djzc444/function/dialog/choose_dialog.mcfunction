@@ -30,9 +30,9 @@ execute store result storage djzc:type_manage ggne int 1 run scoreboard players 
 execute if score ggne djzc.type matches 0 run data modify storage djzc:type_manage ggne_color set value "red"
 execute if score ggne djzc.type matches 1 run data modify storage djzc:type_manage ggne_color set value "green"
 #干员·冈格尼尔的参数
-execute store result storage djzc:type_manage bzb int 1 run scoreboard players get bzb 5
-execute if score bzb 5 matches 0 run data modify storage djzc:type_manage bzb_color set value "red"
-execute if score bzb 5 matches 1 run data modify storage djzc:type_manage bzb_color set value "green"
+execute store result storage djzc:type_manage bzb int 1 run scoreboard players get bzb djzc.type
+execute if score bzb djzc.type matches 0 run data modify storage djzc:type_manage bzb_color set value "red"
+execute if score bzb djzc.type matches 1 run data modify storage djzc:type_manage bzb_color set value "green"
 #板载兵的参数
 
 function djzc444:dialog/type_choose with storage djzc:type_manage

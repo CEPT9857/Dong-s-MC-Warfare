@@ -7,7 +7,7 @@ playsound entity.ender_dragon.growl music @a[team=CT] -368.54 62.77 -760.00 100
 playsound entity.player.levelup music @a[team=T] -369.00 62.91 -758.53 1000
 
 scoreboard players set T_SC djzc.time3 30
-execute as @p[x=-385,y=66,z=-768,dx=16,dy=7,dz=12,team=T] at @p run scoreboard players add @s djzc.occupy 1
+execute as @p[x=-385,y=66,z=-768,dx=16,dy=7,dz=15,team=T] at @p run scoreboard players add @s djzc.occupy 1
 
 function djzc444:game/game_flow
 #运行游戏流程计算器

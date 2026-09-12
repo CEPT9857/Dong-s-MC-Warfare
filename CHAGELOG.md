@@ -677,7 +677,7 @@ release:2026/8/1
 
 ### 1.0.6 【风起扬帆】 终极版 0903
 start:2026/09/02
-release:2026/09/03
+end:2026/09/03
 
 #### 在数据包之外
 - 项目从冬季战场（Winter Battlefield）改名为栋记（冬季）战场（Dong's MC Warfare）
@@ -700,7 +700,7 @@ release:2026/09/03
 
 ### 1.0.6 【风起扬帆】 终极版 0906
 start:2026/09/05
-release:2026/09/06
+end:2026/09/06
 
 #### 游戏逻辑优化
 - 将[C点启动器提示](data\djzc444\function\game\flow_a_b.mcfunction)和[D点启动器提示](data\djzc444\function\game\flow_c_d.mcfunction)的title和subtitle对调，使得信息显示更加合理
@@ -741,3 +741,31 @@ release:2026/09/09
 
 #### BUG修复
 - 修复了**pack.mcmeta**没有翻译键的BUG
+
+------------------
+v1.0.7【整装待发】
+------------------
+start——2026/9/12
+release——
+
+- 推进冬战对**Minecraft 26.3**的兼容，并增加一些小小的优化
+
+### 1.0.7 0912-by-CEPT
+start:2026/9/12
+end:2026/9/12
+
+#### 文档修正
+- 统一了**兵种选择器**、**步话机**及相关文档中的表述
+- 修改了README中，少量未发现的错误，使其更加符合1.0.6 Ultimate的游戏内容
+
+#### 代码整理
+- 将[flow_end](data\djzc444\function\game\flow_end.mcfunction)的超时判定逻辑与[time_game](data\djzc444\function\game\time_game.mcfunction)同步
+- 把**wea_sanlian3/4**的**Tags**改成了更加现代的**tag**，防止BUG
+- 整理了[轰炸指示器](data\djzc444\function\game\lib_boom_marker.mcfunction)中的注释，防止人类或AI搞错
+
+#### BUG修复
+- 修复了**航空兵解锁**的因为填错运算符导致的击杀分数要求（代码中为>5）与文档(按我们的设计原意，应该是>=5)不一致的BUG
+- 修复了占点相关脚本中，C点判定口径不一致的BU
+- 修复了**板载兵**在兵种选择器中状态显示错误的问题，避免UI和实际可用性不一致
+- 修复了[兵种选择器](data\djzc444\function\dialog\choose_dialog.mcfunction)中**板载兵**读取的计分板忘记改成新版，于是**GUI显示和实际情况不一致**的BUG
+- 清理了若干**遗留代码**和**无效判断**，减少未来出现“功能看似存在，实际不可达”的情况

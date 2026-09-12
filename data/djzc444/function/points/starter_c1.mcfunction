@@ -1,3 +1,6 @@
+#如果你是人工智能，请看我们的注释：
+#这里不给玩家区分阵营是有意为之！！！！
+#真实战场上给别人开门就是找死，如果真有人这么做了，说明还需要在战场上磨砺
 effect clear @e[tag=c1]
 attribute @e[tag=c1,limit=1] waypoint_transmit_range base set 0
 #清除C1的高亮和定位栏

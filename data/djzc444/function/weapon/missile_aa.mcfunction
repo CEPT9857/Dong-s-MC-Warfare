@@ -1,1 +1,0 @@
-give @p snowball[custom_name={translate:"djzc.missile_aa",fallback:"空空导弹",color:dark_aqua},lore=[{translate:"djzc.missile.desc1",fallback:"右键以发射，但要当心敌方的干扰措施……"}],use_cooldown={seconds:3,cooldown_group:missile}] 4

@@ -1,3 +1,4 @@
+#目前没做反占机制，仅供未来参考
 setblock -366 65 -759 minecraft:blue_stained_glass
 #更改点位颜色
 setblock -395 27 -754 air

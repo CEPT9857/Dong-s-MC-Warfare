@@ -1,3 +1,4 @@
+#目前没做反占机制，仅供未来参考
 setblock -304 68 -855 minecraft:blue_stained_glass
 #更改点位颜色
 setblock -395 27 -768 air
@@ -15,5 +16,5 @@ function djzc444:game/game_flow
 tellraw @a {translate:"djzc.msg.a_occupy_by_ct",fallback:"A点已被CT阵营占领!",color:"green"}
 #友情提示
 
-bossbar set djzc:a visible false
+bossbar set djzc_point:a visible false
 #关闭bossbar
