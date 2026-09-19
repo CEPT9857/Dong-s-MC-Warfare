@@ -27,7 +27,19 @@
             "type":"plain_message",
             "contents":{
                 "translate": "djzc.dialog.wiki.how_to_play.body2",
-                "fallback": "· 右键冬战成员用书（或按G键打开GUI）选择阵营和兵种"
+                "fallback": "· 右键冬战成员用书（或按G键打开GUI）选择阵营和兵种",
+                "with": [
+                {
+                    "keybind": "key.use",
+                    "color": "gold",
+                    "bold": true
+                },
+                {
+                    "keybind": "key.quickActions",
+                    "color": "gold",
+                    "bold": true
+                }
+            ]
             },
             "width": 500
         },

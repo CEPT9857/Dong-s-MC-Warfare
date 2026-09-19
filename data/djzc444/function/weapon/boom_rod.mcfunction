@@ -1,1 +1,1 @@
-give @p minecraft:carrot_on_a_stick[custom_name={translate:"djzc.boom_rod",fallback:"轰炸指示器"},lore=[{translate:"djzc.boom_rod.desc",fallback:"右键标记地点，召唤轰炸"}],enchantment_glint_override=true]
+give @p minecraft:carrot_on_a_stick[custom_name={translate:"djzc.boom_rod",fallback:"轰炸指示器"},lore=[{translate:"djzc.boom_rod.desc",fallback:"右键标记地点，召唤轰炸",with:[{keybind:"key.use",color:"gold",bold:true}]}],enchantment_glint_override=true]

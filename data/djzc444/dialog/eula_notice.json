@@ -84,6 +84,11 @@
             "contents":{
                 "translate": "djzc.dialog.eula_notice.body6",
                 "fallback":"· G键：打开「冬战成员用书」",
+                "with": [{
+                    "keybind": "key.quickActions",
+                    "color": "gold",
+                    "bold": true
+                }],
                 "color":"white"
             },
             "width": 300

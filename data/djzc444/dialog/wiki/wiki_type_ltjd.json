@@ -93,7 +93,14 @@
                     "lore": [
                         {
                             "translate":"djzc.missile.desc1",
-                            "fallback":"右键以发射，但要当心敌方的干扰措施……"
+                            "fallback":"长按右键以发射，但要当心敌方的干扰措施……",
+                            "with":[
+                                {
+                                    "keybind":"key.use",
+                                    "color":"gold",
+                                    "bold":true
+                                    }
+                                ]
                         }
                     ],
                     "use_cooldown": {
@@ -132,7 +139,14 @@
                     "lore": [
                         {
                             "translate":"djzc.missile.desc1",
-                            "fallback":"右键以发射，但要当心敌方的干扰措施……"
+                            "fallback":"长按右键以发射，但要当心敌方的干扰措施……",
+                            "with":[
+                                {
+                                    "keybind":"key.use",
+                                    "color":"gold",
+                                    "bold":true
+                                    }
+                                ]
                         }
                     ],
                     "use_cooldown": {

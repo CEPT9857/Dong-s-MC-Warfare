@@ -34,7 +34,20 @@ $dialog show @s \
         "contents": [\
         {\
             "translate": "djzc.dialog.type_manage.body3",\
-            "fallback": "[左键]是正向循环选择预设，[SHIFT+左键]是反向循环选择预设"\
+            "fallback": "[左键]是正向循环选择预设，[SHIFT+左键]是反向循环选择预设",\
+            "with": [\
+                        {\
+                            "keybind": "key.attack",\
+                            "color": "gold",\
+                            "bold": true\
+                        },\
+                        {\
+                            "keybind": "key.sneak",\
+                            "color": "gold",\
+                            "bold": true\
+                        }\
+                    ]\
+        }\
         }\
         ]\
     }\

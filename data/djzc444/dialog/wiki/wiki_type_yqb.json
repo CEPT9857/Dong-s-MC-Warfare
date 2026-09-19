@@ -97,7 +97,19 @@
                         },
                         {
                             "translate":"djzc.spear_yqb.desc2",
-                            "fallback":"，按[跳跃+潜行]键开始垂直机动"
+                            "fallback":"，按[跳跃+潜行]键开始垂直机动",
+                            "with": [
+                                {
+                                    "keybind": "key.jump",
+                                    "color": "gold",
+                                    "bold": true
+                                },
+                                {
+                                    "keybind": "key.sneak",
+                                    "color": "gold",
+                                    "bold": true
+                                }
+                            ]
                         }
                     ]
                     ],

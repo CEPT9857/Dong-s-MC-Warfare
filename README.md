@@ -227,9 +227,9 @@
 以我們的第一張地圖**冬季戰場**為例：
 - **四個戰區**：A（冰湖北側）、B（冰刺之地南側）、C（雪原村莊中心）、D（CT 家後方冰湖）。
 - **佔領規則**：
-  - T 方進入戰區 → 增加佔領進度；CT 方進入 → 減少進度。
+  - T 方進入戰區 → 增加佔領進度；CT 方進入 → 回頂進度。
   - 離開戰區不會重置進度（保留已佔領比例）。
-  - 雙方同時進點時，T 方進度增加效率減半，CT 方無法減少進度。
+  - 雙方同時進點時，T 方進度增加效率減半，CT 方無法回頂進度。
   - CT 無法奪回已被 T 完全佔領的點位。
 - **佔點時間**：60 秒。
 
@@ -254,8 +254,8 @@
 - **飛彈類型**：
   - 空對空飛彈：追蹤敵方空中單位。
   - 空對地飛彈：追蹤地面單位。
-- **發射與干擾**：右鍵發射；任何投擲物（雞蛋、雪球）都會吸引飛彈追蹤，可用於欺騙。
-- **警報系統**：當敵方飛彈進入 100 公尺內，**每秒發出一次警報**。
+- **發射與干擾**：右鍵發射導彈；道具**干擾彈**會吸引導彈追蹤，可用於欺騙。
+- **警報系統**：當敵方飛彈進入 100 公尺內，**每 0.5 秒發出一次警報**。
 - **機場補給**：
   - 己方機場停留 30 秒 → 獲得 4 枚空對空、8 枚空對地飛彈。
   - 接近敵方機場（<75 公尺且有敵方單位）→ 機場自動發射地對空飛彈。
@@ -263,7 +263,7 @@
 
 #### 5. 步話機與戰術通訊
 - **MK.IV 步話機**：基於對話框的預設指令系統。
-- **12 條指令**：包含「進攻 D 點」、「防守 D 點」、「發現敵人」、「我來助你」等。
+- **16 條指令**：包含「進攻 D 點」、「防守 D 點」、「發現敵人」、「我來助你」等。
 - **彩蛋指令**：`Ciallo～(∠・ω< )⌒★` —— 彩蛋。
 - **使用方式**：G 鍵主選單 →「轉到步話機」→ 點擊對應訊息。
 
@@ -380,9 +380,9 @@ Of course, brrowing his name was also used with GNOD728's permission. You are al
 Using our first map, **Dong's MC Warfare**, as an example:
 - **Four combat zones**: A (north of the ice lake), B (south of the Ice Spikes), C (the center of the snowy village), and D (the ice lake behind the CT base).
 - **Capture rules**:
-  - T entering a combat zone increases capture progress; CT entering decreases it.
+  - T entering a combat zone increases capture progress; CT entering restores progress.
   - Leaving a combat zone does not reset its progress. The captured percentage is retained.
-  - If both teams are in the zone, T's capture speed is halved and CT cannot reduce progress.
+  - If both teams are in the zone, T's capture speed is halved and CT cannot restore progress.
   - CT cannot recapture a point fully captured by T.
 - **Capture time**: 60 seconds.
 
@@ -407,8 +407,8 @@ Using our first map, **Dong's MC Warfare**, as an example:
 - **Missile types**:
   - Air-to-air missiles: track airborne enemy units.
   - Air-to-ground missiles: track ground units.
-- **Launching and jamming**: right-click to launch. Any projectile, such as an egg or snowball, attracts missile tracking and can be used as a decoy.
-- **Warning system**: when an enemy missile comes within 100 meters, a warning is issued **once every second**.
+- **Launching and jamming**: right-click to launch a missile; the jamming item attracts incoming missiles and can be used as a decoy.
+- **Warning system**: when an enemy missile comes within 100 meters, a warning is issued **every 0.5 seconds**.
 - **Airfield resupply**:
   - Stay at your team's airfield for 30 seconds → receive 4 air-to-air and 8 air-to-ground missiles.
   - Approach an enemy airfield (within 75 meters and with an enemy unit present) → the airfield automatically launches surface-to-air missiles.
@@ -416,7 +416,7 @@ Using our first map, **Dong's MC Warfare**, as an example:
 
 #### 5. Radio and Tactical Communication
 - **MK.IV Radio**: a preset command system based on dialogue boxes.
-- **12 commands**: including “Attack point D,” “Defend point D,” “Enemy spotted,” and “I’m coming to help.”
+- **16 commands**: including “Attack point D,” “Defend point D,” “Enemy spotted,” and “I’m coming to help.”
 - **Easter egg command**: `Ciallo~(∠・ω< )⌒★` — an easter egg.
 - **How to use**: G-key main menu → “Go to Radio” → click the desired message.
 
