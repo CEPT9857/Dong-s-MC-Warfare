@@ -1,0 +1,158 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.ch02.title",
+        "fallback": "第二章 · 目标与对局流程",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch02.h1",
+                "fallback": "【怎么赢】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch02.l1",
+                "fallback": "T：按 A→B→C→D 顺序占领全部四个战区即胜。CT：撑过 15 分钟即胜。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch02.h2",
+                "fallback": "【开局流程】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch02.l2",
+                "fallback": "全员点击“%1$s”后自动开局 → 传送到地下配装中心（Y=30），重生点同时设在此处。",
+                "with": [
+                    { "translate": "djzc.dialog.userbook.to_prepare", "color": "green" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch02.l3",
+                "fallback": "地面（Y≥40）不能换装和传送，出发前先在地下配好兵种，再通过传送系统前往前线。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch02.l4",
+                "fallback": "阵亡后在配装中心重生，换装、补给后再次上线——这就是冬战的基础节奏。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch02.h3",
+                "fallback": "【占点数值】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch02.l5",
+                "fallback": "占领速度不随人数叠加（只统计点内最近的一名 T 与一名 CT）：无 CT 驻守 60 秒占满；有 CT 驻守则效率减半，需 120 秒。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch02.l6",
+                "fallback": "离开点位进度不清零；已被 T 占领的点 CT 无法夺回；点位 bossbar 变红（≤15）说明 T 快得手了。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch02.l7",
+                "fallback": "注意：意外死亡（摔落等非战斗死亡）会把击杀数送给离你最近的敌人！",
+                "color": "red"
+            }
+        }
+    ],
+    "columns": 2,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.to_prepare",
+                "color": "green"
+            },
+            "tooltip": {
+                "translate": "djzc777.dialog.btn.ready.desc",
+                "fallback": "与成员用书中的“准备”按钮等效，全员准备后自动开局"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger djzc.prepare set 1"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.un_prepare",
+                "color": "red"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger djzc.prepare set 0"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.home",
+                "fallback": "返回主页",
+                "color": "gold"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/root"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.next",
+                "fallback": "下一章 ▶",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch03"
+            }
+        }
+    ],
+    "exit_action": {
+        "label": {
+            "translate": "djzc777.dialog.nav.home",
+            "fallback": "返回主页"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/root"
+        }
+    }
+}

@@ -1,0 +1,172 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.ch03.title",
+        "fallback": "第三章 · 八大兵种",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch03.h1",
+                "fallback": "%1$s —— 正面推进",
+                "with": [
+                    { "translate": "djzc.type_tjb", "color": "yellow" }
+                ],
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch03.l1",
+                "fallback": "%1$s：盾斧剑全能战士，新手推荐　|　%2$s：%3$s 专破盾牌，%4$s 激流突进",
+                "with": [
+                    { "translate": "djzc.type_jzb", "color": "gold" },
+                    { "translate": "djzc.type_scj", "color": "gold" },
+                    { "translate": "djzc.trident_yh", "color": "aqua" },
+                    { "translate": "djzc.trident_yzxf", "color": "aqua" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch03.h2",
+                "fallback": "%1$s —— 远程压制",
+                "with": [
+                    { "translate": "djzc.type_zcb", "color": "yellow" }
+                ],
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch03.l2",
+                "fallback": "%1$s：大威力弓 + 烟花重炮，新手推荐　|　%2$s：%3$s 手持移速翻倍，来去如风",
+                "with": [
+                    { "translate": "djzc.type_jjs", "color": "gold" },
+                    { "translate": "djzc.type_yqb", "color": "gold" },
+                    { "translate": "djzc.spear_yqb", "color": "aqua" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch03.h3",
+                "fallback": "%1$s —— 火力辅助",
+                "with": [
+                    { "translate": "djzc.type_zyb", "color": "yellow" }
+                ],
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch03.l3",
+                "fallback": "%1$s：速射弩 + %2$s，空军的噩梦　|　%3$s：%4$s 加持，%5$s 贴脸引爆",
+                "with": [
+                    { "translate": "djzc.type_fkb", "color": "gold" },
+                    { "translate": "djzc.fishing_rod", "color": "aqua" },
+                    { "translate": "djzc.type_ggne", "color": "gold" },
+                    { "translate": "djzc.trident_ggne", "color": "aqua" },
+                    { "translate": "djzc.wea_cl", "color": "aqua" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch03.h4",
+                "fallback": "%1$s —— 制空奇袭",
+                "with": [
+                    { "translate": "djzc.type_hkb", "color": "yellow" }
+                ],
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch03.l4",
+                "fallback": "%1$s：鞘翅 + 导弹（本局击杀达标解锁）　|　%2$s：每局只能选一次的疯狂玩法",
+                "with": [
+                    { "translate": "djzc.type_ltjd", "color": "gold" },
+                    { "translate": "djzc.type_bzb", "color": "gold" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch03.l5",
+                "fallback": "换装规则：仅地下（Y<40）可选兵种；换兵种 = 清空背包重新发放整套装备；部分兵种可能被管理员禁用。",
+                "color": "gray"
+            }
+        }
+    ],
+    "columns": 3,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.type_choose",
+                "color": "green"
+            },
+            "tooltip": {
+                "translate": "djzc777.dialog.btn.class.desc",
+                "fallback": "需要位于地下配装中心（Y<40），管理员 debug 模式除外"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger djzc.option set 11"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.home",
+                "fallback": "返回主页",
+                "color": "gold"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/root"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.next",
+                "fallback": "下一章 ▶",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch04"
+            }
+        }
+    ],
+    "exit_action": {
+        "label": {
+            "translate": "djzc777.dialog.nav.home",
+            "fallback": "返回主页"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/root"
+        }
+    }
+}

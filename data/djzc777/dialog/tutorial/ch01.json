@@ -1,0 +1,154 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.ch01.title",
+        "fallback": "第一章 · 安装与首次进入",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch01.h1",
+                "fallback": "【安装】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch01.l1",
+                "fallback": "数据包放入存档的 datapacks 文件夹；资源包《赛扬的冬季战场》放入 resourcepacks 并启用，优先级调到最高。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch01.l2",
+                "fallback": "游戏版本：Minecraft Java 1.21.11，推荐服务器或局域网联机游玩。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch01.l3",
+                "fallback": "网络不好下不动资源包？把数据包 zip 直接塞进 resourcepacks 文件夹也能用（内含备用资源）。",
+                "color": "gray"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch01.h2",
+                "fallback": "【首次进入】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch01.l4",
+                "fallback": "用户协议不能用 ESC 关闭，且每 60 秒重弹一次，直到你点击“%1$s”。",
+                "with": [
+                    { "translate": "djzc.dialog.eula", "color": "green" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch01.l5",
+                "fallback": "同意后自动弹出阵营选择：%1$s（蓝方，防守）/ %2$s（红方，进攻），开局前随时可换边。",
+                "with": [
+                    { "translate": "djzc.dialog.userbook.join_ct", "color": "blue" },
+                    { "translate": "djzc.dialog.userbook.join_t", "color": "red" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch01.l6",
+                "fallback": "主菜单三种打开方式：按 %1$s 键 / 右键 %2$s / ESC 暂停菜单中的按钮。",
+                "with": [
+                    { "keybind": "key.quickActions", "color": "gold", "bold": true },
+                    { "translate": "djzc.book_userbook", "color": "gold" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch01.l7",
+                "fallback": "对话框显示不全（被截断）？视频设置 → GUI 缩放，调小一档。",
+                "color": "gray"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch01.l8",
+                "fallback": "两条铁律：全场冒险模式，不能破坏方块；敌我看盔甲纹饰颜色分辨（CT 蓝 / T 红），头顶没有名字！",
+                "color": "gold"
+            }
+        }
+    ],
+    "columns": 3,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc777.dialog.btn.team",
+                "fallback": "前往阵营选择",
+                "color": "green"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc444:team_selection"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.home",
+                "fallback": "返回主页",
+                "color": "gold"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/root"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.next",
+                "fallback": "下一章 ▶",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch02"
+            }
+        }
+    ],
+    "exit_action": {
+        "label": {
+            "translate": "djzc777.dialog.nav.home",
+            "fallback": "返回主页"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/root"
+        }
+    }
+}

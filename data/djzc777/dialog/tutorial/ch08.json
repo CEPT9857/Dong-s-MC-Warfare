@@ -1,0 +1,137 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.ch08.title",
+        "fallback": "第八章 · 常见问题 FAQ",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch08.l1",
+                "fallback": "Q 按 %1$s 没反应？→ 检查按键绑定中的“快速操作”；或右键成员用书；或按 ESC 在暂停菜单点击按钮。",
+                "with": [
+                    { "keybind": "key.quickActions", "color": "gold", "bold": true }
+                ],
+                "color": "aqua"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch08.l2",
+                "fallback": "Q 对话框显示不全？→ 视频设置 → GUI 缩放，调小一档。",
+                "color": "aqua"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch08.l3",
+                "fallback": "Q 不能选兵种 / 用%1$s？→ 请回到地下配装中心（Y<40）。",
+                "with": [
+                    { "translate": "djzc.dialog.tp_system.title" }
+                ],
+                "color": "aqua"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch08.l4",
+                "fallback": "Q 迟迟不开局？→ 需要全员点“%1$s”，一个人没点都不会开始。",
+                "with": [
+                    { "translate": "djzc.dialog.userbook.to_prepare" }
+                ],
+                "color": "aqua"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch08.l5",
+                "fallback": "Q 能破坏方块吗？→ 全场强制冒险模式，不能破坏，这是防拆家特性。",
+                "color": "aqua"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch08.l6",
+                "fallback": "Q 死亡掉装备吗？→ 不掉（装备不可破坏）；但手动换兵种会清空背包重新发放。",
+                "color": "aqua"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch08.l7",
+                "fallback": "Q 中途加入怎么玩？→ 同意协议 → 选阵营 → 地下配装 → 传送系统上前线。",
+                "color": "aqua"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch08.l8",
+                "fallback": "Q 卡顿是网络问题吗？→ 不一定：技能特效多时短暂掉刻属正常，持续高延迟才是网络。管理员可开 boost 模式优化。",
+                "color": "aqua"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch08.l9",
+                "fallback": "还有其他问题？欢迎到 GitHub 仓库 CEPT9857/Dong-s-MC-Warfare 反馈，每一个反馈者都是冬战的共建者！",
+                "color": "gold"
+            }
+        }
+    ],
+    "columns": 2,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.prev",
+                "fallback": "◀ 上一章",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch07"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.home",
+                "fallback": "返回主页",
+                "color": "gold"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/root"
+            }
+        }
+    ],
+    "exit_action": {
+        "label": {
+            "translate": "djzc777.dialog.nav.home",
+            "fallback": "返回主页"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/root"
+        }
+    }
+}

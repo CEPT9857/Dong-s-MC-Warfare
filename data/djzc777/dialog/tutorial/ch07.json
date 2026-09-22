@@ -1,0 +1,182 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.ch07.title",
+        "fallback": "第七章 · 步话机、支援与成就",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch07.h1",
+                "fallback": "【%1$s】",
+                "with": [
+                    { "translate": "djzc.book_msg", "color": "yellow" }
+                ],
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch07.l1",
+                "fallback": "16 条预设指令（进攻/防守 A-D 点、发现敌人、请求支援、撤退等），仅己方可见；唯一例外：%1$s 全服可见。",
+                "with": [
+                    { "translate": "djzc.msg.ciallo", "color": "light_purple" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch07.l2",
+                "fallback": "入口：%1$s 主菜单 → %2$s；或 %3$s 背包里的 %4$s 成书。",
+                "with": [
+                    { "keybind": "key.quickActions", "color": "gold", "bold": true },
+                    { "translate": "djzc.dialog.userbook.msg", "color": "gold" },
+                    { "keybind": "key.use", "color": "gold", "bold": true },
+                    { "translate": "djzc.book_msg", "color": "gold" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch07.h2",
+                "fallback": "【地图特殊设施】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch07.l3",
+                "fallback": "轰炸观测塔：在隐藏的高塔塔顶使用 %1$s，标记落地 10 秒后爆炸，半径 14.5 格、爆心 144 伤——会炸死自己人和队友！一根指示器只能用 2 次。",
+                "with": [
+                    { "translate": "djzc.boom_rod", "color": "gold" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch07.l4",
+                "fallback": "地雷：C2 地道等处有雷，触发后 0.5 秒爆炸，5 格内 54 伤，跑图注意脚下。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch07.h3",
+                "fallback": "【成就】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch07.l5",
+                "fallback": "%1$s / %2$s / %3$s / %4$s / %5$s / %6$s / %7$s……共 30 余项，进度界面随时查看。",
+                "with": [
+                    { "translate": "djzc.advancement.count_kill5", "color": "gold" },
+                    { "translate": "djzc.advancement.count_kill10", "color": "gold" },
+                    { "translate": "djzc.advancement.count_occupy4", "color": "gold" },
+                    { "translate": "djzc.advancement.stat_kill1", "color": "gold" },
+                    { "translate": "djzc.advancement.stat_fight100", "color": "gold" },
+                    { "translate": "djzc.advancement.wea_aa", "color": "gold" },
+                    { "translate": "djzc.advancement.wea_fly", "color": "gold" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch07.l6",
+                "fallback": "赐福系统已退役；海战模式尚未实装（1.1 见）；战场支援装备（无人系统等）为 1.1.1 预览内容。",
+                "color": "gray"
+            }
+        }
+    ],
+    "columns": 2,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.msg",
+                "color": "green"
+            },
+            "tooltip": {
+                "translate": "djzc777.dialog.btn.radio.desc",
+                "fallback": "需要已加入阵营（CT/T）"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger djzc.option set 12"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.stop_music",
+                "color": "green"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger djzc.option set 14"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.prev",
+                "fallback": "◀ 上一章",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch06"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.home",
+                "fallback": "返回主页",
+                "color": "gold"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/root"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.next",
+                "fallback": "下一章 ▶",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch08"
+            }
+        }
+    ],
+    "exit_action": {
+        "label": {
+            "translate": "djzc777.dialog.nav.home",
+            "fallback": "返回主页"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/root"
+        }
+    }
+}

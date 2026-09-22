@@ -1,0 +1,165 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.ch06.title",
+        "fallback": "第六章 · 占点、启动器与传送",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch06.h1",
+                "fallback": "【%1$s】",
+                "with": [
+                    { "translate": "djzc.dialog.tp_system.title", "color": "yellow" }
+                ],
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch06.l1",
+                "fallback": "仅地下（Y<40）可用；只能传送到己方控制的位置；“传送到队友”会自动代发步话机“%1$s”。",
+                "with": [
+                    { "translate": "djzc.msg.cover", "color": "aqua" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch06.l2",
+                "fallback": "共 20 个点位：4 战区（%1$s ~ %2$s）、6 启动器（%3$s ~ %4$s）、双方出生点 ×2、双方空中出生点、双方机场（%5$s / %6$s）、最近/随机队友。",
+                "with": [
+                    { "translate": "djzc.dialog.point_a", "color": "light_purple" },
+                    { "translate": "djzc.dialog.point_d", "color": "light_purple" },
+                    { "translate": "djzc.dialog.point_c1", "color": "white" },
+                    { "translate": "djzc.dialog.point_d3", "color": "white" },
+                    { "translate": "djzc.dialog.respawn_airport_ct", "color": "blue" },
+                    { "translate": "djzc.dialog.respawn_airport_t", "color": "red" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch06.h2",
+                "fallback": "【启动器（C/D 点的前置条件）】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch06.l3",
+                "fallback": "占领 A+B 后 %1$s/%2$s/%3$s 高亮；占领 C 后 %4$s/%5$s/%6$s 高亮。屏幕边缘出现定位栏图标，穿墙可见，不会迷路。",
+                "with": [
+                    { "translate": "djzc.dialog.point_c1" },
+                    { "translate": "djzc.dialog.point_c2" },
+                    { "translate": "djzc.dialog.point_c3" },
+                    { "translate": "djzc.dialog.point_d1" },
+                    { "translate": "djzc.dialog.point_d2" },
+                    { "translate": "djzc.dialog.point_d3" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch06.l4",
+                "fallback": "激活方法：对发光物品展示框连续 %1$s 7 次（转满一整圈）；三台全部激活后，对应战区开放占领，山羊角号声响彻全场。",
+                "with": [
+                    { "keybind": "key.use", "color": "gold", "bold": true }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch06.l5",
+                "fallback": "警告：激活不区分阵营！CT 玩家千万不要去转展示框——转满同样会替 T 开门。CT 的合法反制是把展示框打掉，让它重置归零（每台仅一次，修复后的框不可再破坏）。",
+                "color": "red"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch06.l6",
+                "fallback": "展示框被意外击毁会自动修复；每局开始时全部重置归零，上局的激活不保留。",
+                "color": "gray"
+            }
+        }
+    ],
+    "columns": 3,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc.dialog.tp_system.title",
+                "color": "green"
+            },
+            "tooltip": {
+                "translate": "djzc777.dialog.btn.tp.desc",
+                "fallback": "需要位于地下（Y<40），管理员 debug 模式除外"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger djzc.option set 16"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.prev",
+                "fallback": "◀ 上一章",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch05"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.home",
+                "fallback": "返回主页",
+                "color": "gold"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/root"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.next",
+                "fallback": "下一章 ▶",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch07"
+            }
+        }
+    ],
+    "exit_action": {
+        "label": {
+            "translate": "djzc777.dialog.nav.home",
+            "fallback": "返回主页"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/root"
+        }
+    }
+}

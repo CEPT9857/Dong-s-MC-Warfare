@@ -1,0 +1,167 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.ch05.title",
+        "fallback": "第五章 · 导弹与空战",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.h1",
+                "fallback": "【三种导弹】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.l1",
+                "fallback": "%1$s（烈焰棒）：追空中，84 伤　|　%2$s（旋风棒）：追地面，46 伤　|　%3$s（骨头）：追空中，84 伤，手持移速减半。",
+                "with": [
+                    { "translate": "djzc.missile_aa", "color": "gold" },
+                    { "translate": "djzc.missile_ag", "color": "gold" },
+                    { "translate": "djzc.fishing_rod", "color": "gold" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.h2",
+                "fallback": "【发射流程】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.l2",
+                "fallback": "手持导弹长按 %1$s 约 1.6 秒完成发射；长按期间，你面前 60° 锥形、128 格内所有人（不分敌我）会发光——这是雷达锁定，对方也能看到自己亮了。",
+                "with": [
+                    { "keybind": "key.use", "color": "gold", "bold": true }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.l3",
+                "fallback": "发射后自动追击最近的合法目标（约 33 米/秒），3 格内近炸；导弹寿命有限（空空 3 秒 / 空地 2 秒 / 地空 6 秒），出手前先把机头对准目标方向。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.h3",
+                "fallback": "【告警与干扰】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.l4",
+                "fallback": "敌方导弹进入 100 格：铁砧声每半秒响一次，声音方向就是导弹方向——听声辨位，立刻机动！"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.l5",
+                "fallback": "右键 %1$s：身边弹出干扰鸡（存活 5 秒），敌方导弹会优先追鸡。Q 键丢投掷物骗导弹的老办法已失效。",
+                "with": [
+                    { "translate": "djzc.jam_egg", "color": "gold" }
+                ],
+                "color": "aqua"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.h4",
+                "fallback": "【机场】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.l6",
+                "fallback": "己方机场停留 30 秒获补给：%1$s ×4、%2$s ×8、烟花 ×5、%3$s ×5（军械仅限航空兵种领取）。",
+                "with": [
+                    { "translate": "djzc.missile_aa", "color": "gold" },
+                    { "translate": "djzc.missile_ag", "color": "gold" },
+                    { "translate": "djzc.jam_egg", "color": "gold" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch05.l7",
+                "fallback": "敌空军进入己方机场 75 格内：机场每秒自动发射 1 枚地空导弹拦截；跑道上的弹射器给你速度 + 漂浮，踩它起飞。"
+            }
+        }
+    ],
+    "columns": 2,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.prev",
+                "fallback": "◀ 上一章",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch04"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.home",
+                "fallback": "返回主页",
+                "color": "gold"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/root"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.next",
+                "fallback": "下一章 ▶",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch06"
+            }
+        }
+    ],
+    "exit_action": {
+        "label": {
+            "translate": "djzc777.dialog.nav.home",
+            "fallback": "返回主页"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/root"
+        }
+    }
+}

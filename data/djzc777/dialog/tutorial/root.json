@@ -1,0 +1,94 @@
+{
+    "type": "dialog_list",
+    "pause": false,
+    "title": [
+        {
+            "translate": "djzc777.dialog.root.title",
+            "fallback": "冬战新手教程",
+            "color": "gold",
+            "bold": true
+        }
+    ],
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.root.body1",
+                "fallback": "欢迎来到栋记（冬季）战场！",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.root.body2",
+                "fallback": "这是一份基于 v1.0.6 数据包代码逐行核对编写的新手教程，共 8 章。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.root.body3",
+                "fallback": "随时可通过 %1$s 键（快速操作）、暂停菜单按钮或 /function djzc777:open 再次打开。",
+                "with": [
+                    { "keybind": "key.quickActions", "color": "gold", "bold": true }
+                ],
+                "color": "gray"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.root.body4",
+                "fallback": "部分章节附带可直接点击的系统入口（%1$s、%2$s、%3$s、%4$s 等）。",
+                "with": [
+                    { "translate": "djzc.dialog.userbook.to_prepare" },
+                    { "translate": "djzc.dialog.userbook.type_choose" },
+                    { "translate": "djzc.dialog.tp_system.title" },
+                    { "translate": "djzc.dialog.userbook.msg" }
+                ],
+                "color": "gray"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.root.body5",
+                "fallback": "祝你在冰原上玩得愉快！%1$s",
+                "with": [
+                    { "translate": "djzc.msg.ciallo", "color": "light_purple" }
+                ],
+                "color": "light_purple"
+            }
+        }
+    ],
+    "columns": 2,
+    "dialogs": [
+        "djzc777:tutorial/ch01",
+        "djzc777:tutorial/ch02",
+        "djzc777:tutorial/ch03",
+        "djzc777:tutorial/ch04",
+        "djzc777:tutorial/ch05",
+        "djzc777:tutorial/ch06",
+        "djzc777:tutorial/ch07",
+        "djzc777:tutorial/ch08"
+    ],
+    "exit_action": {
+        "label": {
+            "translate": "djzc777.dialog.nav.book",
+            "fallback": "返回%1$s",
+            "with": [
+                { "translate": "djzc.book_userbook" }
+            ]
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc444:userbook"
+        }
+    }
+}

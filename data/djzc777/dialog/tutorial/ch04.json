@@ -1,0 +1,168 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.ch04.title",
+        "fallback": "第四章 · 武器与操作",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch04.h1",
+                "fallback": "【基础操作】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch04.l1",
+                "fallback": "射击：长按 %1$s 拉弓/弩；突进武器（三叉戟、矛）蓄力后松开向前突刺。",
+                "with": [
+                    { "keybind": "key.use", "color": "gold", "bold": true }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch04.l2",
+                "fallback": "垂直机动：手持 %1$s 或 %2$s，同时按住 %3$s + %4$s，原地升空（漂浮 1 秒 + 缓降 1 秒）。",
+                "with": [
+                    { "translate": "djzc.spear_yqb", "color": "gold" },
+                    { "translate": "djzc.sanlian_fly", "color": "gold" },
+                    { "keybind": "key.sneak", "color": "gold", "bold": true },
+                    { "keybind": "key.jump", "color": "gold", "bold": true }
+                ],
+                "color": "aqua"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch04.h2",
+                "fallback": "【弹药机制】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch04.l3",
+                "fallback": "弩可以装填烟花火箭当弹药：%1$s（24 星 ≈44 伤）、%2$s（30 星 ≈54 伤）都是这么发射的。",
+                "with": [
+                    { "translate": "djzc.rocket_jjs", "color": "gold" },
+                    { "translate": "djzc.rocket_ltjd", "color": "gold" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch04.l4",
+                "fallback": "没有烟火之星的烟花 = 鞘翅助推燃料（滑翔时手持右键加速）；手持烟花直接右键只会“原地放烟花”。",
+                "color": "gray"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch04.h3",
+                "fallback": "【关键数值】",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch04.l5",
+                "fallback": "%1$s 锋利 100（近战天花板）；%2$s 半蓄力即满伤，点点点比蓄满更高效。",
+                "with": [
+                    { "translate": "djzc.heavy_axe", "color": "gold" },
+                    { "translate": "djzc.trident_ggne", "color": "gold" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch04.l6",
+                "fallback": "%1$s 命中禁用敌方盾牌 3 秒——被破盾时后撤或换武器；%2$s 把敌人送上天当靶子。",
+                "with": [
+                    { "translate": "djzc.trident_yh", "color": "gold" },
+                    { "translate": "djzc.frag_fly", "color": "gold" }
+                ]
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 500,
+            "contents": {
+                "translate": "djzc777.dialog.ch04.l7",
+                "fallback": "%1$s：发射约 0.7 秒后爆炸的 256 星贴脸武器，注意别炸到自己。",
+                "with": [
+                    { "translate": "djzc.wea_cl", "color": "gold" }
+                ],
+                "color": "red"
+            }
+        }
+    ],
+    "columns": 2,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.prev",
+                "fallback": "◀ 上一章",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch03"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.home",
+                "fallback": "返回主页",
+                "color": "gold"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/root"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.nav.next",
+                "fallback": "下一章 ▶",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/ch05"
+            }
+        }
+    ],
+    "exit_action": {
+        "label": {
+            "translate": "djzc777.dialog.nav.home",
+            "fallback": "返回主页"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/root"
+        }
+    }
+}
