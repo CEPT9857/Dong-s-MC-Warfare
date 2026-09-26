@@ -6,8 +6,14 @@
         "hover_event": {
             "action": "show_text",
             "value": {
-                "translate": "djzc.dialog.author_deepseek",
-                "fallback": "Deepseek 编写"
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with":[
+                    {
+                    "translate":"djzc.dialog.author2",
+                    "fallback":"Deepseek"
+                    }
+                ]
             }
         }
      },
@@ -39,7 +45,15 @@
         "contents":[
             {
                 "translate": "djzc.wiki_fkb_3",
-                "fallback": "他挨了最毒的打，等了最久的加强。从1.0.1熬到1.0.4，从“根本打不穿”到“新星”入列，从被近战兵当经验包，变成能用铺天盖地的箭雨洗死任何敢低空的单位。"
+                "fallback": "他挨了最毒的打，等了最久的加强。从1.0.1熬到1.0.4，从“根本打不穿”到“%1$s”入列，从被近战兵当经验包，变成能用铺天盖地的箭雨洗死任何敢低空的单位。",
+                "with": [
+                    {
+                        "translate": "djzc.nova",
+                        "fallback": "新星",
+                        "color": "aqua",
+                        "italic": true
+                    }
+                ]
             }
         ]
         },
@@ -123,7 +137,7 @@
                     "lore":[
                         {
                             "translate":"djzc.missile.desc1",
-                            "fallback":"长按右键以发射，但要当心敌方的干扰措施……",
+                            "fallback":"长按%1$s以发射，但要当心敌方的干扰措施……",
                             "with":[
                                 {
                                     "keybind":"key.use",

@@ -10,7 +10,21 @@
         },
         "description": {
             "translate": "djzc.advancement.wea_fly.desc",
-            "fallback": "使用骑兵枪·MKIV或者一键三连·航空版进行垂直机动"
+            "fallback": "使用%1$s或者%2$s进行垂直机动",
+            "with": [
+                {
+                    "translate": "djzc.spear_yqb",
+                    "fallback": "骑兵枪 MK.IV",
+                    "color": "aqua",
+                    "italic": true
+                },
+                {
+                    "translate": "djzc.sanlian_fly",
+                    "fallback": "一键三连·航空版",
+                    "color": "aqua",
+                    "italic": true
+                }
+            ]
         },
         "frame": "task",
         "show_toast": false,

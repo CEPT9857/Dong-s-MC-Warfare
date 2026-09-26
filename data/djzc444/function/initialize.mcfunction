@@ -40,7 +40,7 @@ function djzc444:game/music_stop
 scoreboard objectives setdisplay below_name djzc.hp
 #启动血量显示
 
-tellraw @a {translate:"djzc.msg.initialize",fallback:"检测到该冬季战场副本首次启动，请按G键打开冬战成员用书，或打开README.md阅读详细信息",color:green,"with":[{"keybind": "key.quickActions","color": "gold","bold": true}]}
+tellraw @a {translate:"djzc.msg.initialize",fallback:"检测到该冬季战场副本首次启动，请按%1$s打开%2$s，或打开README.md阅读详细信息",color:green,"with":[{"keybind": "key.quickActions","color": "gold","bold": true},{"translate":"djzc.book_userbook","fallback":"冬战成员用书","color":"aqua","italic":true}]}
 
 scoreboard players set initialize djzc.option 1
 #退出初始化状态

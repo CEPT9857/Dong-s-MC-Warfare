@@ -10,7 +10,15 @@
         },
         "description": {
             "translate": "djzc.advancement.buff_hm.desc",
-            "fallback": "进攻就是最好的防守！毁灭之弹助你横扫战场！"
+            "fallback": "进攻就是最好的防守！%1$s助你横扫战场！",
+            "with": [
+                {
+                    "translate": "djzc.rocket_hm",
+                    "fallback": "毁灭之弹",
+                    "color": "aqua",
+                    "italic": true
+                }
+            ]
         },
         "frame": "task",
         "show_toast": false,

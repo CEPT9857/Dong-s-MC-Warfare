@@ -6,8 +6,14 @@
         "hover_event": {
             "action": "show_text",
             "value": {
-                "translate": "djzc.dialog.author_deepseek",
-                "fallback": "Deepseek 编写"
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with":[
+                    {
+                    "translate":"djzc.dialog.author2",
+                    "fallback":"Deepseek"
+                    }
+                ]
             }
         }
      },
@@ -39,7 +45,15 @@
         "contents":[
             {
                 "translate": "djzc.wiki_ltjd_3",
-                "fallback": "最早的立体机动，只有弩箭和雷枪。后来有了导弹，也有了冬战史上最多的BUG。导弹追着自己人炸过，近炸引信该响不响过，发射器切模式切到死循环过。但他撑起了冬战的CAS。"
+                "fallback": "最早的立体机动，只有弩箭和%1$s。后来有了导弹，也有了冬战史上最多的BUG。导弹追着自己人炸过，近炸引信该响不响过，发射器切模式切到死循环过。但他撑起了冬战的CAS。",
+                "with": [
+                    {
+                        "translate": "djzc.rocket_ltjd",
+                        "fallback": "雷枪",
+                        "color": "aqua",
+                        "italic": true
+                    }
+                ]
             }
         ]
         },
@@ -93,7 +107,7 @@
                     "lore": [
                         {
                             "translate":"djzc.missile.desc1",
-                            "fallback":"长按右键以发射，但要当心敌方的干扰措施……",
+                            "fallback":"长按%1$s以发射，但要当心敌方的干扰措施……",
                             "with":[
                                 {
                                     "keybind":"key.use",
@@ -139,7 +153,7 @@
                     "lore": [
                         {
                             "translate":"djzc.missile.desc1",
-                            "fallback":"长按右键以发射，但要当心敌方的干扰措施……",
+                            "fallback":"长按%1$s以发射，但要当心敌方的干扰措施……",
                             "with":[
                                 {
                                     "keybind":"key.use",

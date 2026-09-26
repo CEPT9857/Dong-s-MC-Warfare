@@ -6,8 +6,14 @@
         "hover_event": {
             "action": "show_text",
             "value": {
-                "translate": "djzc.dialog.author_deepseek",
-                "fallback": "Deepseek 编写"
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with":[
+                    {
+                "translate":"djzc.dialog.author2",
+                "fallback":"Deepseek"
+                    }
+                ]
             }
         }
      },
@@ -27,7 +33,7 @@
             "type":"plain_message",
             "contents":{
                 "translate": "djzc.dialog.wiki.how_to_play.body2",
-                "fallback": "· 右键冬战成员用书（或按G键打开GUI）选择阵营和兵种",
+                "fallback": "· %1$s%3$s（或按%2$s打开GUI）选择阵营和兵种",
                 "with": [
                 {
                     "keybind": "key.use",
@@ -38,6 +44,12 @@
                     "keybind": "key.quickActions",
                     "color": "gold",
                     "bold": true
+                },
+                {
+                    "translate":"djzc.book_userbook",
+                    "fallback":"冬战成员用书",
+                    "color":"aqua",
+                    "italic":true
                 }
             ]
             },

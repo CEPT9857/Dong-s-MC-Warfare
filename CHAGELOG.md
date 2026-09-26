@@ -777,10 +777,10 @@ end:2026/9/19
 #### 游戏逻辑优化
 通过keybind类型的文本组件，现在，冬战文本中提及的**游戏按键**现在被标为**金色加粗(Gold & Bold)**，并且随着绑定按键自动变化
 
-### 1.0.7 0923 by Wuyue
+### 1.0.7 0923-by-Wuyue
 start:2026/9/20
 end:2026/9/23
-
+> 该版本的更新日志由 GLM 5.3 Flash 生成
 #### 新手教程
 - 新增[djzc777]命名空间：基于v1.0.7代码逐行核对编写的**冬战新手教程**对话框（主页+八个章节），通过**ESC暂停菜单按钮**或`/function djzc777:open`打开
 - 为[djzc777]注册**pause_screen_actions**、**function load**标签（均为合并值）
@@ -793,4 +793,22 @@ end:2026/9/23
 
 实境引导版新手教程与进阶教程/训练场处于设计阶段（后者已批复暂停），接口已预留：`djzc777:tutorial_skip`、`djzc777:tutorial/start`
 
-该版本的更新日志由 GLM 5.3 Flash 生成
+### 1.0.7 0926-by-CEPT
+start:2026/9/25
+end:2026/9/26
+
+#### 游戏逻辑优化
+- 利用translate类型的文本组件的with参数与fallback的关系，现在，*没有安装配套资源包的玩家*也能看到fallback文本中，对应的按键被标为**金色加粗(Gold & Bold)**，并且随着绑定按键自动变化，保持了体验的一致性
+- 在游戏道具名字以外的，包含**道具名称的**长文本中，用translate类型的文本组件，with %N*$s（道具名字,N*为非零自然数），并设为**青色斜体（aqua & italic）**
+- 利用translate的with参数，将*djzc.dialog.author*一类的翻译键优化为参数化形式，解耦了作者与翻译键中，**动词**的关系，防止后续相关翻译键数量通过乘法快速膨胀
+- 通过with参数，合并了[骑兵枪](data\djzc444\function\weapon\spear_yqb.mcfunction)中的的两条拼接而成的desc为同一条
+- 与上一条类似地，修改了**冬季战场百科全书**中，[游骑兵](data\djzc444\dialog\wiki\wiki_type_yqb.json)和[三叉戟兵](data\djzc444\dialog\wiki\wiki_type_scj.json)中，类似的字段，统一为用with插入字段
+
+#### BUG修复
+- 通过设置fallback为空，在**无资源包或没有安装“冬季战场：雪域龙腾”的情况下**，隐藏了[近战手枪](data\djzc444\function\weapon\wea_heavy_pistol.mcfunction)及其相关内容中，没有在“赛扬的冬季战场”中引用，但在“冬季战场：雪域龙腾”中引用的翻译键，使得玩家不会看到一坨奇怪的翻译键
+- 修复了[玩前必看](data\djzc444\dialog\wiki\wiki_before_play.json)中，对导弹系统的描述和现行机制不同的BUG
+- 修复了因为[兵种管理系统](data\djzc444\function\dialog\type_manage.mcfunction)中多了一个花括号（}）导致的兵种管理系统坏掉的BUG
+- 修复不了因为Wuyue过于依赖Vibe Coding导致Git Commit名称出现一条不符合[版本]+[其他参数]命名规范的，反倒是**以详细描述开头**的BUG
+- 修复不了因为Wuyue过于依赖Vibe Coding导致**更新日志文风有一股AI味**的BUG
+- 修理了Wuyue
+- 修复了[刺雷](data\djzc444\dialog\wiki\wiki_type_ggne.json)在**冬季战场百科全书**中和实际代码中*飞行时间*不一致的BUG

@@ -9,8 +9,14 @@
     "hover_event": {\
     "action": "show_text",\
     "value": {\
-        "translate": "djzc.dialog.author1",\
-        "fallback": "冬战制作组 制作"\
+        "translate": "djzc.dialog.author_make",\
+        "fallback": "%1$s 制作",\
+        "with":[\
+            {\
+            "translate":"djzc.dialog.author1",\
+            "fallback":"冬战制作组"\
+            }\
+        ]\
     }\
     }\
     }\
@@ -270,7 +276,21 @@
             },\
             "tooltip": {\
                 "translate": "djzc.type_fkb.desc",\
-                "fallback": "拥有高射速的弩和地空导弹，也可以对着地面扫射"\
+                "fallback": "拥有%1$s和%2$s，也可以对着地面扫射",\
+                "with": [\
+                    {\
+                        "translate": "djzc.sanlian3",\
+                        "fallback": "一键三连·MKIII",\
+                        "color": "aqua",\
+                        "italic": true\
+                    },\
+                    {\
+                        "translate": "djzc.fishing_rod",\
+                        "fallback": "地空导弹发射器",\
+                        "color": "aqua",\
+                        "italic": true\
+                    }\
+                ]\
             },\
             "action": {\
                 "type": "run_command",\
@@ -315,7 +335,15 @@
             },\
             "tooltip": {\
                 "translate": "djzc.type_yqb.desc",\
-                "fallback": "拥有特色武器“骑兵枪”，重要的是，他很快"\
+                "fallback": "拥有特色武器“骑兵枪”，重要的是，他很快",\
+                "with": [\
+                    {\
+                        "translate": "djzc.spear_yqb",\
+                        "fallback": "骑兵枪 MK.IV",\
+                        "color": "aqua",\
+                        "italic": true\
+                    }\
+                ]\
             },\
             "action": {\
                 "type": "run_command",\
@@ -330,7 +358,8 @@
             },\
             "tooltip": {\
                 "translate": "djzc.type_ggne.desc",\
-                "fallback": "贯穿一切，抵抗命运。"\
+                "fallback": "%1$s",\
+                "with": [{"translate":"djzc.trident_ggne.desc","fallback":"贯穿一切，抵抗命运","color":"aqua","italic":true}],\
             },\
             "action": {\
                 "type": "run_command",\

@@ -6,8 +6,14 @@
         "hover_event": {
             "action": "show_text",
             "value": {
-                "translate": "djzc.dialog.author_deepseek",
-                "fallback": "Deepseek 编写"
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with":[
+                    {
+                    "translate":"djzc.dialog.author2",
+                    "fallback":"Deepseek"
+                    }
+                ]
             }
         }
      },
@@ -114,10 +120,12 @@
                             "fallback":"双枪会给出答案"
                         },
                         {
-                            "translate":"djzc.heavy_pistol.desc2"
+                            "translate":"djzc.heavy_pistol.desc2",
+                            "fallback":""
                         },
                         {
-                            "translate":"djzc.heavy_pistol.desc3"
+                            "translate":"djzc.heavy_pistol.desc3",
+                            "fallback":""
                         }
                     ]
                 }

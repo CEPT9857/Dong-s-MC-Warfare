@@ -6,8 +6,14 @@
         "hover_event": {
             "action": "show_text",
             "value": {
-                "translate": "djzc.dialog.author_deepseek",
-                "fallback": "Deepseek 编写"
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with":[
+                    {
+                    "translate":"djzc.dialog.author2",
+                    "fallback":"Deepseek"
+                    }
+                ]
             }
         }
      },
@@ -49,15 +55,13 @@
         "contents":[
             {
                 "translate": "djzc.wiki_scj_4",
-                "fallback": "冬战里有很多这样的兵种：游骑兵追不上狙击手，干员摸不到"
-            },
-            {
-                "translate": "djzc.type_bzb",
-                "fallback": "板载兵"
-            },
-            {
-                "translate": "djzc.wiki_scj_5",
-                "fallback": "，魔法兵至今没能实装……不是每个兵种都能赢，但每个兵种都该有上场的机会。"
+                "fallback": "冬战里有很多这样的兵种：游骑兵追不上狙击手，干员摸不到%1$s，魔法兵至今没能实装……不是每个兵种都能赢，但每个兵种都该有上场的机会。",
+                "with":[
+                    {
+                        "translate": "djzc.type_bzb",
+                        "fallback": "板载兵"
+                    }
+                ]
             }
         ]
         },
@@ -65,7 +69,7 @@
             "type": "item",
             "width": 30,
             "description": {
-                "translate": "djzc.wiki_scj_6",
+                "translate": "djzc.wiki_scj_5",
                 "fallback": "温馨提示：它可以破盾"
             },
             "item": {

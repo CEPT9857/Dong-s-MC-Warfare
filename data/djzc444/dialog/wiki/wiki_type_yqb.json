@@ -6,8 +6,14 @@
         "hover_event": {
             "action": "show_text",
             "value": {
-                "translate": "djzc.dialog.author_deepseek",
-                "fallback": "Deepseek 编写"
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with":[
+                    {
+                    "translate":"djzc.dialog.author2",
+                    "fallback":"Deepseek"
+                    }
+                ]
             }
         }
      },
@@ -39,23 +45,21 @@
         "contents":[
             {
                 "translate": "djzc.wiki_yqb_3",
-                "fallback": "你们刚给过他"
-            },
-            {
-                "translate": "djzc.spear_yqb",
-                "fallback": "骑兵枪MK·IV"
-            },
-            {
-                "translate": "djzc.wiki_yqb_4",
-                "fallback": ",刚给过他突进III，刚给过他锋利50，刚给过他狙击同款"
-            },
-            {
-                "translate": "djzc.light_pistol",
-                "fallback": "小手枪"
-            },
-            {
-                "translate": "djzc.wiki_yqb_5",
-                "fallback": "，他还是不够好用。游骑兵不是设计失败了，游骑兵是还没成功。"
+                "fallback": "你们刚给过他%1$s,刚给过他突进III，刚给过他锋利50，刚给过他狙击同款%2$s，他还是不够好用。游骑兵不是设计失败了，游骑兵是还没成功。",
+                "with": [
+                    {
+                        "translate": "djzc.spear_yqb",
+                        "fallback": "骑兵枪 MK.IV",
+                        "color": "aqua",
+                        "italic": true
+                    },
+                    {
+                        "translate": "djzc.light_pistol",
+                        "fallback": "小手枪",
+                        "color": "aqua",
+                        "italic": true
+                    }
+                ]
             }
         ]
         },
@@ -64,7 +68,7 @@
         "width": 300,
         "contents":[
             {
-                "translate": "djzc.wiki_yqb_6",
+                "translate": "djzc.wiki_yqb_4",
                 "fallback": "他在等下一个版本，下一次测试，下一个愿意选他，然后发现“原来这么好玩”的玩家。冬战也是。"
             }
         ]
@@ -88,17 +92,15 @@
                     "lore":[
                         [
                         {
-                            "translate":"djzc.spear_yqb.desc1",
-                            "fallback":"手持"
-                        },
-                        {
-                            "translate": "djzc.spear_yqb",
-                            "fallback": "骑兵枪 MK.IV"
-                        },
-                        {
-                            "translate":"djzc.spear_yqb.desc2",
-                            "fallback":"，按[跳跃+潜行]键开始垂直机动",
+                            "translate":"djzc.spear_yqb.desc",
+                            "fallback":"手持%1$s，按[%2$s+%3$s]开始垂直机动",
                             "with": [
+                                {
+                            "translate": "djzc.spear_yqb",
+                            "fallback": "骑兵枪 MK.IV",
+                            "color": "aqua",
+                            "italic": true
+                                },
                                 {
                                     "keybind": "key.jump",
                                     "color": "gold",

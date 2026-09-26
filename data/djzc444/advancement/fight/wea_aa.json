@@ -10,7 +10,9 @@
         },
         "description": {
             "translate": "djzc.advancement.wea_aa.desc",
-            "fallback": "发射一枚空空导弹"
+            "fallback": "发射一枚%1$s",
+            "color": "aqua",
+            "italic": true
         },
         "frame": "task",
         "show_toast": false,

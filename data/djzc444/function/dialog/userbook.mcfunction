@@ -9,8 +9,14 @@
     "hover_event": {\
     "action": "show_text",\
     "value": {\
-        "translate": "djzc.dialog.author1",\
-        "fallback": "冬战制作组 制作"\
+        "translate": "djzc.dialog.author_make",\
+        "fallback": "%1$s 制作",\
+        "with":[\
+            {\
+            "translate":"djzc.dialog.author1",\
+            "fallback":"冬战制作组"\
+            }\
+        ]\
     }\
     }\
     }\

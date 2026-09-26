@@ -7,8 +7,14 @@
         "hover_event": {
             "action": "show_text",
             "value": {
-                "translate": "djzc.dialog.author2",
-                "fallback": "冬季战场制作组 编写"
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with":[
+                    {
+                "translate":"djzc.dialog.author1",
+                "fallback":"冬战制作组"
+                    }
+                ]
             }
         }
      },
@@ -83,11 +89,17 @@
             "type":"plain_message",
             "contents":{
                 "translate": "djzc.dialog.eula_notice.body6",
-                "fallback":"· G键：打开「冬战成员用书」",
+                "fallback":"· %1$s：打开「%2$s」",
                 "with": [{
                     "keybind": "key.quickActions",
                     "color": "gold",
                     "bold": true
+                },
+                {
+                    "translate":"djzc.book_userbook",
+                    "fallback":"冬战成员用书",
+                    "color":"aqua",
+                    "italic":true
                 }],
                 "color":"white"
             },
@@ -181,7 +193,8 @@
             "type":"plain_message",
             "contents":{
                 "translate": "djzc.dialog.eula_notice.body16",
-                "fallback":"但包里的内容由你负责，与冬战制作组无关。",
+                "fallback":"但包里的内容由你负责，与%1$s无关。",
+                "with":[{"translate":"djzc.dialog.author1","fallback":"冬战制作组"}],
                 "color":"white",
                 "italic": true
             },
@@ -342,4 +355,4 @@
             }
         }
      ]
-}
+}

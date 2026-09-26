@@ -10,7 +10,15 @@
         },
         "description": {
             "translate": "djzc.advancement.wea_bzb.desc",
-            "fallback": "使用板载弹"
+            "fallback": "使用%1$s",
+            "with": [
+                {
+                    "translate": "djzc.rocket_bzb",
+                    "fallback": "板载弹",
+                    "color": "aqua",
+                    "italic": true
+                }
+            ]
         },
         "frame": "task",
         "show_toast": false,

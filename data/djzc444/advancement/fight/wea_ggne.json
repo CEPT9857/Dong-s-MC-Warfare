@@ -10,7 +10,9 @@
         },
         "description": {
             "translate": "djzc.advancement.wea_ggne.desc",
-            "fallback": "使用神枪·冈格尼尔"
+            "fallback": "使用%1$s",
+            "color": "aqua",
+            "italic": true
         },
         "frame": "task",
         "show_toast": false,

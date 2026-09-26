@@ -10,7 +10,15 @@
         },
         "description": {
             "translate": "djzc.advancement.wea_sanlian.desc",
-            "fallback": "使用一键三连·MKIII"
+            "fallback": "使用%1$s",
+            "with": [
+                {
+                    "translate": "djzc.sanlian3",
+                    "fallback": "一键三连·MKIII",
+                    "color": "aqua",
+                    "italic": true
+                }
+            ]
         },
         "frame": "task",
         "show_toast": false,

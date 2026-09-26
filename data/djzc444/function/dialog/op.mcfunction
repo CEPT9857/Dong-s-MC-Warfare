@@ -9,8 +9,14 @@ $dialog show @s \
     "hover_event": {\
     "action": "show_text",\
     "value": {\
-        "translate": "djzc.dialog.author1",\
-        "fallback": "冬战制作组 制作"\
+        "translate": "djzc.dialog.author_make",\
+        "fallback": "%1$s 制作",\
+        "with":[\
+            {\
+            "translate":"djzc.dialog.author1",\
+            "fallback":"冬战制作组"\
+            }\
+        ]\
     }\
     }\
     }\
@@ -21,7 +27,8 @@ $dialog show @s \
         "contents": \
         {\
             "translate": "djzc.dialog.wiki.back_userbook",\
-            "fallback": "返回冬战成员用书",\
+            "fallback": "返回%1$s",\
+            "with": [{"translate":"djzc.book_userbook","fallback":"冬战成员用书","color":"aqua","italic":true}],\
             "click_event": {\
                 "action": "run_command",\
                 "command":"trigger djzc.option set 15"\

@@ -6,8 +6,14 @@
         "hover_event": {
             "action": "show_text",
             "value": {
-                "translate": "djzc.dialog.author2",
-                "fallback": "冬季战场制作组 编写"
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with":[
+                    {
+                "translate":"djzc.dialog.author1",
+                "fallback":"冬战制作组"
+                    }
+                ]
             }
         }
      },
@@ -43,7 +49,15 @@
      "exit_action": {
         "label": {
             "translate": "djzc.dialog.wiki.back_userbook",
-            "fallback": "返回冬战成员用书"
+            "fallback": "返回%1$s",
+            "with": [
+                {
+                    "translate": "djzc.book_userbook",
+                    "fallback": "冬战成员用书",
+                    "color": "aqua",
+                    "italic": true
+                }
+            ]
         },
         "action": {
             "type": "show_dialog",

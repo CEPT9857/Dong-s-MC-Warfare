@@ -7,8 +7,14 @@
             "action": "show_text",
             "value": [
             {
-                "translate": "djzc.dialog.author_deepseek",
-                "fallback": "Deepseek 编写"
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with":[
+                    {
+                    "translate":"djzc.dialog.author2",
+                    "fallback":"Deepseek"
+                    }
+                ]
             }
         ]
         }
@@ -31,7 +37,21 @@
         "contents":[
             {
                 "translate": "djzc.wiki_bzb_2",
-                "fallback": "设计动机：恶趣味。历史原型：特攻队。代码遗产：养活了轰炸指示器，养活了冈格尼尔旁边的刺雷，养活了冬战一半的爆炸特效。"
+                "fallback": "设计动机：恶趣味。历史原型：特攻队。代码遗产：养活了%1$s，养活了冈格尼尔旁边的%2$s，养活了冬战一半的爆炸特效。",
+                "with": [
+                    {
+                        "translate": "djzc.boom_rod",
+                        "fallback": "轰炸指示器",
+                        "color": "aqua",
+                        "italic": true
+                    },
+                    {
+                        "translate": "djzc.wea_cl",
+                        "fallback": "刺雷",
+                        "color": "aqua",
+                        "italic": true
+                    }
+                ]
             }
         ]
         },
@@ -89,7 +109,7 @@
                     "lore": [
                         {
                             "translate":"djzc.missile.desc1",
-                            "fallback":"长按右键以发射，但要当心敌方的干扰措施……",
+                            "fallback":"长按%1$s以发射，但要当心敌方的干扰措施……",
                             "with":[
                                 {
                                     "keybind":"key.use",
