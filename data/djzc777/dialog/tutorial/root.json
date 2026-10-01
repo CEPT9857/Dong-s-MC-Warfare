@@ -24,7 +24,7 @@
             "width": 500,
             "contents": {
                 "translate": "djzc777.dialog.root.body2",
-                "fallback": "这是一份基于 v1.0.6 数据包代码逐行核对编写的新手教程，共 8 章。"
+                "fallback": "跟随实境引导熟悉占点、启动器、成员用书和兵种装备，在模拟靶场完成第一次出击。"
             }
         },
         {
@@ -32,9 +32,13 @@
             "width": 500,
             "contents": {
                 "translate": "djzc777.dialog.root.body3",
-                "fallback": "随时可通过 %1$s 键（快速操作）、暂停菜单按钮或 /function djzc777:open 再次打开。",
+                "fallback": "可随时通过暂停菜单或 /function djzc777:open 返回本页；完成后也能从冬战百科全书重播。",
                 "with": [
-                    { "keybind": "key.quickActions", "color": "gold", "bold": true }
+                    {
+                        "keybind": "key.quickActions",
+                        "color": "gold",
+                        "bold": true
+                    }
                 ],
                 "color": "gray"
             }
@@ -44,12 +48,20 @@
             "width": 500,
             "contents": {
                 "translate": "djzc777.dialog.root.body4",
-                "fallback": "部分章节附带可直接点击的系统入口（%1$s、%2$s、%3$s、%4$s 等）。",
+                "fallback": "选择下方入口重新开始新手教程。进阶教程模块仍在设计中。",
                 "with": [
-                    { "translate": "djzc.dialog.userbook.to_prepare" },
-                    { "translate": "djzc.dialog.userbook.type_choose" },
-                    { "translate": "djzc.dialog.tp_system.title" },
-                    { "translate": "djzc.dialog.userbook.msg" }
+                    {
+                        "translate": "djzc.dialog.userbook.to_prepare"
+                    },
+                    {
+                        "translate": "djzc.dialog.userbook.type_choose"
+                    },
+                    {
+                        "translate": "djzc.dialog.tp_system.title"
+                    },
+                    {
+                        "translate": "djzc.dialog.userbook.msg"
+                    }
                 ],
                 "color": "gray"
             }
@@ -59,9 +71,12 @@
             "width": 500,
             "contents": {
                 "translate": "djzc777.dialog.root.body5",
-                "fallback": "祝你在冰原上玩得愉快！%1$s",
+                "fallback": "沿着光柱前进，战场上的每一步都会教会你新的东西。%1$s",
                 "with": [
-                    { "translate": "djzc.msg.ciallo", "color": "light_purple" }
+                    {
+                        "translate": "djzc.msg.ciallo",
+                        "color": "light_purple"
+                    }
                 ],
                 "color": "light_purple"
             }
@@ -69,21 +84,16 @@
     ],
     "columns": 2,
     "dialogs": [
-        "djzc777:tutorial/ch01",
-        "djzc777:tutorial/ch02",
-        "djzc777:tutorial/ch03",
-        "djzc777:tutorial/ch04",
-        "djzc777:tutorial/ch05",
-        "djzc777:tutorial/ch06",
-        "djzc777:tutorial/ch07",
-        "djzc777:tutorial/ch08"
+        "djzc777:tutorial_skip"
     ],
     "exit_action": {
         "label": {
             "translate": "djzc777.dialog.nav.book",
             "fallback": "返回%1$s",
             "with": [
-                { "translate": "djzc.book_userbook" }
+                {
+                    "translate": "djzc.book_userbook"
+                }
             ]
         },
         "action": {

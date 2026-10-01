@@ -33,12 +33,13 @@
 
 #### 1. 安装
 - **数据包**：将 `djzc444.zip` 放入存档的 `datapacks` 文件夹。(如果您使用了我们提供的存档进行游玩，可以跳过这一步)
-- **资源包**：将 `赛扬的冬季战场v1.0.6.zip` 放入 `resourcepacks` 文件夹，并在游戏中加载（**优先级调到最高**）。
+- **资源包**：将 [赛扬的冬季战场v1.0.6.zip](https://github.com/CEPT9857/CEPT-s-djzc) 放入 `resourcepacks` 文件夹，并在游戏中加载（**优先级调到最高**）。
 > 听说你的网络太卡了下载不了我们的资源包？
->  没问题，你可以把*数据包*塞进资源包文件夹，我们往里面塞了一套备用的文件！
-- **可选主题包**：如需“雪域龙腾”或“极地潜兵”，同样放入资源包文件夹，优先级高于默认包。
+> 没问题，你可以把*本数据包*塞进资源包文件夹，我们往里面塞了一套备用的文件！
+> 当然也只是备用的，请下载配套资源包获得完整体验。
+- **可选主题包**：如需[冬季战场：雪域龙腾](https://github.com/CEPT9857/Dong-s-MC-Warfare-Red-Loong)或“极地潜兵”，同样放入资源包文件夹，优先级高于默认包。
 
-- **或者即将推出的“冬季战场优化整合包”**：平常怎么装整合包就怎么装这个。
+- **或者直接用[冬季战场优化整合包](https://modrinth.com/modpack/dongs-mc-warfare)**：平常怎么装整合包就怎么装这个。
 
 > 📌 提示：强烈推荐使用服务器或者局域网联机进行多人对战。虽然单人模式也可体验游戏的部分内容，但多人游戏是我们推荐的游玩方式。
 
@@ -129,15 +130,11 @@
 - **防破坏**：所有生存模式玩家进入服务器自动设为冒险模式，无法破坏方块。
 
 #### 版本规划
-[这是更新日志](CHAGELOG.md)
+[这是更新日志](CHANGELOG.md)
 
-1.0.6 Ultimate（当前）
-- [x] 初步适配 English
-- [x] 进一步整理现有代码架构
-- [x] 修复一些BUG
-
-1.0.7 【整装待发】（2026年Q4）
+1.0.7 【整装待发】（开发中，预计2026年Q4发布）
 - [ ] 迁移到 Minecraft 26.3
+- [ ] 通过物品模型映射的team类型，根据队伍对盔甲进行自动着色，简化代码
 - [ ] 在代码中解耦游戏地图，并增加一个新地图
 - [ ] 加入地图边界检测系统，防止玩家迷路
 - [ ] 重制航空兵的**雷枪**
@@ -191,9 +188,10 @@
 - **資源包**：將 `賽揚的冬季戰場v1.0.6.zip` 放入 `resourcepacks` 資料夾，並在遊戲中載入（**將優先級調到最高**）。
 > 聽說你的網路太卡了下載不到我們的資源包？
 >  沒問題，你可以把*資料包*塞進資源包資料夾，我們往裡面塞了一套備用的檔案！
+> 當然這也只是備用檔案，請下載配套資源包以獲得完整體驗。
 - **可選主題包**：如需「雪域龍騰」或「極地潛兵」，同樣放入資源包資料夾，優先級高於預設包。
 
-- **或者即將推出的「冬季戰場優化整合包」**：平常怎麼裝整合包就怎麼裝這個。
+- **或者直接使用[冬季戰場優化整合包](https://modrinth.com/modpack/dongs-mc-warfare)**：平常怎麼安裝整合包就怎麼安裝這個。
 
 > 📌 提示：強烈推薦使用伺服器或區域網路進行多人對戰。雖然單人模式也可體驗遊戲的部分內容，但多人遊戲是我們推薦的遊玩方式。
 
@@ -284,14 +282,11 @@
 - **防破壞**：所有生存模式玩家進入伺服器後自動設為冒險模式，無法破壞方塊。
 
 #### 版本規劃
-[這是更新日誌](CHAGELOG.md)
-1.0.6 Ultimate（當前）
-- [x] 初步適配 English
-- [x] 進一步整理現有程式碼架構
-- [x] 修復一些 BUG
+[這是更新日誌](CHANGELOG.md)
 
-1.0.7 【整裝待發】（2026 年 Q4）
+1.0.7 【整裝待發】（開發中，預計 2026 年 Q4 發布）
 - [ ] 遷移到 Minecraft 26.3
+- [ ] 透過物品模型映射的 team 類型，根據隊伍自動為盔甲著色，簡化程式碼
 - [ ] 在程式碼中解耦遊戲地圖，並增加一個新地圖
 - [ ] 加入地圖邊界檢測系統，防止玩家迷路
 - [ ] 重製航空兵的**雷槍**
@@ -344,9 +339,10 @@ Of course, brrowing his name was also used with GNOD728's permission. You are al
 - **Resource pack**: Put `Saiyang's Dong's MC Warfare v1.0.6.zip` in the `resourcepacks` folder and load it in-game (**set its priority to the highest**).
 > Heard your internet is too slow to download our resource pack?
 >  No problem—you can put the *data pack* inside the resource pack folder; we included a backup set for that.
+> Of course, this is only a backup; download the matching resource pack for the full experience.
 - **Optional themed resource packs**: To use Red Loong or Polar Diver, also place the corresponding resource pack in the resource packs folder and give it a higher priority than the default pack.
 
-- **Or use the upcoming “Dong's MC Warfare Optimization Modpack”**: install it the same way you would install any other modpack.
+- **Or use the [Dong's MC Warfare Optimization Modpack](https://modrinth.com/modpack/dongs-mc-warfare)**: install it the same way you would install any other modpack.
 
 > 📌 Tip: We strongly recommend using a server or LAN multiplayer for combat. Although single-player lets you experience some of the game, multiplayer is the intended way to play.
 
@@ -437,14 +433,11 @@ Using our first map, **Dong's MC Warfare**, as an example:
 - **Block protection**: all players in Survival mode are automatically set to Adventure mode when they enter the server and cannot break blocks.
 
 #### Version Roadmap
-[This is changelog](CHAGELOG.md)
-1.0.6 Ultimate (current)
-- [x] Initial English adaptation
-- [x] Further organization of the existing code architecture
-- [x] Fixed some bugs
+[This is changelog](CHANGELOG.md)
 
-1.0.7 [On the Verge of Release] (Q4 2026)
+1.0.7 [In Development, Expected Q4 2026]
 - [ ] Migrate to Minecraft 26.3
+- [ ] Use the team type in item model mappings to automatically tint armor based on each player's team, simplifying the code
 - [ ] Decouple the game map from the code and add a new map
 - [ ] Add a map boundary detection system to prevent players from getting lost
 - [ ] Rebuild the Air Force's **Lightning Spear**

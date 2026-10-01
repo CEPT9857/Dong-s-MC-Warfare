@@ -1,0 +1,31 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_advanced.title",
+        "fallback": "进阶教程 · 模块待开放",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 440,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_advanced.body1",
+                "fallback": "进阶教程正在规划为分模块训练。本页先为你保留入口；模块内容准备完成后即可从这里继续学习。"
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.tutorial_advanced.back",
+            "fallback": "返回教程结尾",
+            "color": "aqua"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial_end"
+        }
+    }
+}

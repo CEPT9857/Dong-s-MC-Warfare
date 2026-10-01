@@ -1,0 +1,39 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_b.title",
+        "fallback": "训练目标 · 寻找 B 点",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_b.body1",
+                "fallback": "找点时留意三种线索：远处的信标光柱、点位附近的悬浮文字，以及启动器阶段出现的定位栏图标。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_b.body2",
+                "fallback": "B 点在你左前或右前方。转动视角寻找新的光柱，再朝它移动；定位栏用于追踪启动器，不会替你指向普通点位。"
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.common.dismiss",
+            "fallback": "寻找 B 点",
+            "color": "green"
+        },
+        "action": {
+            "type": "run_command",
+            "command": "dialog clear @s"
+        }
+    }
+}

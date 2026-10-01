@@ -1,0 +1,39 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_win.title",
+        "fallback": "训练完成 · 胜利",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_win.body1",
+                "fallback": "漂亮！你已攻下 D 点，完成了新兵的第一场胜利。你已经掌握寻找点位、启动启动器和推进战线的基本方法。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_win.body2",
+                "fallback": "接下来前往模拟配装处与靶场，认识成员用书，并亲手试用一套兵种装备。"
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.common.dismiss",
+            "fallback": "进入配装教学",
+            "color": "green"
+        },
+        "action": {
+            "type": "run_command",
+            "command": "dialog clear @s"
+        }
+    }
+}

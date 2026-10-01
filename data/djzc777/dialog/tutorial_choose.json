@@ -1,0 +1,34 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_choose.title",
+        "fallback": "选择你的兵种",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_choose.body1",
+                "fallback": "点击下方按钮打开兵种选择系统。选好装备后，到靶场试用武器；准备好了就自行走向显眼的出口。"
+            }
+        }
+    ],
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc777.dialog.tutorial_choose.action",
+                "fallback": "兵种选择",
+                "color": "gold",
+                "underlined": true
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc444:type_choose"
+            }
+        }
+    ]
+}

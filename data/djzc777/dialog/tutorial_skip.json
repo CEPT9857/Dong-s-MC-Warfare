@@ -1,0 +1,54 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "can_close_with_escape": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_skip.title",
+        "fallback": "新兵报到 · 是否跳过教程？",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_skip.body1",
+                "fallback": "实境教程将带你体验占领战区、启动启动器，并在模拟靶场熟悉装备。整个过程会以 T 方视角进行。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_skip.body2",
+                "fallback": "已经熟悉冬战？可以跳过教程，直接选择阵营并前往配装处。"
+            }
+        }
+    ],
+    "columns": 2,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc777.dialog.tutorial_skip.start",
+                "fallback": "进入新手教程",
+                "color": "green"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "function djzc777:tutorial/start"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.tutorial_skip.skip",
+                "fallback": "跳过，选择阵营",
+                "color": "gray"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc444:team_selection"
+            }
+        }
+    ]
+}

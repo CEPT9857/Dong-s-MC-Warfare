@@ -1,0 +1,39 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_gui2.title",
+        "fallback": "冬战成员用书 · 第二行",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_gui2.body1",
+                "fallback": "步话机用于向队友发送战场指令；重新部署会让你返回部署流程；中止音乐只影响你自己。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_gui2.body2",
+                "fallback": "这三项分别负责沟通、重新进入战场和个人音频，不会改变队伍的战斗目标。"
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.common.next",
+            "fallback": "下一页",
+            "color": "aqua"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial_gui3"
+        }
+    }
+}

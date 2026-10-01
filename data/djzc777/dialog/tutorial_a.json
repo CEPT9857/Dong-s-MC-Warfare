@@ -1,0 +1,39 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_a.title",
+        "fallback": "训练目标 · 占领 A 点",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_a.body1",
+                "fallback": "冬战的核心是占领战区。站进地面的 A 点画框，T 方的占领进度就会推进；保持控制直到 60 秒进度完成，即可拿下 A 点。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_a.body2",
+                "fallback": "占点不是击败某个目标，而是进入并控制区域。先让 A 点完成占领，再继续寻找下一处战区。"
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.common.dismiss",
+            "fallback": "继续占领",
+            "color": "green"
+        },
+        "action": {
+            "type": "run_command",
+            "command": "dialog clear @s"
+        }
+    }
+}

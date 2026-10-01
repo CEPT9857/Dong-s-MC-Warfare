@@ -1,0 +1,39 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_c.title",
+        "fallback": "干得漂亮 · 启动器已激活",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_c.body1",
+                "fallback": "你已经成功启动一台启动器！对准展示框互动并转动其中的物品；每台需要转满 7 圈，完成全部启动器后才能进攻对应战区。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_c.body2",
+                "fallback": "看一眼定位栏：图标会告诉你启动器所在方向。读懂这些提示，再行动；这就是现代战场的信息链。"
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.common.dismiss",
+            "fallback": "继续行动",
+            "color": "green"
+        },
+        "action": {
+            "type": "run_command",
+            "command": "dialog clear @s"
+        }
+    }
+}

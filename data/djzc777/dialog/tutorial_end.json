@@ -1,0 +1,64 @@
+{
+    "type": "multi_action",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_end.title",
+        "fallback": "基础教程完成 · 下一步？",
+        "color": "gold",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 440,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_end.body1",
+                "fallback": "基础教程到此结束。以后可以在冬季战场百科全书中重新打开新手教程。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 440,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_end.body2",
+                "fallback": "要继续学习进阶教程吗？进阶内容将按模块开放；模块清单仍在设计中。"
+            }
+        }
+    ],
+    "columns": 3,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc777.dialog.tutorial_end.finish",
+                "fallback": "暂不学习，结束教程",
+                "color": "gray"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "function djzc777:tutorial/end"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.tutorial_end.advanced",
+                "fallback": "了解进阶教程",
+                "color": "green"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial_advanced"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.tutorial_end.replay",
+                "fallback": "重播新手教程",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/root"
+            }
+        }
+    ]
+}

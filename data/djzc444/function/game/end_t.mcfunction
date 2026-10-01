@@ -1,4 +1,4 @@
-title @p title [{translate:"djzc.msg.failed_ct",fallback:"CT阵营战败","color":"red"}]
+title @a[team=CT] title [{translate:"djzc.msg.failed_ct",fallback:"CT阵营战败","color":"red"}]
 scoreboard players add @a[team=CT] djzc.fight_lost 1
 
 title @a[team=T] title [{translate:"djzc.msg.win_t",fallback:"T阵营胜利","color":"blue"}]
