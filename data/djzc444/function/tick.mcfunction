@@ -44,6 +44,8 @@ function djzc444:game/lib_sanlian3
 
 function djzc444:game/lib_boom_marker
 #轰炸指示器
+function djzc444:game/lib_rocket_ltjd
+#雷枪
 
 #function djzc444:game/lib_bzd
 #新版板载弹（制作中）
@@ -59,10 +61,10 @@ function djzc444:game/lib_jam_egg
 function djzc444:game/death_scoreboard
 #阵亡计分板
 
-execute if score A djzc.gameflow matches 0 run function djzc444:points/a_point
-execute if score B djzc.gameflow matches 0 run function djzc444:points/b_point
-execute if score C djzc.gameflow matches 1 run function djzc444:points/c_point
-execute if score D djzc.gameflow matches 1 run function djzc444:points/d_point
+execute if score A djzc.gameflow matches 0 run function djzc444:points/x_point with storage djzc444:map_djzc a_point
+execute if score B djzc.gameflow matches 0 run function djzc444:points/x_point with storage djzc444:map_djzc b_point
+execute if score C djzc.gameflow matches 1 run function djzc444:points/x_point with storage djzc444:map_djzc c_point
+execute if score D djzc.gameflow matches 1 run function djzc444:points/x_point with storage djzc444:map_djzc d_point
 #占点系统
 execute if score B+ djzc.gameflow matches 1 run function djzc444:game/game_starter_c
 execute if score C+ djzc.gameflow matches 1 run function djzc444:game/game_starter_d

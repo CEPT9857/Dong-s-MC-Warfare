@@ -63,7 +63,7 @@
 - **导弹发射**：手持导弹（如“空空导弹”），右键发射。
 - **干扰导弹**：右键干扰弹，你的上下左右前后会弹出几只鸡，导弹会追踪它们。
 
-> ⚠️ 注意：敌方玩家头顶**是没有名字的！**你可以通过盔甲纹饰颜色（CT蓝色 / T红色）和外观识别场上的人是敌是右。
+> ⚠️ 注意：敌方玩家头顶**是没有名字的！**你可以通过盔甲纹饰颜色（CT蓝色 / T红色）和外观识别场上的人是敌是友。
 
 ---
 
@@ -137,7 +137,7 @@
 - [ ] 通过物品模型映射的team类型，根据队伍对盔甲进行自动着色，简化代码
 - [ ] 在代码中解耦游戏地图，并增加一个新地图
 - [ ] 加入地图边界检测系统，防止玩家迷路
-- [ ] 重制航空兵的**雷枪**
+- [x] 重制航空兵的**雷枪**
 - [ ] 性能优化
 - [ ] 小bug修复
 
@@ -289,7 +289,7 @@
 - [ ] 透過物品模型映射的 team 類型，根據隊伍自動為盔甲著色，簡化程式碼
 - [ ] 在程式碼中解耦遊戲地圖，並增加一個新地圖
 - [ ] 加入地圖邊界檢測系統，防止玩家迷路
-- [ ] 重製航空兵的**雷槍**
+- [x] 重製航空兵的**雷槍**
 - [ ] 效能優化
 - [ ] 小 bug 修復
 
@@ -336,7 +336,7 @@ Of course, brrowing his name was also used with GNOD728's permission. You are al
 
 #### 1. Installation
 - **Data pack**: Put `djzc444.zip` in the world's `datapacks` folder. (You can skip this step if you are using the world save we provided.)
-- **Resource pack**: Put `Saiyang's Dong's MC Warfare v1.0.6.zip` in the `resourcepacks` folder and load it in-game (**set its priority to the highest**).
+- **Resource pack**: Put `CE's MC Warfare v1.0.6.zip` in the `resourcepacks` folder and load it in-game (**set its priority to the highest**).
 > Heard your internet is too slow to download our resource pack?
 >  No problem—you can put the *data pack* inside the resource pack folder; we included a backup set for that.
 > Of course, this is only a backup; download the matching resource pack for the full experience.
@@ -440,7 +440,7 @@ Using our first map, **Dong's MC Warfare**, as an example:
 - [ ] Use the team type in item model mappings to automatically tint armor based on each player's team, simplifying the code
 - [ ] Decouple the game map from the code and add a new map
 - [ ] Add a map boundary detection system to prevent players from getting lost
-- [ ] Rebuild the Air Force's **Lightning Spear**
+- [x] Rebuild the Air Force's **Thunder Spear**
 - [ ] Performance optimization
 - [ ] Minor bug fixes
 

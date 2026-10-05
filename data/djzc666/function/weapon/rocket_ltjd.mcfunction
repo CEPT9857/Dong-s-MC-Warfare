@@ -1,0 +1,1 @@
+give @s warped_fungus_on_a_stick[max_damage=16,custom_name={translate:"djzc.rocket_ltjd",fallback:"雷枪",color:dark_purple,bold:true},lore=[{translate:"djzc.rocket_ltjd.desc",fallback:"栋为调查兵团设计的新雷枪，但它不是为了对抗巨人......",color:dark_green,italic:true}],enchantment_glint_override=true,custom_data={tags:["djzc.rocket.ltjd"]}] 2

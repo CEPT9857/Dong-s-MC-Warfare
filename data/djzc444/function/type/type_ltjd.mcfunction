@@ -12,7 +12,7 @@ give @s minecraft:golden_apple 32
 #function djzc444:weapon/missile_ag
 
 give @s minecraft:ender_pearl[custom_name={translate:"djzc.type_ltjd.ender_pearl",fallback:"（这是装置的一部分）"}] 16
-function djzc444:weapon/rocket_ltjd
+function djzc666:weapon/rocket_ltjd
 function djzc666:weapon/missile_ag
 give @s firework_rocket[fireworks={flight_duration:2}] 128
 give @s lingering_potion[potion_contents={custom_effects:[{id:"instant_damage",amplifier:4,duration:600}]}] 7

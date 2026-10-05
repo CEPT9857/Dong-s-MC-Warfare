@@ -5,7 +5,7 @@ data modify storage example:data arr set value [0,1,1,0,1]
 data modify storage example:data arr_temp set from storage example:data arr
 
 #运行数组输出
-function djzc444:option/tool_display2
+function djzc444:option/test_tool/tool_display2
 
 #current_index：当前索引（虚拟玩家名，表示正在处理第几个元素）
 #arr->array：数列

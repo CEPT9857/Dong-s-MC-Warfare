@@ -67,9 +67,13 @@ scoreboard objectives add djzc666.track dummy {translate:"djzc666.scoreboard.tra
 scoreboard objectives add djzc.r_click3 minecraft.used:minecraft.blue_egg "r_click_blue_egg"
 scoreboard objectives add djzc.r_click4 minecraft.used:minecraft.brown_egg "r_click_brown_egg"
 scoreboard objectives add djzc.r_click5 minecraft.used:minecraft.carrot_on_a_stick "r_click_carrot_on_a_stick"
+scoreboard objectives add djzc.r_click6 minecraft.used:minecraft.warped_fungus_on_a_stick "r_click_warped_fungus_on_a_stick"
 scoreboard objectives add djzc.r_click7 minecraft.used:minecraft.written_book "r_click_written_book"
 scoreboard objectives add djzc.r_click2 minecraft.used:minecraft.egg "r_click_egg"
 #行为检测类计分板
+
+scoreboard objectives add djzc.map dummy
+#注入地图参数
 
 scoreboard players set 1 djzc.r_click7 1
 #常量设置
