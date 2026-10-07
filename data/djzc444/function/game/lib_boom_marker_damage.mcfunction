@@ -1,5 +1,5 @@
 #特效
-execute at @s run particle campfire_cosy_smoke ~ ~ ~ 0.2 0.1 0.2 0.9 500
+execute at @s run particle campfire_cosy_smoke ~ ~ ~ 0.2 0.1 0.2 0.9 500 force
 #爆炸伤害梯度
 execute at @s as @e[distance=..0.5] run damage @s 144 minecraft:explosion
 execute at @s as @e[distance=0.5..1.5] run damage @s 134 minecraft:explosion

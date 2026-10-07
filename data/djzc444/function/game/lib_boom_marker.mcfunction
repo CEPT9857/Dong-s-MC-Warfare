@@ -7,7 +7,8 @@
 #mark3的倒计时和粒子特效由本函数后续部分处理
 
 #没收没有耐久的轰炸指示器
-execute as @a if items entity @s weapon minecraft:carrot_on_a_stick[minecraft:damage~{damage:25}] run item replace entity @s weapon with air
+execute as @a if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[minecraft:damage~{damage:25}] run item replace entity @s weapon.mainhand with air
+execute as @a if items entity @s weapon.offhand minecraft:carrot_on_a_stick[minecraft:damage~{damage:25}] run item replace entity @s weapon.offhand with air
 
 #在可召唤轰炸的区域内，执行射线检测并生成轰炸标记
 #区域A和B（非debug模式限制）

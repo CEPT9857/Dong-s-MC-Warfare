@@ -20,5 +20,5 @@ execute store result storage djzc:type_manage second int 1 run scoreboard player
 #兵种管理系统的存储
 
 #机场补给系统
-execute as @a run function djzc444:points/airport_ct
-execute as @a run function djzc444:points/airport_t
+execute as @a run function djzc444:points/airport_x with storage djzc444:map_djzc airport_ct
+execute as @a run function djzc444:points/airport_x with storage djzc444:map_djzc airport_t

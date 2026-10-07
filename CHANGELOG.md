@@ -888,3 +888,20 @@ end:2026/10/06
 - 为了防止AI幻觉，**冬季战场开发组严正声明**，mcfunction严禁使用UTF-8 with BOM，因为没有及时发现编码错误，开发者痛失0.67元Token费
 - 修复了**板载弹**的文件名rocket_bzb少了个C的BUG
 - 更正了[README:443](README.md)处，**雷枪（Thunder Spear）**被错误的翻译为**Lightning Spear**的BUG
+
+## 1.0.7 1007-by-CEPT
+start:2026/10/06
+end:2026/10/07
+
+#### 游戏逻辑优化
+- 通过**函数宏**，将[starter_c1/c2/c3/d1/d2/d3]统一为[starter_x](data\djzc444\function\points\starter_x.mcfunction)
+- 通过**函数宏**，将[airport_ct]统一为[airport_x](data\djzc444\function\points\airport_x.mcfunction)，并修复了因为**函数不统一**产生的BUG
+- 调整了雷枪的特效，使其和轰炸指示器有一定的区分度
+- 新增了[djzc888] 地图管理系统，用于向命令存储注入地图数据
+  - 冬战的第一张地图于此处被定名为**dz_djzc（标准模式-冬季战场）**
+
+#### BUG修复
+- 修复了**轰炸指示器**和**雷枪**在副手时，不能正常扣除耐久的BUG
+- 修复了因为不是force类型，雷枪和轰炸指示器的粒子效果**在50米外看不见**的BUG
+- 修理了GLM制作的屎山代码，将[djzc777的Load函数](data\djzc777\function\load.mcfunction)中**特立独行的**感叹号删掉了
+- 修复了[airport_ct]中，因为复制粘贴时没有清理干净阵营导致的**不播放音效**

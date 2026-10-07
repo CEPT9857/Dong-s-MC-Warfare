@@ -6,7 +6,8 @@
 function djzc555:raycast/ground
 
 #扣掉轰炸指示器的耐久（debug模式不扣）
-execute unless score debug djzc.option matches 1 run item modify entity @s weapon djzc444:damage_half
+execute unless score debug djzc.option matches 1 run item modify entity @s weapon.mainhand djzc444:damage_half
+execute unless score debug djzc.option matches 1 run item modify entity @s weapon.offhand djzc444:damage_half
 
 #重置右键分数
 scoreboard players set @s djzc.r_click5 0

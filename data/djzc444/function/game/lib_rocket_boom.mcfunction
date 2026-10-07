@@ -26,7 +26,7 @@ $execute positioned $(x) $(y) $(z) as @e[distance=7.0..7.5,tag=!djzc.rocket_cast
 $execute positioned $(x) $(y) $(z) as @e[distance=7.5..8.0,tag=!djzc.rocket_caster] run damage @s 2 minecraft:explosion
 
 #特效（定位到爆心）
-$execute positioned $(x) $(y) $(z) run particle minecraft:campfire_cosy_smoke ~ ~ ~ 0.2 0.1 0.2 0.9 500
+$execute positioned $(x) $(y) $(z) run particle minecraft:campfire_cosy_smoke ~ ~ ~ 0.1 0.1 0.1 0.5 300 force
 
 #音效
 $execute positioned $(x) $(y) $(z) run playsound entity.generic.explode ambient @a ~ ~ ~ 1.0 1.0 0.1

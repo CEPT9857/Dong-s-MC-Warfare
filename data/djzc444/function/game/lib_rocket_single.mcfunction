@@ -9,4 +9,5 @@ scoreboard players set @s djzc.r_click6 0
 function djzc444:game/lib_rocket_fire
 
 #扣掉雷枪耐久（满16发即耗尽，debug模式不扣）
-execute unless score debug djzc.option matches 1 run item modify entity @s weapon djzc444:damage_ltjd
+execute unless score debug djzc.option matches 1 run item modify entity @s weapon.mainhand djzc444:damage_ltjd
+execute unless score debug djzc.option matches 1 run item modify entity @s weapon.offhand djzc444:damage_ltjd
