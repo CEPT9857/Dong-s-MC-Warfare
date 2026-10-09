@@ -14,8 +14,9 @@ advancement grant @a only djzc444:fight/root
 advancement grant @a from djzc444:intro/root
 #初始成就
 
-execute as @a run spawnpoint @s -245 65 -630
-#默认重生点
+setworldspawn -434 41 -709 -505 0
+execute as @a run spawnpoint @s -434 41 -709 -505 0
+#默认重生点，jc_main中的起始点，用两种方法设置，防止BUG
 
 scoreboard objectives add djzc.gameflow dummy {translate:"djzc.scoreboard.gameflow",fallback:"游戏流程计算器"}
 #游戏流程计算器

@@ -8,6 +8,7 @@ scoreboard players set @s djzc.r_click6 0
 #执行射线检测并在落点引爆
 function djzc444:game/lib_rocket_fire
 
-#扣掉雷枪耐久（满16发即耗尽，debug模式不扣）
-execute unless score debug djzc.option matches 1 run item modify entity @s weapon.mainhand djzc444:damage_ltjd
+#扣掉雷枪耐久（debug模式不扣）
+execute unless score debug djzc.option matches 1 run execute as @a if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick run item modify entity @s weapon.mainhand djzc444:damage_ltjd
+execute as @a if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick run return fail
 execute unless score debug djzc.option matches 1 run item modify entity @s weapon.offhand djzc444:damage_ltjd

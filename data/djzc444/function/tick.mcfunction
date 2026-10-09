@@ -6,7 +6,7 @@ execute if score game djzc.gameflow matches 0 run function djzc444:game/game_pre
 #准备系统
 
 execute as @a[gamemode=survival] run gamemode adventure
-#把所有生存模式玩家改成冒险模式-反破坏
+#把所有生存模式玩家改成冒险模式，防止玩家拆掉地图
 
 scoreboard players enable @a djzc.ctmsg
 scoreboard players enable @a djzc.tmsg
@@ -55,17 +55,23 @@ function djzc444:game/lib_smoke
 
 function djzc444:game/lib_allay_drone
 function djzc444:game/lib_swarm_drones
-function djzc444:game/lib_jam_egg
 #无人机系统
+function djzc444:game/lib_jam_egg
+#干扰弹
 
 function djzc444:game/death_scoreboard
 #阵亡计分板
 
-execute if score A djzc.gameflow matches 0 run function djzc444:points/x_point with storage djzc444:map_djzc a_point
-execute if score B djzc.gameflow matches 0 run function djzc444:points/x_point with storage djzc444:map_djzc b_point
-execute if score C djzc.gameflow matches 1 run function djzc444:points/x_point with storage djzc444:map_djzc c_point
-execute if score D djzc.gameflow matches 1 run function djzc444:points/x_point with storage djzc444:map_djzc d_point
+execute if score A djzc.gameflow matches 0 run function djzc444:points/x_point with storage djzc:map a_point
+execute if score B djzc.gameflow matches 0 run function djzc444:points/x_point with storage djzc:map b_point
+execute if score C djzc.gameflow matches 1 run function djzc444:points/x_point with storage djzc:map c_point
+execute if score D djzc.gameflow matches 1 run function djzc444:points/x_point with storage djzc:map d_point
 #占点系统
-execute if score B+ djzc.gameflow matches 1 run function djzc444:game/game_starter_c
-execute if score C+ djzc.gameflow matches 1 run function djzc444:game/game_starter_d
+execute if score B+ djzc.gameflow matches 1 run function djzc444:game/game_starter_x with storage djzc:map c1
+execute if score B+ djzc.gameflow matches 1 run function djzc444:game/game_starter_x with storage djzc:map c2
+execute if score B+ djzc.gameflow matches 1 run function djzc444:game/game_starter_x with storage djzc:map c3
+
+execute if score C+ djzc.gameflow matches 1 run function djzc444:game/game_starter_x with storage djzc:map d1
+execute if score C+ djzc.gameflow matches 1 run function djzc444:game/game_starter_x with storage djzc:map d2
+execute if score C+ djzc.gameflow matches 1 run function djzc444:game/game_starter_x with storage djzc:map d3
 #启动器系统

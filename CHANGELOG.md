@@ -889,13 +889,13 @@ end:2026/10/06
 - 修复了**板载弹**的文件名rocket_bzb少了个C的BUG
 - 更正了[README:443](README.md)处，**雷枪（Thunder Spear）**被错误的翻译为**Lightning Spear**的BUG
 
-## 1.0.7 1007-by-CEPT
+### 1.0.7 1007-by-CEPT
 start:2026/10/06
 end:2026/10/07
 
 #### 游戏逻辑优化
 - 通过**函数宏**，将[starter_c1/c2/c3/d1/d2/d3]统一为[starter_x](data\djzc444\function\points\starter_x.mcfunction)
-- 通过**函数宏**，将[airport_ct]统一为[airport_x](data\djzc444\function\points\airport_x.mcfunction)，并修复了因为**函数不统一**产生的BUG
+- 通过**函数宏**，将[airport_ct/t]统一为[airport_x](data\djzc444\function\points\airport_x.mcfunction)，并修复了因为**函数不统一**产生的BUG
 - 调整了雷枪的特效，使其和轰炸指示器有一定的区分度
 - 新增了[djzc888] 地图管理系统，用于向命令存储注入地图数据
   - 冬战的第一张地图于此处被定名为**dz_djzc（标准模式-冬季战场）**
@@ -904,4 +904,33 @@ end:2026/10/07
 - 修复了**轰炸指示器**和**雷枪**在副手时，不能正常扣除耐久的BUG
 - 修复了因为不是force类型，雷枪和轰炸指示器的粒子效果**在50米外看不见**的BUG
 - 修理了GLM制作的屎山代码，将[djzc777的Load函数](data\djzc777\function\load.mcfunction)中**特立独行的**感叹号删掉了
-- 修复了[airport_ct]中，因为复制粘贴时没有清理干净阵营导致的**不播放音效**
+- 修复了[airport_ct]中，因为复制粘贴时没有清理干净阵营导致的**不播放音效**的BUG
+
+### 1.0.7 1009-by-CEPT/GNOD728
+start:2026/10/08
+end:2026/10/09
+
+#### 在数据包之外
+- 在dz_djzc地图的地下，新建了新手教程地图**jc_main**的一部分，并进一步优化了附近的环境，力求做到性能优化（GNOD728）
+- 拆除了原本在地表设置的新手教程和欢迎点位
+- 进一步删除了不必要的方块，替换为石头
+
+#### 游戏逻辑优化
+- 调整了雷枪和轰炸指示器的优先级：当双持**轰炸指示器**或双持**雷枪**时，优先使用主手上的道具
+- 修改世界重生点到**jc_main的起始点**
+- 现在，大多数音效将自动在玩家/重要的中介实体所在位置播放，完全与地图解耦，取代了过去设定在**地图几何中心坐标处**的方法
+- 通过**函数宏**，将**自动修复物品展示框**的功能与地图解耦
+- 通过**函数宏**，将[game_starter_c/d]统一为[game_starter_x](data\djzc444\function\game\game_starter_x.mcfunction)
+- 现在，准备系统只会检测CT和T阵营的玩家，不再需要全部在线玩家准备了
+- 通过**函数宏**，将开局时**自动复位启动器**的功能与地图解耦
+
+
+#### BUG修复
+- 维护了接口文档
+- 修复了上个版本的更新日志中，### 1.0.7 1007-by-CEPT不小心少了个#的BUG
+- 修复了上个版本的更新日志中[airport_ct/t]不小心少了个/t的BUG
+- 清理了一部分上个版本中，DSH写的乱七八糟的注释，防止污染其他AI的上下文
+- 修复了**轰炸指示器**或**雷枪**在副手激活时，同步扣除主手道具耐久的BUG
+- 修复了[轰炸指示器](data\djzc444\function\weapon\boom_rod.mcfunction)falback的“右键”二字没有改成%1$s的BUG
+- 删除了[end_custom](data\djzc444\function\game\end_custom.mcfunction)中，在制作独立地图前遗留的/gamerule mob_griefing true代码，防止地图被炸坏
+- 修复了[flow_begin](data\djzc444\function\game\flow_begin.mcfunction)中，错误的将**展示subtitle**的指令的目标选择器写成`@p`而非`@a`的BUG

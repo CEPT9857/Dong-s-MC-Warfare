@@ -5,7 +5,7 @@
 #清理上一tick遗留的爆心标记（正常情况下不存在，作兜底）
 kill @e[tag=ltjd_boom]
 
-#执行基于djzc555的即时射线检测（与轰炸指示器同源）
+#执行基于djzc555的即时射线检测
 execute at @s run function djzc555:raycast/rocket
 
 #在射线检测命中/终点位置召唤爆心标记（标记只承载坐标，引爆时读出）

@@ -3,11 +3,13 @@
 scoreboard players set #total_players djzc.prepare 0
 scoreboard players set #ready_players djzc.prepare 0
 
-# 统计所有玩家总数（包括所有在线玩家）
-execute as @a run scoreboard players add #total_players djzc.prepare 1
+# 统计所有玩家总数（包括所有CT/T玩家）
+execute as @a[team=T] run scoreboard players add #total_players djzc.prepare 1
+execute as @a[team=CT] run scoreboard players add #total_players djzc.prepare 1
 
 # 统计准备就绪的玩家数（这里假设 prepare 分数为 1 表示已准备）
-execute as @a if score @s djzc.prepare matches 1 run scoreboard players add #ready_players djzc.prepare 1
+execute as @a[team=T] if score @s djzc.prepare matches 1 run scoreboard players add #ready_players djzc.prepare 1
+execute as @a[team=CT] if score @s djzc.prepare matches 1 run scoreboard players add #ready_players djzc.prepare 1
 # 统计prepare分数不为0的玩家数
 
 # 只有当存在至少一名玩家，且所有在线玩家都已准备时，才启动游戏

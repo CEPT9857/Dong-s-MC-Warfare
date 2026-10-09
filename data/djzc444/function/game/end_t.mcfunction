@@ -8,8 +8,8 @@ tellraw @a {translate:"djzc.msg.win_t.desc",fallback:"T阵营占领了所有战�
 #友情提示
 
 stopsound @a
-playsound minecraft:entity.wither.death music @a[team=CT] -386.00 70.39 -755.52 1000
-playsound entity.ender_dragon.death music @a[team=T] -386.00 70.39 -755.52 1000
+execute as @a[team=T] at @s run playsound entity.ender_dragon.death player @s ~ ~ ~ 1000
+execute as @a[team=CT] at @s run playsound minecraft:entity.wither.death player @s ~ ~ ~ 1000
 #T胜利
 
 function djzc444:game/end_custom

@@ -10,8 +10,8 @@ tellraw @a {translate:"djzc.msg.win_ct.desc",fallback:"T阵营未能占领所有
 bossbar set djzc_game:time visible false
 
 stopsound @a
-playsound minecraft:entity.wither.death music @a[team=T] -386.00 70.39 -755.52 1000
-playsound entity.ender_dragon.death music @a[team=CT] -386.00 70.39 -755.52 1000
+execute as @a[team=T] at @s run playsound minecraft:entity.wither.death player @s ~ ~ ~ 1000
+execute as @a[team=CT] at @s run playsound entity.ender_dragon.death player @s ~ ~ ~ 1000
 #CT胜利
 
 function djzc444:game/end_custom

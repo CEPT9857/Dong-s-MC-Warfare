@@ -16,7 +16,7 @@ $execute if score T_$(NAME) djzc.time3 <= 1000 djzc.time3 run scoreboard players
 $execute if score T_$(NAME) djzc.time3 <= 1000 djzc.time3 run scoreboard players set T_$(NAME) djzc.time3 1040
 #小于1000时退位
 
-$execute if score T_S$(NAME) djzc.time3 <= 0 djzc.time3 run function djzc444:points/x_occupy_by_t with storage djzc444:map_djzc $(name)_point
+$execute if score T_S$(NAME) djzc.time3 <= 0 djzc.time3 run function djzc444:points/x_occupy_by_t with storage djzc:map $(name)_point
 $execute if score T_S$(NAME) djzc.time3 <= 0 djzc.time3 run scoreboard players set T_S$(NAME) djzc.time3 60
 #引用占点函数
 

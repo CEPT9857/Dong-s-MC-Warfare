@@ -6,13 +6,12 @@ bossbar set djzc_game:time visible false
 scoreboard players add @a[team=T] djzc.fight 1
 scoreboard players add @a[team=CT] djzc.fight 1
 scoreboard players set @a djzc.prepare 0
-gamerule mob_griefing true
 
 #抹除工具类成就
 advancement revoke @a from djzc444:tool/root
 
 #默认重生点
-execute as @a run spawnpoint @s -245 65 -630
+execute as @a run spawnpoint @s -434 41 -709 -505 0
 gamerule command_block_output true
 #提示游戏结束
 tellraw @a "——————"
