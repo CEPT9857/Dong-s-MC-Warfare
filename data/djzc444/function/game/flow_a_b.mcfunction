@@ -1,3 +1,5 @@
+#地图特殊事件
+$function djzc888:$(name)/unique
 scoreboard players set A+B djzc.gameflow 0
 stopsound @a
 scoreboard players set A djzc.gameflow -1
@@ -9,9 +11,9 @@ title @a[team=T] title [{translate:"djzc.msg.a_b.t",fallback:"进攻C点启动�
 title @a[team=CT] title [{translate:"djzc.msg.a_b.ct",fallback:"防守C点启动器","color":"dark_aqua"}]
 tellraw @a {translate:"djzc.msg.a_b.desc",fallback:"C点启动器的位置已被高亮，旋转物品展示框会激活启动器。若启动器被全部激活，C点就可以被T阵营占领",color:"green"}
 #高亮启动器旁的盔甲架
-execute as @e[tag=c1] run function djzc444:game/game_starter_display
-execute as @e[tag=c2] run function djzc444:game/game_starter_display
-execute as @e[tag=c3] run function djzc444:game/game_starter_display
+function djzc444:game/game_starter_display with storage djzc:map c1
+function djzc444:game/game_starter_display with storage djzc:map c2
+function djzc444:game/game_starter_display with storage djzc:map c3
 #音效
 execute as @a[team=T] at @s run playsound minecraft:entity.piglin_brute.angry player @s ~ ~ ~ 1000
 execute as @a[team=CT] at @s run playsound minecraft:entity.piglin_brute.death player @s ~ ~ ~ 1000

@@ -3,8 +3,7 @@
 #真实战场上给敌人开门就是找死，如果真有人这么做了，说明还需要在战场上磨砺
 
 #清除启动器的高亮和定位栏
-$effect clear @e[tag=$(name)]
-$attribute @e[tag=$(name),limit=1] waypoint_transmit_range base set 0
+$function djzc444:game/game_starter_nodisplay with storage djzc:map $(name)
 #音效
 $execute if score $(NAME) djzc.gameflow matches 0 as @a[team=CT] at @s run playsound entity.ender_dragon.growl music @s ~ ~ ~ 1000
 $execute if score $(NAME) djzc.gameflow matches 0 as @a[team=T] at @s run playsound entity.player.levelup music @s ~ ~ ~ 1000
@@ -15,4 +14,4 @@ $execute if score $(NAME) djzc.gameflow matches 0 run tellraw @a {translate:"djz
 $data merge entity @e[x=$(x),y=$(y),z=$(z),limit=1,type=minecraft:glow_item_frame,distance=..1.5] {ItemRotation:0}
 #请求并修改游戏流程计算器，标志该启动器被激活
 $scoreboard players set $(NAME) djzc.gameflow 1
-function djzc444:game/game_flow
+function djzc444:game/game_flow with storage djzc:map map_data

@@ -10,9 +10,16 @@
         },
         "description": {
             "translate": "djzc.advancement.wea_ga.desc",
-            "fallback": "投射一枚%1$s",
-            "color": "aqua",
-            "italic": true
+            "fallback": "使用一次%1$s",
+            "italic": true,
+            "with": [
+                {
+                    "translate": "djzc.fishing_rod",
+                    "fallback": "地空导弹发射器",
+                    "color": "aqua",
+                    "italic": true
+                }
+            ]
         },
         "frame": "task",
         "show_toast": false,

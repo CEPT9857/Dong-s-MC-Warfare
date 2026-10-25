@@ -3,21 +3,20 @@ gamerule mob_griefing false
 schedule clear djzc444:game/music_stop
 stopsound @a
 function djzc444:game/time_initialize
-function djzc444:game/flow_begin
+function djzc888:map_swich
+
+function djzc444:game/flow_begin with storage djzc:map map_data
 
 execute as @a[team=CT] run spawnpoint @s -405 30 -809
 execute as @a[team=T] run spawnpoint @s -397 30 -809
-#设定双方默认重生点为dz_djzc配装处
+#设定双方默认重生点为dz_djzc配装处，有经费做新地图的配装处以后，转移到unique
 
 tp @a[team=CT] -405 30 -809
 tp @a[team=T] -397 30 -809
-#传送到dz_djzc配装处
+#传送到dz_djzc配装处，有经费做新地图的配装处以后，转移到unique
 
 bossbar set djzc_game:time visible true
 bossbar set djzc_game:time value 900
-
-fill -467 62 -764 -469 62 -758 netherite_block
-#填平D点大坑
 
 scoreboard players reset @a djzc.CT
 scoreboard players reset @a djzc.T
@@ -66,8 +65,13 @@ function djzc444:game/game_starter_reset with storage djzc:map d2
 function djzc444:game/game_starter_reset with storage djzc:map d3
 #重置启动器展示框
 
-function djzc444:game/game_starter_nodisplay
-#重置启动器盔甲架
+function djzc444:game/game_starter_nodisplay with storage djzc:map c1
+function djzc444:game/game_starter_nodisplay with storage djzc:map c2
+function djzc444:game/game_starter_nodisplay with storage djzc:map c3
+function djzc444:game/game_starter_nodisplay with storage djzc:map d1
+function djzc444:game/game_starter_nodisplay with storage djzc:map d2
+function djzc444:game/game_starter_nodisplay with storage djzc:map d3
+#重置启动器盔甲架状态
 
 scoreboard objectives setdisplay list djzc.count_kill
 #将击杀数显示在玩家列表中

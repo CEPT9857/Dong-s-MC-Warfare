@@ -1,3 +1,5 @@
+#地图特殊事件
+$function djzc888:$(name)/unique
 title @a title [{translate:"djzc.msg.begin",fallback:"冬季战场初始化","color":"aqua"}]
 title @a subtitle [{translate:"djzc.msg.begin.desc",fallback:"加油，特种兵","color":"dark_aqua"}]
 #修改游戏流程计算器，提示游戏开始

@@ -14,12 +14,12 @@
 
 ~~其实本来叫Winter Battlefield的，但是这和EA的Battlefield太像了，所以改成现在的名字，大家感觉我们的谐音梗水平怎么样呢？~~
 
-**核心理念**：免费、公平、文化传播、玩家共创。
+**核心理念**：免费、公平、开放、自定义
 
 - **免费**：永远不收一分钱，如果谁让你付费购买，你被骗了。
-- **公平**：禁止外挂，不搞氪金变强，每一场胜负只取决于你的操作和配合。
-- **文化传播**：从“雪域龙腾”到“极地潜兵”，冬战可以被任何人改写成任何文化主题。
-- **玩家共创**：每一个测试员、每一个提交翻译键的人、每一个在60144发过“Ciallo～”的人，都是冬战的共建者。
+- **公平**：我们呼吁各位玩家拒绝外挂和氪金变强，每一场胜负应该取决于你的操作和配合。
+- **开放**：欢迎各位给我们提出各种各样的建议
+- **自定义**：从“雪域龙腾”到“极地潜兵”，冬战长成什么样交给你决定。
 
 **一句话定义**：  
 **在冰原上打一场15分钟的攻防战，用兵种、导弹和步话机，写自己的战争故事。**
@@ -135,7 +135,7 @@
 1.0.7 【整装待发】（开发中，预计2026年Q4发布）
 - [ ] 迁移到 Minecraft 26.3
 - [ ] 通过物品模型映射的team类型，根据队伍对盔甲进行自动着色，简化代码
-- [ ] 在代码中解耦游戏地图，并增加一个新地图
+- [x] 在代码中解耦游戏地图，并增加一个新地图
 - [ ] 加入地图边界检测系统，防止玩家迷路
 - [x] 重制航空兵的**雷枪**
 - [ ] 性能优化
@@ -166,12 +166,12 @@
 
 ~~其實本來叫 Winter Battlefield 的，但是這和 EA 的 Battlefield 太像了，所以改成現在的名字，大家覺得我們的諧音梗水準怎麼樣呢？~~
 
-**核心理念**：免費、公平、文化傳播、玩家共創。
+**核心理念**：免費、公平、開放、自訂
 
 - **免費**：永遠不收一分錢，如果有人讓你付費購買，你就被騙了。
-- **公平**：禁止外掛，不搞課金變強，每一場勝負只取決於你的操作和配合。
-- **文化傳播**：從「雪域龍騰」到「極地潛兵」，冬戰可以被任何人改寫成任何文化主題。
-- **玩家共創**：每一個測試員、每一個提交翻譯鍵的人、每一個在 60144 發過「Ciallo～」的人，都是冬戰的共建者。
+- **公平**：我們呼籲各位玩家拒絕外掛和課金變強，每一場勝負都應該取決於你的操作和配合。
+- **開放**：歡迎各位提出各種各樣的建議。
+- **自訂**：從「雪域龍騰」到「極地潛兵」，冬戰要長成什麼樣子，由你決定。
 
 **一句話定義**：
 **在冰原上打一場 15 分鐘的攻防戰，用兵種、飛彈和步話機，寫下自己的戰爭故事。**
@@ -287,7 +287,7 @@
 1.0.7 【整裝待發】（開發中，預計 2026 年 Q4 發布）
 - [ ] 遷移到 Minecraft 26.3
 - [ ] 透過物品模型映射的 team 類型，根據隊伍自動為盔甲著色，簡化程式碼
-- [ ] 在程式碼中解耦遊戲地圖，並增加一個新地圖
+- [x] 在程式碼中解耦遊戲地圖，並增加一個新地圖
 - [ ] 加入地圖邊界檢測系統，防止玩家迷路
 - [x] 重製航空兵的**雷槍**
 - [ ] 效能優化
@@ -317,12 +317,12 @@ Of course, brrowing his name was also used with GNOD728's permission. You are al
 
 ~~It was originally going to be called Winter Battlefield, but that sounded too much like EA's Battlefield, so we changed it to its current name. What do you think of our pun?~~
 
-**Core principles**: free, fair, cultural expression, and player co-creation.
+**Core principles**: free, fair, open, and customizable.
 
 - **Free**: We will never charge a cent. If someone asks you to pay for it, you are being scammed.
-- **Fair**: Cheats are forbidden, and paying cannot make you stronger. Every match is decided by your skill and teamwork.
-- **Cultural expression**: From the Snowland Dragon Soar theme to the Polar Diver theme, Dong's MC Warfare can be rewritten by anyone around any cultural theme.
-- **Player co-creation**: Every tester, everyone who submits a translation key, and everyone who has posted “Ciallo~” in 60144 is a co-builder of Dong's MC Warfare.
+- **Fair**: We encourage players to reject cheats and pay-to-win. Every match should be decided by your skill and teamwork.
+- **Open**: We welcome all kinds of suggestions.
+- **Customizable**: From Red Loong to Polar Diver, you decide what Dong's MC Warfare becomes.
 
 **In one sentence**:
 **Fight a 15-minute attack-and-defense battle on an ice plain, using classes, missiles, and radios to write your own war story.**
@@ -438,7 +438,7 @@ Using our first map, **Dong's MC Warfare**, as an example:
 1.0.7 [In Development, Expected Q4 2026]
 - [ ] Migrate to Minecraft 26.3
 - [ ] Use the team type in item model mappings to automatically tint armor based on each player's team, simplifying the code
-- [ ] Decouple the game map from the code and add a new map
+- [x] Decouple the game map from the code and add a new map
 - [ ] Add a map boundary detection system to prevent players from getting lost
 - [x] Rebuild the Air Force's **Thunder Spear**
 - [ ] Performance optimization

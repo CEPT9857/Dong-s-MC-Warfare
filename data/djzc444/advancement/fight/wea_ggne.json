@@ -11,8 +11,16 @@
         "description": {
             "translate": "djzc.advancement.wea_ggne.desc",
             "fallback": "使用%1$s",
-            "color": "aqua",
-            "italic": true
+            "color": "green",
+            "italic": true,
+            "with": [
+                {
+                    "translate": "djzc.trident_ggne",
+                    "fallback": "[神枪] - 冈格尼尔",
+                    "color": "aqua",
+                    "italic": true
+                }
+            ]
         },
         "frame": "task",
         "show_toast": false,

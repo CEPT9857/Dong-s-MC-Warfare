@@ -1,5 +1,8 @@
+#地图特殊事件
+$function djzc888:$(name)/unique 
+
 scoreboard players set B+ djzc.gameflow 2
-function djzc444:game/game_flow
+function djzc444:game/game_flow with storage djzc:map map_data
 #修改并运行游戏流程计算器
 tellraw @a {translate:"djzc.msg.c_starter",fallback:"C点启动器被全部激活，C点已向T阵营开放占领",color:"green"}
 #友情提示

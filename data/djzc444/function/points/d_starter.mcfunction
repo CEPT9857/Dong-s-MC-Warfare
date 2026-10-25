@@ -1,7 +1,8 @@
-fill -467 62 -764 -469 62 -758 air
-#打开D点盖子
+#地图特殊事件
+$function djzc888:$(name)/unique
+
 scoreboard players set C+ djzc.gameflow 2
-function djzc444:game/game_flow
+function djzc444:game/game_flow with storage djzc:map map_data
 #修改并运行游戏流程计算器
 tellraw @a {translate:"djzc.msg.d_starter",fallback:"D点启动器被全部激活，D点已向T阵营开放占领",color:"green"}
 #友情提示

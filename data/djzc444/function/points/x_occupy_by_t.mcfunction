@@ -8,7 +8,7 @@ execute as @a[team=CT] at @s run playsound entity.ender_dragon.growl music @s ~ 
 $scoreboard players set T_S$(NAME) djzc.time3 60
 $execute as @a[x=$(x),y=$(y),z=$(z),dx=$(dx),dy=$(dy),dz=$(dz),team=T] at @s run scoreboard players add @s djzc.occupy 1
 
-function djzc444:game/game_flow
+function djzc444:game/game_flow with storage djzc:map map_data
 #运行游戏流程计算器
 
 $tellraw @a {translate:"djzc.msg.$(name)_occupy_by_t",fallback:"$(NAME)点已被T阵营占领!",color:"green"}

@@ -11,8 +11,15 @@
         "description": {
             "translate": "djzc.advancement.wea_aa.desc",
             "fallback": "发射一枚%1$s",
-            "color": "aqua",
-            "italic": true
+            "italic": true,
+            "with": [
+                {
+                    "translate": "djzc.missile_ag",
+                    "fallback": "空地导弹",
+                    "color": "aqua",
+                    "italic": true
+                }
+            ]
         },
         "frame": "task",
         "show_toast": false,
