@@ -979,3 +979,19 @@ end:2026/10/25
   其他语言也同步了本次修改
 - 将[game_starter_x](data\djzc444\function\game\game_starter_x.mcfunction)中内置的盔甲架定位栏控制桥接到[game_starter_nodisplay](data\djzc444\function\game\game_starter_nodisplay.mcfunction)，防止BUG
 - 修复了几个成就的desc没加with参数的BUG
+
+### 1.0.7 1104-by-CE_PT
+start:2026/10/26
+end:2026/11/04
+
+#### 在数据包之外
+- 将**主菜单音乐**改为*Deepseek V4.1 flash/CE_PT - 冬季战场*
+
+  | 调性 | 拍号 | 速度 | 长度 |
+  | --- | --- | --- | --- |
+  | D 小调 | 4/4 | 100 | 2:52.8 |
+- 为**QBZ-191**和**QBU-201**制作了建模，它们将在1.1版本随着战场支援系统登场
+
+#### 待定事项
+- [ ]枪械系统重置
+- [ ]一键三连 三连发功能重置
