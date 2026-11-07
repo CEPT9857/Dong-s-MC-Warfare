@@ -7,7 +7,7 @@
 
 ### 一、项目简介
 
-**栋记（冬季）战场（Dong's MC Warfare）** 是一个基于《我的世界》Java版 1.21.11 的多人对抗数据包。它不是小游戏插件，不是命令方块堆砌的临时娱乐——它是一个从命令方块项目转化而来、由数据驱动、支持多语言与主题包的**完整对战平台**。
+**栋记（冬季）战场（Dong's MC Warfare）** 是一个基于《我的世界》Java版 1.21.11 的多人对抗小游戏。是一个从命令方块项目转化而来、由数据驱动、支持多语言与主题包的**很有特色的对战系统**。
 
 取名为*栋记*战场，是为了以此纪念为《冬季战场》开发提供宝贵支持的Minecraft超级栋服腐竹**GNOD728**，没有超级栋服的支持，我们做不出来这个小东西。
 当然，我们*号为张楚*也是经过了GNOD728本人的允许，也欢迎大家去玩他做的*冬季战场：极地潜兵*。
@@ -37,7 +37,7 @@
 > 听说你的网络太卡了下载不了我们的资源包？
 > 没问题，你可以把*本数据包*塞进资源包文件夹，我们往里面塞了一套备用的文件！
 > 当然也只是备用的，请下载配套资源包获得完整体验。
-- **可选主题包**：如需[冬季战场：雪域龙腾](https://github.com/CEPT9857/Dong-s-MC-Warfare-Red-Loong)或“极地潜兵”，同样放入资源包文件夹，优先级高于默认包。
+- **可选主题包**：如需[冬季战场：雪域龙腾](https://github.com/CEPT9857/Dong-s-MC-Warfare-Red-Loong)或即将推出的“冬季战场：极地潜兵”，同样放入资源包文件夹，优先级高于默认包。
 
 - **或者直接用[冬季战场优化整合包](https://modrinth.com/modpack/dongs-mc-warfare)**：平常怎么装整合包就怎么装这个。
 
@@ -70,7 +70,7 @@
 ### 三、游戏机制详解
 
 #### 1. 战区与占领
-以我们的第一张地图**冬季战场**为例：
+以我们的第一张地图**冬季战场（dz_djzc）**为例：
 - **四个战区**：A（冰湖北侧）、B（冰刺之地南侧）、C（雪原村庄中心）、D（CT家后方冰湖）。
 - **占领规则**：
   - T方进入战区 → 增加占领进度；CT方进入 → 回顶进度。
@@ -90,7 +90,7 @@
 | 大类 | 亚种 | 定位 |
 |------|------|------|
 | **突击兵** | 近战兵（盾斧剑）、三叉戟兵（破盾戟） | 正面推进 |
-| **侦察兵** | 狙击手（大狙弓）、游骑兵（高速矛） | 远程压制/骚扰 |
+| **侦察兵** | 狙击手（大狙弓）、游骑兵（加速矛） | 远程压制/骚扰 |
 | **支援兵** | 防空兵（原版机枪+霰弹弩+地空导弹）、冈格尼尔（秒杀三叉戟） | 火力支援/辅助 |
 | **航空兵** | 立体机动装置（导弹+雷枪）、板载兵（就是你想的那个，不建议玩，因为这很疯狂） | 制空与奇袭 |
 
@@ -122,7 +122,7 @@
 - **旧版传送器**：保留但已加警示标语，建议使用新版。
 
 #### 7. 特殊机制
-- **轰炸塔**：地图中隐藏的观测塔，使用“轰炸指示器”标记区域，标记落地10秒后爆炸，伤害半径14米，有伤害梯度（**可能炸死自己或者队友**）。
+- **轰炸塔**：地图中隐藏的观测塔，使用“轰炸指示器”标记区域，标记落地10秒后爆炸。
 - **自动设置重生点**：
   - 开局时重生点自动设为地下配装处。
   - 游戏结束时重生点移到队伍选择器附近。
@@ -132,7 +132,7 @@
 #### 版本规划
 [这是更新日志](CHANGELOG.md)
 
-1.0.7 【整装待发】（开发中，预计2026年Q4发布）
+1.0.7 【升火待发】（开发中，预计2026年Q4发布）
 - [ ] 迁移到 Minecraft 26.3
 - [ ] 通过物品模型映射的team类型，根据队伍对盔甲进行自动着色，简化代码
 - [x] 在代码中解耦游戏地图，并增加一个新地图
@@ -141,7 +141,7 @@
 - [ ] 性能优化
 - [ ] 小bug修复
 
-1.1 【新航线】（2027年Q1）
+1.1 【走向深蓝】（2027年Q1）
 - [ ] 海战系统！
 - [ ] BOT系统（第一版）
 - [ ] 新手教程
@@ -152,6 +152,7 @@
 - [x] 加入一些无人装备
 ……
 
+根据《Minecraft 使用准则》，特此加入免责声明：冬季战场非 MINECRAFT 官方产品。未经 MOJANG 或 MICROSOFT 批准，也不与 MOJANG 或 MICROSOFT 关联
 
 ## 繁體中文
 希望使用繁體的同胞們看得舒服一點！
@@ -159,7 +160,7 @@
 
 ### 一、項目簡介
 
-**棟記（冬季）戰場（Dong's MC Warfare）** 是一個基於《我的世界》Java 版 1.21.11 的多人對抗資料包。它不是小遊戲插件，不是命令方塊堆砌的臨時娛樂，而是一個由資料驅動、支援多語言與主題包的**完整對戰平台**。
+**棟記（冬季）戰場（Dong's MC Warfare）** 是一個基於《我的世界》Java 版 1.21.11 的多人對抗小遊戲。它是一個從命令方塊專案轉化而來、由資料驅動、支援多語言與主題包的**很有特色的對戰系統**。
 
 取名為*棟記*戰場，是為了紀念為《冬季戰場》開發提供寶貴支援的 Minecraft 超級棟服腐竹**GNOD728**。沒有超級棟服的支援，我們做不出這個小東西。
 當然，我們*號為張楚*也是經過了 GNOD728 本人的允許，也歡迎大家去玩他製作的*冬季戰場：極地潛兵*。
@@ -189,7 +190,7 @@
 > 聽說你的網路太卡了下載不到我們的資源包？
 >  沒問題，你可以把*資料包*塞進資源包資料夾，我們往裡面塞了一套備用的檔案！
 > 當然這也只是備用檔案，請下載配套資源包以獲得完整體驗。
-- **可選主題包**：如需「雪域龍騰」或「極地潛兵」，同樣放入資源包資料夾，優先級高於預設包。
+- **可選主題包**：如需「雪域龍騰」或即將推出的「冬季戰場：極地潛兵」，同樣放入資源包資料夾，優先級高於預設包。
 
 - **或者直接使用[冬季戰場優化整合包](https://modrinth.com/modpack/dongs-mc-warfare)**：平常怎麼安裝整合包就怎麼安裝這個。
 
@@ -222,7 +223,7 @@
 ### 三、遊戲機制詳解
 
 #### 1. 戰區與佔領
-以我們的第一張地圖**冬季戰場**為例：
+以我們的第一張地圖**冬季戰場（dz_djzc）**為例：
 - **四個戰區**：A（冰湖北側）、B（冰刺之地南側）、C（雪原村莊中心）、D（CT 家後方冰湖）。
 - **佔領規則**：
   - T 方進入戰區 → 增加佔領進度；CT 方進入 → 回頂進度。
@@ -242,7 +243,7 @@
 | 大類 | 亞種 | 定位 |
 |------|------|------|
 | **突擊兵** | 近戰兵（盾斧劍）、三叉戟兵（破盾戟） | 正面推進 |
-| **偵察兵** | 狙擊手（大狙弓）、遊騎兵（高速矛） | 遠程壓制/騷擾 |
+| **偵察兵** | 狙擊手（大狙弓）、遊騎兵（加速矛） | 遠程壓制/騷擾 |
 | **支援兵** | 防空兵（原版機槍+霰彈弩+地對空飛彈）、岡格尼爾（秒殺三叉戟） | 火力支援/輔助 |
 | **航空兵** | 立體機動裝置（飛彈+雷槍）、板載兵（就是你想的那個，不建議玩，因為這很瘋狂） | 制空與奇襲 |
 
@@ -274,7 +275,7 @@
 - **舊版傳送器**：保留但已加警示標語，建議使用新版。
 
 #### 7. 特殊機制
-- **轟炸塔**：地圖中隱藏的觀測塔，使用「轟炸指示器」標記區域，標記落地 10 秒後爆炸，傷害半徑 14 公尺，有傷害梯度（**可能炸死自己或者隊友**）。
+- **轟炸塔**：地圖中隱藏的觀測塔，使用「轟炸指示器」標記區域，標記落地 10 秒後爆炸。
 - **自動設定重生點**：
   - 開局時重生點自動設為地下配裝處。
   - 遊戲結束時重生點移到隊伍選擇器附近。
@@ -284,7 +285,7 @@
 #### 版本規劃
 [這是更新日誌](CHANGELOG.md)
 
-1.0.7 【整裝待發】（開發中，預計 2026 年 Q4 發布）
+1.0.7 【升火待發】（開發中，預計 2026 年 Q4 發布）
 - [ ] 遷移到 Minecraft 26.3
 - [ ] 透過物品模型映射的 team 類型，根據隊伍自動為盔甲著色，簡化程式碼
 - [x] 在程式碼中解耦遊戲地圖，並增加一個新地圖
@@ -293,7 +294,7 @@
 - [ ] 效能優化
 - [ ] 小 bug 修復
 
-1.1 【新航線】（2027 年 Q1）
+1.1 【走向深藍】（2027 年 Q1）
 - [ ] 海戰系統！
 - [ ] BOT 系統（第一版）
 - [ ] 新手教學
@@ -304,13 +305,15 @@
 - [x] 加入一些無人裝備
 ……
 
+根據《Minecraft 使用準則》，特此加入免責聲明：冬季戰場非 MINECRAFT 官方產品。未經 MOJANG 或 MICROSOFT 批准，也不與 MOJANG 或 MICROSOFT 關聯
+
 ## English
 Don't worry, we're saving up token money for translation.
 ---
 
 ### I. Project Overview
 
-**Dong's MC Warfare** is a multiplayer combat data pack based on Minecraft Java Edition 1.21.11. It is not a mini-game plugin or a temporary command-block contraption. It is a **complete combat platform** converted from a command-block project, driven by data, and supporting multiple languages and themed resource packs.
+**Dong's MC Warfare** is a multiplayer combat minigame based on Minecraft Java Edition 1.21.11. Converted from a command-block project, it is data-driven, supports multiple languages and themed resource packs, and is a **distinctive combat system**.
 
 The name *Dong's MC Warfare* commemorates **GNOD728**, the owner of **Super Dong Server**, whose valuable support helped develop the original Dong's MC Warfare project. Without Super Dong Server's support, we could not have made this little project.
 Of course, brrowing his name was also used with GNOD728's permission. You are also welcome to try his project, *Dong's MC Warfare: Polar Diver Pack*.
@@ -340,7 +343,7 @@ Of course, brrowing his name was also used with GNOD728's permission. You are al
 > Heard your internet is too slow to download our resource pack?
 >  No problem—you can put the *data pack* inside the resource pack folder; we included a backup set for that.
 > Of course, this is only a backup; download the matching resource pack for the full experience.
-- **Optional themed resource packs**: To use Red Loong or Polar Diver, also place the corresponding resource pack in the resource packs folder and give it a higher priority than the default pack.
+- **Optional themed resource packs**: To use Red Loong or the upcoming *Dong's MC Warfare: Polar Diver*, also place the corresponding resource pack in the resource packs folder and give it a higher priority than the default pack.
 
 - **Or use the [Dong's MC Warfare Optimization Modpack](https://modrinth.com/modpack/dongs-mc-warfare)**: install it the same way you would install any other modpack.
 
@@ -373,7 +376,7 @@ Of course, brrowing his name was also used with GNOD728's permission. You are al
 ### III. Detailed Game Mechanics
 
 #### 1. Combat Zones and Capture
-Using our first map, **Dong's MC Warfare**, as an example:
+Using our first map, **Winter Battlefield (dz_djzc)**, as an example:
 - **Four combat zones**: A (north of the ice lake), B (south of the Ice Spikes), C (the center of the snowy village), and D (the ice lake behind the CT base).
 - **Capture rules**:
   - T entering a combat zone increases capture progress; CT entering restores progress.
@@ -393,7 +396,7 @@ Using our first map, **Dong's MC Warfare**, as an example:
 | Category | Subclass | Role |
 |------|------|------|
 | **Assault** | Melee (shield, axe, and sword), Trident (shield-breaking trident) | Front-line assault |
-| **Recon** | Sniper (heavy sniper bow), Ranger (high-speed spear) | Long-range suppression and harassment |
+| **Recon** | Sniper (heavy sniper bow), Ranger (speed-boosting spear) | Long-range suppression and harassment |
 | **Support** | Anti-air (vanilla machine gun, shotgun crossbow, and surface-to-air missiles), Gungnir (one-hit-kill trident) | Fire support and assistance |
 | **Air** | 3D Maneuver Gear (missiles and lightning spear), Boarder (you know the one; not recommended because it is absolutely wild) | Air superiority and surprise attacks |
 
@@ -425,7 +428,7 @@ Using our first map, **Dong's MC Warfare**, as an example:
 - **Legacy Teleporter**: retained with a warning label; the new system is recommended.
 
 #### 7. Special Mechanics
-- **Bombing Tower**: a hidden observation tower on the map. Use the “Bombing Designator” to mark an area. It explodes 10 seconds after the marker lands, with a 14-meter damage radius and damage falloff (**you may kill yourself or your teammates**).
+- **Bombing Tower**: a hidden observation tower on the map. Use the “Bombing Designator” to mark an area. It explodes 10 seconds after the marker lands.
 - **Automatic spawn points**:
   - At the start of a match, your spawn point is automatically set to the underground loadout area.
   - When the game ends, it is moved near the team selector.
@@ -435,7 +438,7 @@ Using our first map, **Dong's MC Warfare**, as an example:
 #### Version Roadmap
 [This is changelog](CHANGELOG.md)
 
-1.0.7 [In Development, Expected Q4 2026]
+1.0.7 [Fired Up and Ready] (In Development, Expected Q4 2026)
 - [ ] Migrate to Minecraft 26.3
 - [ ] Use the team type in item model mappings to automatically tint armor based on each player's team, simplifying the code
 - [x] Decouple the game map from the code and add a new map
@@ -444,13 +447,15 @@ Using our first map, **Dong's MC Warfare**, as an example:
 - [ ] Performance optimization
 - [ ] Minor bug fixes
 
-1.1 [New Route] (Q1 2027)
+1.1 [To the Deep Blue] (Q1 2027)
 - [ ] Naval combat system!
 - [ ] BOT system (first version)
 - [ ] Beginner tutorial
 - [ ] Fix bugs caused by adapting to 26.3
 
-1.1.1 [Unmanned Victory] (Q2 2027)
+1.1.1 [Unmanned Triumph] (Q2 2027)
 - [ ] Completely remove the remaining parts of the **Blessing system**, then add a **Warfare support system**
 - [x] Add some unmanned equipment
 ……
+
+In accordance with the Minecraft Usage Guidelines, this disclaimer is included: Dong's MC Warfare is NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.

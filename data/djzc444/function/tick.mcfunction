@@ -15,6 +15,7 @@ scoreboard players enable @a djzc.option
 scoreboard players enable @a djzc.type_choose
 scoreboard players enable @a djzc.tp
 scoreboard players enable @a djzc.eula
+scoreboard players enable @a djzc.map
 #开放trigger类计分板权限
 
 function djzc444:game/game_teammsg

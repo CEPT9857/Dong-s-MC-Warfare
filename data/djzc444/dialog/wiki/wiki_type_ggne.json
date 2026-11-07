@@ -24,7 +24,7 @@
             "type":"plain_message",
             "contents":{
                 "translate": "djzc.wiki_ggne_1",
-                "fallback": "干员·冈格尼尔：玻璃大炮，和用它惩罚静态视力不好的人",
+                "fallback": "干员·冈格尼尔：玻璃大炮，现在穿了一层铁皮",
                 "color": "yellow"
             },
             "width": 500
@@ -35,7 +35,27 @@
         "contents":[
             {
                 "translate": "djzc.wiki_ggne_2",
-                "fallback": "蕾米莉亚设计的原型。CE拼出来的成品。"
+                "fallback": "蕾米莉亚设计的原型，CE拼出来的成品。1.0.6给他补了一整套无附魔的铁甲，也给%1$s装上了突进；%2$s和一具%3$s，是从1.0.5就陪着他的老伙计。玻璃还是玻璃，只是不再裸奔。",
+                "with": [
+                    {
+                        "translate": "djzc.trident_ggne",
+                        "fallback": "[神枪] - 冈格尼尔",
+                        "color": "aqua",
+                        "italic": true
+                    },
+                    {
+                        "translate": "djzc.wea_cl",
+                        "fallback": "刺雷",
+                        "color": "aqua",
+                        "italic": true
+                    },
+                    {
+                        "translate": "djzc.fishing_rod",
+                        "fallback": "地空导弹发射器",
+                        "color": "aqua",
+                        "italic": true
+                    }
+                ]
             }
         ]
         },
@@ -45,7 +65,15 @@
         "contents":[
             {
                 "translate": "djzc.wiki_ggne_3",
-                "fallback": "零甲。秒杀。突进。玻璃大炮——以及，惩罚每一个静态视力不好的人。这句话我看了三遍，你们不是在写兵种介绍。你们在写你们自己。"
+                "fallback": "零甲。秒杀。突进。那是1.0.6 alpha测试时的第一版——测试员说突进冷却太短，连普攻都打不出来。于是突进从III降到II，神枪加上了minimum_attack_charge；到了1.0.7，%1$s的飞行时间也终于和代码对上了账。他依然一枪一个，只是每一次出枪之前，你得先想好怎么活下来。",
+                "with": [
+                    {
+                        "translate": "djzc.wea_cl",
+                        "fallback": "刺雷",
+                        "color": "aqua",
+                        "italic": true
+                    }
+                ]
             }
         ]
         },
@@ -55,7 +83,7 @@
         "contents":[
             {
                 "translate": "djzc.wiki_ggne_4",
-                "fallback": "那个静态视力不好的人是谁？是站在狙击位上以为自己安全的敌人？还是某个熬夜debug、死活找不到那个少写的斜杠的自己？冈格尼尔不是武器。冈格尼尔是“我还能再战一局”的倔强。"
+                "fallback": "他甚至有了自己的模式——陆战-冈格尼尔，只启用这一个兵种，冬战最经典的活动模式之一。1.0.7把地图和代码都拆开了，冈格尼尔没有变：玻璃大炮，专门惩罚静态视力不好的人。至于那个人是站在狙击位上以为自己安全的敌人，还是某个熬夜debug、死活找不到那个少写斜杠的自己——不重要。冈格尼尔是“我还能再战一局”的倔强，哪怕这一局，他穿的只是铁皮。"
             }
         ]
         },

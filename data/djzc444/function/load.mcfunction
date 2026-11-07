@@ -73,7 +73,7 @@ scoreboard objectives add djzc.r_click7 minecraft.used:minecraft.written_book "r
 scoreboard objectives add djzc.r_click2 minecraft.used:minecraft.egg "r_click_egg"
 #行为检测类计分板
 
-scoreboard objectives add djzc.map dummy
+scoreboard objectives add djzc.map trigger
 #注入地图参数
 
 scoreboard players set 1 djzc.r_click7 1

@@ -24,7 +24,7 @@
             "type":"plain_message",
             "contents":{
                 "translate": "djzc.wiki_ltjd_1",
-                "fallback": "立体机动装置：BUG堆里飞起来的天空",
+                "fallback": "立体机动装置：BUG堆里飞起来的天空，终于等到了机场",
                 "color": "yellow"
             },
             "width": 500
@@ -35,7 +35,7 @@
         "contents":[
             {
                 "translate": "djzc.wiki_ltjd_2",
-                "fallback": "栋设计的。他是冬战第四个兵种，唯一需要“杀五个人”才能解锁的单位。——这不是门槛，这是敬意。"
+                "fallback": "栋设计的。他是冬战第四个兵种，唯一需要杀五个人才能解锁的单位——1.0.7顺手修好了代码里那个“差一人”的老毛病。这不是门槛，这是敬意。"
             }
         ]
         },
@@ -45,13 +45,18 @@
         "contents":[
             {
                 "translate": "djzc.wiki_ltjd_3",
-                "fallback": "最早的立体机动，只有弩箭和%1$s。后来有了导弹，也有了冬战史上最多的BUG。导弹追着自己人炸过，近炸引信该响不响过，发射器切模式切到死循环过。但他撑起了冬战的CAS。",
+                "fallback": "最早的立体机动，只有弩箭和%1$s。后来有了导弹，也有了冬战史上最多的BUG——导弹追着自己人炸过，近炸引信该响不响过，发射器切模式切到死循环过。1.0.7把%1$s整个重做了：%2$s发射、命中即爆，范围够大、伤害够狠，还不误伤队友，也进了机场补给。玩家许愿是有用的。",
                 "with": [
                     {
                         "translate": "djzc.rocket_ltjd",
                         "fallback": "雷枪",
                         "color": "aqua",
                         "italic": true
+                    },
+                    {
+                        "keybind": "key.use",
+                        "color": "gold",
+                        "bold": true
                     }
                 ]
             }
@@ -63,7 +68,27 @@
         "contents":[
             {
                 "translate": "djzc.wiki_ltjd_4",
-                "fallback": "CE说，未来要给他找个机场，要给航空版一键三连加加油。因为他值得。在那个命令方块铺满地图的年代，是他第一次让冬战的玩家抬起头，看见天空也是战场。"
+                "fallback": "CE说，未来要给他找个机场。机场已经找到了：在己方机场待一会儿，导弹、%1$s和烟花火箭都会补给；敌方机场还会用防空导弹欢迎你。他甚至还混进了一个预设——陆战-鹰击长空，和%2$s一起把天空包场。至于%3$s的三连发重置，还记在待定事项里。但没关系，在那个命令方块铺满地图的年代，是他第一次让冬战的玩家抬起头，看见天空也是战场。",
+                "with": [
+                    {
+                        "translate": "djzc.rocket_ltjd",
+                        "fallback": "雷枪",
+                        "color": "aqua",
+                        "italic": true
+                    },
+                    {
+                        "translate": "djzc.type_bzb",
+                        "fallback": "板载兵",
+                        "color": "aqua",
+                        "italic": true
+                    },
+                    {
+                        "translate": "djzc.sanlian_fly",
+                        "fallback": "一键三连·航空版",
+                        "color": "aqua",
+                        "italic": true
+                    }
+                ]
             }
         ]
         },

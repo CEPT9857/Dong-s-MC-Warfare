@@ -24,10 +24,11 @@
     body:[\
     {\
     "type":"plain_message",\
+    "width": 500,\
     "contents":[\
         {\
             "translate": "djzc.dialog.wiki",\
-            "fallback": "点击查看冬季战场百科全书",\
+            "fallback": "冬季战场百科全书",\
             "color":"green",\
             "hover_event": {\
                 "action": "show_text",\
@@ -40,12 +41,73 @@
                 "action": "show_dialog",\
                 "dialog": "djzc444:wiki/wiki_notice"\
             }\
+        },\
+        {\
+            "text": " | ",\
+            "color": "white"\
+        },\
+        {\
+            "translate": "djzc.dialog.scoreboard",\
+            "fallback": "统计信息",\
+            "color":"light_purple",\
+            "underlined": true,\
+            "click_event": {\
+                "action": "run_command",\
+                "command":"trigger djzc.option set 8"\
+            }\
+        },\
+        {\
+            "text": " | ",\
+            "color": "white"\
+        },\
+        {\
+            "translate": "djzc.dialog.map_selection.title",\
+            "fallback":"地图选择",\
+            "color":"blue",\
+            "click_event": {\
+                "action": "run_command",\
+                "command":"trigger djzc.option set 18"\
+            }\
+        },\
+        {\
+            "text": " | ",\
+            "color": "white"\
+        },\
+        {\
+            "translate": "djzc.book_opbook",\
+            "fallback": "冬战管理用书",\
+            "color":"aqua",\
+            "click_event": {\
+                "action": "run_command",\
+                "command":"function djzc444:dialog/op_dialog"\
+            }\
         }\
     ]\
     },\
     {\
     type:"plain_message",\
     contents:[\
+        {\
+            "translate": "djzc.dialog.map",\
+            "fallback":"当前地图：%1$s",\
+            "with": [\
+                {\
+                    "translate": "djzc.dialog.wiki.map_$(map_name).title",\
+                    "fallback": "未知地图",\
+                    "color": "aqua",\
+                    "hover_event": {\
+                    "action": "show_text",\
+                    "value": {\
+                    "translate": "djzc.dialog.wiki.map_$(map_name).body1",\
+                    "fallback": "未知地图"\
+                    }\
+                    }\
+                }\
+            ]\
+        },\
+        {\
+            "text": " | "\
+        },\
         {\
             "translate": "djzc.dialog.time",\
             "fallback":"剩余时间："\
@@ -65,20 +127,6 @@
             "fallback":"秒"\
         }\
     ]\
-    },\
-    {\
-        "type": "plain_message",\
-        "contents": \
-        {\
-            "translate": "djzc.dialog.scoreboard",\
-            "fallback": "点击查看统计信息",\
-            "color":"light_purple",\
-            "underlined": true,\
-            "click_event": {\
-                "action": "run_command",\
-                "command":"trigger djzc.option set 8"\
-            }\
-        }\
     }\
     ],\
     "columns": 3,\

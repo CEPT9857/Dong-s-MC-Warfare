@@ -1,0 +1,378 @@
+{
+     "title":{
+        "translate": "djzc.dialog.wiki.map_jc_basic.title",
+        "fallback":"教程-基础教程",
+        "color":"white",
+        "hover_event": {
+            "action": "show_text",
+            "value": {
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with":[
+                    {
+                "translate":"djzc.dialog.author2",
+                "fallback":"Deepseek"
+                    }
+                ]
+            }
+        }
+     },
+     "pause": false,
+     "type":"dialog_list",
+     "body":[
+    {
+        "type": "plain_message",
+        "contents":{
+        "translate": "djzc.dialog.wiki.map_jc_basic.body1",
+        "fallback": "我们的第二张地图，新手教程就是在这里进行的",
+        "color": "yellow"
+    },
+        "width": 500
+    },
+    {
+        "type": "plain_message",
+        "width": 500,
+        "contents":[
+            {
+                "translate": "djzc.dialog.wiki.map.body2",
+                "fallback": "· 如果你是陆军单位，可以选择从这里出发:",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.dialog.wiki.map.body2.desc",
+                        "fallback":"其实空军单位也可以",
+                        "color": "gray",
+                        "strikethrough": true
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.respawn_point1_ct",
+                "fallback": "CT出生点1",
+                "color": "blue",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.respawn_point1_ct.desc",
+                        "fallback": "总之你们都在起始点"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.respawn_point2_ct",
+                "fallback": "CT出生点2",
+                "color": "blue",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.respawn_point2_ct.desc",
+                        "fallback": "位于靶场起始点"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.respawn_point1_t",
+                "fallback": "T出生点1",
+                "color": "red",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                "translate": "djzc.map.jc_basic.respawn_point1_t.desc",
+                "fallback": "位于起始点，大多数冬战玩家首次抵达的地方"
+            }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.respawn_point2_t",
+                "fallback": "T出生点2",
+                "color": "red",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                "translate": "djzc.map.jc_basic.respawn_point2_t.desc",
+                "fallback": "位于靶场起始点"
+            }
+                }
+            }
+        ]
+    },
+    {
+        "type": "plain_message",
+        "width": 500,
+        "contents":[
+            {
+                "translate": "djzc.dialog.wiki.map.body3",
+                "fallback": "· 如果你是空军单位，可以选择从这里出发:",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.dialog.wiki.map.body3.desc",
+                        "fallback":"其实陆军单位也可以",
+                        "color": "gray",
+                        "strikethrough": true
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.respawn_sky_ct",
+                "fallback": "CT空中出生点",
+                "color": "blue",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.respawn_sky_ct.desc",
+                        "fallback": "这里没有空中出生点"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.respawn_airport_ct",
+                "fallback": "CT机场",
+                "color": "blue",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate":"djzc.map.jc_basic.respawn_airport_ct.desc",
+                        "fallback": "你可以在里面休息一下"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.respawn_sky_t",
+                "fallback": "T空中出生点",
+                "color": "red",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.respawn_sky_t.desc",
+                        "fallback": "这是一张地下地图，没有空中出生点"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.respawn_airport_t",
+                "fallback": "T机场",
+                "color": "red",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.respawn_airport_t.desc",
+                        "fallback": "你可以在里面休息一下"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "type": "plain_message",
+        "width": 500,
+        "contents":[
+            {
+                "translate": "djzc.dialog.wiki.map.body4",
+                "fallback": "· 这是你需要关注的战区"
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.point_a",
+                "fallback": "A点",
+                "color": "light_purple",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.point_a.desc",
+                        "fallback": "从新手教程起始点出发，马上就能看见"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.point_b",
+                "fallback": "B点",
+                "color": "light_purple",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.point_b.desc",
+                        "fallback": "距离新手教程起始点稍微远一些，但是马上就能到"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.point_c",
+                "fallback": "C点",
+                "color": "light_purple",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.point_c.desc",
+                        "fallback": "从B点上面跳下来就行"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.point_d",
+                "fallback": "D点",
+                "color": "light_purple",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.point_d.desc",
+                        "fallback": "进攻D点！然后就可以完成我们的教程了"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "type": "plain_message",
+        "width": 500,
+        "contents":[
+            {
+                "translate": "djzc.dialog.wiki.map.body5",
+                "fallback": "· 这是你需要关注的战区启动器"
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.point_c1",
+                "fallback": "C1",
+                "color": "white",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.point_c1.desc",
+                        "fallback": "C点旁边"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.point_c2",
+                "fallback": "C2",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.point_c2.desc",
+                        "fallback": "也在C点旁边"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.point_c3",
+                "fallback": "C3",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.point_c3.desc",
+                        "fallback": "三个都在C点旁边，非常显眼"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.point_d1",
+                "fallback": "D1",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.point_d1.desc",
+                        "fallback": "D点附近的一个房间"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.point_d2",
+                "fallback": "D2",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.point_d2.desc",
+                        "fallback": "在D点附近的墙上"
+                    }
+                }
+            },
+            {
+                "text": " | "
+            },
+            {
+                "translate": "djzc.map.jc_basic.point_d3",
+                "fallback": "D3",
+                "hover_event": {
+                    "action": "show_text",
+                    "value": {
+                        "translate": "djzc.map.jc_basic.point_d3.desc",
+                        "fallback": "D点附近的命令方块旁边"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "type": "plain_message",
+        "contents": {
+            "translate": "djzc.dialog.wiki.map.body6",
+            "fallback": "· 如果需要详细的地图信息，可以关注起始大厅展示的地图，以及我们提供的地图解析文档"
+        },
+        "width": 500
+    }
+    ],
+     "columns": 4,
+     "dialogs": [
+        "djzc444:wiki/wiki_map"
+     ],
+     "exit_action": {
+        "label": {
+            "translate": "djzc.dialog.wiki.back_notice",
+            "fallback": "返回百科全书主页"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc444:wiki/wiki_notice"
+        }
+     }
+}

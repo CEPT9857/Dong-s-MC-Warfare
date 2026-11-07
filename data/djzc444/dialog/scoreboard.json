@@ -26,7 +26,7 @@
     "contents":[
         {
             "translate": "djzc.dialog.wiki",
-            "fallback": "点击查看冬季战场百科全书",
+            "fallback": "冬季战场百科全书",
             "color":"green",
             "hover_event": {
                 "action": "show_text",
@@ -154,4 +154,4 @@
             }
         }
     ]
- }
+ }

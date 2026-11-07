@@ -32,6 +32,9 @@ function djzc444:second
 function djzc444:game/time_initialize
 #运行一次时间初始化函数，输入初始数值
 
+scoreboard players set map djzc.map 1
+#设置初始地图：冬季战场
+
 function djzc444:game/start
 function djzc444:game/end_custom
 function djzc444:game/music_stop

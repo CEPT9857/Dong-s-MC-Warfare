@@ -27,3 +27,4 @@ execute as @a at @s if score @s djzc.option matches 8 run function djzc444:dialo
 execute as @a at @s if score @s djzc.option matches 15 run function djzc444:dialog/user_dialog
 execute as @a at @s if score @s djzc.option matches 16 run function djzc444:dialog/tp_dialog
 execute as @a at @s if score @s djzc.option matches 17 run function djzc444:dialog/manage_dialog
+execute as @a at @s if score @s djzc.option matches 18 run function djzc444:dialog/map_dialog

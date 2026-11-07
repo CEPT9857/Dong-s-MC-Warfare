@@ -37,13 +37,13 @@
                 "text": " | "\
             },\
             {\
-                "translate": "djzc.dialog.respawn_sky_ct",\
+                "translate": "djzc.map.$(map_name).respawn_sky_ct",\
                 "fallback": "CT空中出生点",\
                 "color": "blue",\
                 "hover_event": {\
                     "action": "show_text",\
                     "value": {\
-                        "translate": "djzc.dialog.respawn_sky_ct.desc",\
+                        "translate": "djzc.map.$(map_name).respawn_sky_ct.desc",\
                         "fallback": "这里有点高"\
                     }\
                 },\
@@ -56,13 +56,13 @@
                 "text": " | "\
             },\
             {\
-                "translate": "djzc.dialog.respawn_airport_ct",\
+                "translate": "djzc.map.$(map_name).respawn_airport_ct",\
                 "fallback": "CT机场",\
                 "color": "blue",\
                 "hover_event": {\
                     "action": "show_text",\
                     "value": {\
-                        "translate":"djzc.dialog.respawn_airport_ct.desc",\
+                        "translate":"djzc.map.$(map_name).respawn_airport_ct.desc",\
                         "fallback": "你可以在里面休息一下"\
                     }\
                 },\
@@ -75,13 +75,13 @@
                 "text": " | "\
             },\
             {\
-                "translate": "djzc.dialog.respawn_sky_t",\
+                "translate": "djzc.map.$(map_name).respawn_sky_t",\
                 "fallback": "T空中出生点",\
                 "color": "red",\
                 "hover_event": {\
                     "action": "show_text",\
                     "value": {\
-                        "translate": "djzc.dialog.respawn_sky_t.desc",\
+                        "translate": "djzc.map.$(map_name).respawn_sky_t.desc",\
                         "fallback": "这里也有点高"\
                     }\
                 },\
@@ -94,13 +94,13 @@
                 "text": " | "\
             },\
             {\
-                "translate": "djzc.dialog.respawn_airport_t",\
+                "translate": "djzc.map.$(map_name).respawn_airport_t",\
                 "fallback": "T机场",\
                 "color": "red",\
                 "hover_event": {\
                     "action": "show_text",\
                     "value": {\
-                        "translate": "djzc.dialog.respawn_airport_t.desc",\
+                        "translate": "djzc.map.$(map_name).respawn_airport_t.desc",\
                         "fallback": "你可以在里面休息一下"\
                     }\
                 },\
@@ -114,6 +114,27 @@
     {\
     type:"plain_message",\
     contents:[\
+        {\
+            "translate": "djzc.dialog.map",\
+            "fallback":"当前地图：%1$s",\
+            "with": [\
+                {\
+                    "translate": "djzc.dialog.wiki.map_$(map_name).title",\
+                    "fallback": "未知地图",\
+                    "color": "aqua",\
+                    "hover_event": {\
+                    "action": "show_text",\
+                    "value": {\
+                    "translate": "djzc.dialog.wiki.map_$(map_name).body1",\
+                    "fallback": "未知地图"\
+                    }\
+                    }\
+                }\
+            ]\
+        },\
+        {\
+            "text": " | "\
+        },\
         {\
             "translate": "djzc.dialog.time",\
             "fallback":"剩余时间："\
@@ -161,12 +182,12 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.point_a",\
+                "translate": "djzc.map.$(map_name).point_a",\
                 "fallback": "A点",\
                 "color":"light_purple"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.point_a.desc",\
+                "translate": "djzc.map.$(map_name).point_a.desc",\
                 "fallback": "冰湖中的小船，易攻难守"\
             },\
             "action": {\
@@ -176,12 +197,12 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.point_b",\
+                "translate": "djzc.map.$(map_name).point_b",\
                 "fallback": "B点",\
                 "color":"light_purple"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.point_b.desc",\
+                "translate": "djzc.map.$(map_name).point_b.desc",\
                 "fallback": "冰刺之地中的地堡，易守难攻"\
             },\
             "action": {\
@@ -191,12 +212,12 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.point_c",\
+                "translate": "djzc.map.$(map_name).point_c",\
                 "fallback": "C点",\
                 "color":"light_purple"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.point_c.desc",\
+                "translate": "djzc.map.$(map_name).point_c.desc",\
                 "fallback": "雪原村庄的中心，常常引发激烈的战斗"\
             },\
             "action": {\
@@ -206,11 +227,11 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.point_c1",\
+                "translate": "djzc.map.$(map_name).point_c1",\
                 "fallback": "C1"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.point_c1.desc",\
+                "translate": "djzc.map.$(map_name).point_c1.desc",\
                 "fallback": "战壕旁的地洞"\
             },\
             "action": {\
@@ -220,11 +241,11 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.point_c2",\
+                "translate": "djzc.map.$(map_name).point_c2",\
                 "fallback": "C2"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.point_c2.desc",\
+                "translate": "djzc.map.$(map_name).point_c2.desc",\
                 "fallback": "位于村庄地道系统"\
             },\
             "action": {\
@@ -234,11 +255,11 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.point_c3",\
+                "translate": "djzc.map.$(map_name).point_c3",\
                 "fallback": "C3"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.point_c3.desc",\
+                "translate": "djzc.map.$(map_name).point_c3.desc",\
                 "fallback": "位于北部山地的山腰处"\
             },\
             "action": {\
@@ -248,12 +269,12 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.point_d",\
+                "translate": "djzc.map.$(map_name).point_d",\
                 "fallback": "D点",\
                 "color":"light_purple"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.point_d.desc",\
+                "translate": "djzc.map.$(map_name).point_d.desc",\
                 "fallback": "灯塔之下，CT最后的堡垒，决定成败之地"\
             },\
             "action": {\
@@ -263,11 +284,11 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.point_d1",\
+                "translate": "djzc.map.$(map_name).point_d1",\
                 "fallback": "D1"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.point_d1.desc",\
+                "translate": "djzc.map.$(map_name).point_d1.desc",\
                 "fallback": "一个碉堡。"\
             },\
             "action": {\
@@ -277,11 +298,11 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.point_d2",\
+                "translate": "djzc.map.$(map_name).point_d2",\
                 "fallback": "D2"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.point_d2.desc",\
+                "translate": "djzc.map.$(map_name).point_d2.desc",\
                 "fallback": "在灯塔地下室"\
             },\
             "action": {\
@@ -291,11 +312,11 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.point_d3",\
+                "translate": "djzc.map.$(map_name).point_d3",\
                 "fallback": "D3"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.point_d3.desc",\
+                "translate": "djzc.map.$(map_name).point_d3.desc",\
                 "fallback": "在CT家里"\
             },\
             "action": {\
@@ -305,12 +326,12 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.respawn_piont1_ct",\
+                "translate": "djzc.map.$(map_name).respawn_point1_ct",\
                 "fallback": "CT出生点1",\
                 "color":"blue"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.respawn_point1_ct.desc",\
+                "translate": "djzc.map.$(map_name).respawn_point1_ct.desc",\
                 "fallback": "D3旁边"\
             },\
             "action": {\
@@ -320,12 +341,12 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.respawn_point2_ct",\
+                "translate": "djzc.map.$(map_name).respawn_point2_ct",\
                 "fallback": "CT出生点2",\
                 "color":"blue"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.respawn_piont2_ct.desc",\
+                "translate": "djzc.map.$(map_name).respawn_point2_ct.desc",\
                 "fallback": "一个碉堡。"\
             },\
             "action": {\
@@ -335,12 +356,12 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.respawn_piont1_t",\
+                "translate": "djzc.map.$(map_name).respawn_point1_t",\
                 "fallback": "T出生点1",\
                 "color":"red"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.respawn_point1_t.desc",\
+                "translate": "djzc.map.$(map_name).respawn_point1_t.desc",\
                 "fallback": "在A点附近"\
             },\
             "action": {\
@@ -350,12 +371,12 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.respawn_piont2_t",\
+                "translate": "djzc.map.$(map_name).respawn_point2_t",\
                 "fallback": "T出生点2",\
                 "color":"red"\
             },\
             "tooltip": {\
-                "translate": "djzc.dialog.respawn_piont2_t.desc",\
+                "translate": "djzc.map.$(map_name).respawn_point2_t.desc",\
                 "fallback": "在B点附近"\
             },\
             "action": {\
@@ -365,3 +386,4 @@
         }\
     ]\
  }
+ 

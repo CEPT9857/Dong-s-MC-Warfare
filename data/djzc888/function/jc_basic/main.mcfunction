@@ -3,7 +3,7 @@
 #地图名字
 data merge storage djzc:map {map_data:{name:jc_basic}}
 #POI坐标
-data merge storage djzc:map {a_point:{x:-424,y:41,z:-723,dx:4,dy:2,dz:-5,glass_x:-422,glass_y:42,glass_z:-726,NAME:A,name:a,gameflow:1}}
+data merge storage djzc:map {a_point:{x:-424,y:41,z:-724,dx:4,dy:2,dz:-4,glass_x:-422,glass_y:42,glass_z:-726,NAME:A,name:a,gameflow:1}}
 data merge storage djzc:map {b_point:{x:-399,y:41,z:-744,dx:4,dy:2,dz:-4,glass_x:-397,glass_y:42,glass_z:-746,NAME:B,name:b,gameflow:1}}
 data merge storage djzc:map {c_point:{x:-411,y:18,z:-737,dx:6,dy:2,dz:-6,glass_x:-408,glass_y:19,glass_z:-740,NAME:C,name:c,gameflow:2}}
 data merge storage djzc:map {d_point:{x:-424,y:18,z:-759,dx:6,dy:2,dz:-6,glass_x:-458,glass_y:60,glass_z:-761,NAME:D,name:d,gameflow:2}}
@@ -36,3 +36,6 @@ data merge storage djzc:map {tp_t2:{x:-434,y:41,z:-709}}
 #data merge storage djzc:map {tp_af2:{x:-448,y:73,z:-535}}
 #data merge storage djzc:map {tp_af3:{x:-181,y:189,z:-829}}
 #data merge storage djzc:map {tp_af4:{x:-36,y:68,z:-841}}
+
+#向storage djzc:game中写入地图元数据
+data merge storage djzc:game {map_name:jc_basic}
