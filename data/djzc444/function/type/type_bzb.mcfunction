@@ -14,3 +14,6 @@ advancement grant @s only djzc444:fight/wea_bzb
 function djzc444:music_af
 playsound minecraft:entity.zombie.ambient player @a ~ ~ ~ 1000
 #一阵强劲的音乐响起
+
+#发完装备、tag 就位后立刻同步一次，不等下一秒；second 仍在兜底
+function djzc444:game/lib_armor_sync

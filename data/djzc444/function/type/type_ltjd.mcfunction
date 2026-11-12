@@ -1,7 +1,7 @@
 clear @s
 #清理物品，防止出错
-execute as @s[team=CT] run function djzc444:type/suit_ct/suit_ltjd
-execute as @s[team=T] run function djzc444:type/suit_t/suit_ltjd
+execute as @s[team=CT] run function djzc444:type/suit/suit_ltjd
+execute as @s[team=T] run function djzc444:type/suit/suit_ltjd
 #分阵营发盔甲
 
 give @s iron_sword[enchantments={sharpness:90,knockback:1,fire_aspect:2},unbreakable={},custom_name={translate:"djzc.type_ltjd.sword",fallback:"裁纸刀"}]
@@ -26,3 +26,6 @@ tag @s add ltjd
 #tag相关操作
 
 function djzc444:music_af
+
+#发完装备、tag 就位后立刻同步一次，不等下一秒；second 仍在兜底
+function djzc444:game/lib_armor_sync

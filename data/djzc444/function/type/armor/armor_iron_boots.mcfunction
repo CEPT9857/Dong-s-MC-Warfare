@@ -1,0 +1,1 @@
+give @p iron_boots[trim={material:"minecraft:quartz",pattern:"minecraft:wild"},unbreakable={}]

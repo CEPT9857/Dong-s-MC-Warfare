@@ -6,7 +6,7 @@ data merge storage djzc:map {map_data:{name:jc_basic}}
 data merge storage djzc:map {a_point:{x:-424,y:41,z:-724,dx:4,dy:2,dz:-4,glass_x:-422,glass_y:42,glass_z:-726,NAME:A,name:a,gameflow:1}}
 data merge storage djzc:map {b_point:{x:-399,y:41,z:-744,dx:4,dy:2,dz:-4,glass_x:-397,glass_y:42,glass_z:-746,NAME:B,name:b,gameflow:1}}
 data merge storage djzc:map {c_point:{x:-411,y:18,z:-737,dx:6,dy:2,dz:-6,glass_x:-408,glass_y:19,glass_z:-740,NAME:C,name:c,gameflow:2}}
-data merge storage djzc:map {d_point:{x:-424,y:18,z:-759,dx:6,dy:2,dz:-6,glass_x:-458,glass_y:60,glass_z:-761,NAME:D,name:d,gameflow:2}}
+data merge storage djzc:map {d_point:{x:-424,y:18,z:-759,dx:6,dy:2,dz:-6,glass_x:-421,glass_y:19,glass_z:-762,NAME:D,name:d,gameflow:2}}
 #该地图没有机场
 #data merge storage djzc:map {airport_ct:{x:-445,y:73,z:-535,dx:-6,dy:3,dz:-13,name:airport_ct,TEAM:CT,team:ct,ENEMY_TEAM:T,enemy_team:t}}
 #data merge storage djzc:map {airport_t:{x:-36,y:68,z:-844,dx:-12,dy:3,dz:6,name:airport_t,TEAM:T,team:t,ENEMY_TEAM:CT,enemy_team:ct}}

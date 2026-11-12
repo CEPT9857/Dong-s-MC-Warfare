@@ -73,6 +73,11 @@ scoreboard objectives add djzc.r_click7 minecraft.used:minecraft.written_book "r
 scoreboard objectives add djzc.r_click2 minecraft.used:minecraft.egg "r_click_egg"
 #行为检测类计分板
 
+scoreboard objectives add djzc444.armor_team dummy
+#护甲纹饰同步状态：1=CT，2=T，没分数=还没同步
+scoreboard objectives add djzc444.armor_slot dummy
+#护甲同步遍历槽位的临时计数
+
 scoreboard objectives add djzc.map trigger
 #注入地图参数
 

@@ -16,6 +16,9 @@ execute unless score debug djzc.option matches 1 as @a[predicate=djzc444:boom_ar
 #debug模式：任意区域可召唤
 execute if score debug djzc.option matches 1 as @a[scores={djzc.r_click5=1..}] at @s run function djzc444:game/lib_boom_single
 
+#兜底：任何原因没拿到倒计时的 mark3 补上，避免 time_custom 减成负数后下一 tick 立刻自爆
+execute as @e[tag=mark3,type=minecraft:marker] unless score @s djzc.time2 matches -9999..9999 run scoreboard players set @s djzc.time2 200
+
 #mark3倒计时归零时引爆（倒计时由 time_custom 常驻时钟控制）
 execute as @e[tag=mark3,scores={djzc.time2=..0}] at @s run function djzc444:game/lib_boom_marker_damage
 

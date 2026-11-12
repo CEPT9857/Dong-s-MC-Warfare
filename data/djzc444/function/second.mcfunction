@@ -13,3 +13,7 @@ execute store result storage djzc:type_manage second int 1 run scoreboard player
 #机场补给系统
 execute as @a run function djzc444:points/airport_x with storage djzc:map airport_ct
 execute as @a run function djzc444:points/airport_x with storage djzc:map airport_t
+
+function djzc444:game/lib_armor_sync
+#护甲纹饰按队伍同步，每秒兜底一次
+#换队 / 发装备 / 切和谐模式时会主动请求一次，这里防的是漏调和手动给的白板

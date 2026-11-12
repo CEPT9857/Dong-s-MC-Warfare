@@ -396,6 +396,7 @@
 	"djzc.msg.join_ct": "You have joined CT",
 	"djzc.msg.join_t": "You have joined T",
 	"djzc.msg.no_run": "The system rejected your request, because that would be desertion.",
+	"djzc.msg.no_map": "The system rejected your request, because changing the map during a match would cause a bug.",
 	"djzc.msg.a_occupy_by_ct": "Point A has been captured by Team CT!",
 	"djzc.msg.a_occupy_by_t": "Point A has been captured by Team T!",
 	"djzc.msg.b_occupy_by_ct": "Point B has been captured by Team CT!",

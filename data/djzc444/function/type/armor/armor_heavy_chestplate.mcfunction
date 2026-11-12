@@ -1,0 +1,1 @@
+give @p netherite_chestplate[trim={material:"minecraft:quartz",pattern:"minecraft:wild"},enchantments={projectile_protection:4,protection:4,unbreaking:3,mending:1},unbreakable={},custom_name={translate:"djzc.armor_heavy_chestplate",fallback:"防弹胸甲"}]

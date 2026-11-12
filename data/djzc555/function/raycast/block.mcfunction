@@ -4,7 +4,9 @@
 #调用前可通过计分板设置参数：
 #  scoreboard players set @s djzc555.ray_max <最大步数>（默认500=50格）
 #  scoreboard players set @s djzc555.ray_step <步长值>（默认1=0.1格，设10=1格）
-#  scoreboard players set @s djzc555.ray_particle <0|1>（默认0=关闭粒子轨迹）
+#  scoreboard players set @s djzc555.ray_particle <0|1>（0=关闭，1..=开启）
+#  scoreboard players set @s djzc555.ray_sleep <tick>（0=即时，N=每步 sleep N tick）
+#  切换粒子：function djzc555:raycast/particle/end_rod 或 campfire_cosy_smoke
 #结果写入 storage djzc555:raycast result
 
 #设置射线类型为方块检测
@@ -18,6 +20,9 @@ execute unless score @s djzc555.ray_step matches 1.. run scoreboard players set 
 
 #如果未设置粒子模式，使用默认值0（关闭，纯工具模式）
 execute unless score @s djzc555.ray_particle matches 0.. run scoreboard players set @s djzc555.ray_particle 0
+
+#默认即时检测，调用后同一 tick 即可读 result
+execute unless score @s djzc555.ray_sleep matches 0.. run scoreboard players set @s djzc555.ray_sleep 0
 
 #启动射线检测
 function djzc555:raycast/internal/start

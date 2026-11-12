@@ -1,0 +1,31 @@
+{
+  "function": "minecraft:set_components",
+  "components": {
+    "minecraft:banner_patterns": [
+      {
+        "color": "light_blue",
+        "pattern": "base"
+      },
+      {
+        "color": "white",
+        "pattern": "stripe_bottom"
+      },
+      {
+        "color": "white",
+        "pattern": "triangles_top"
+      },
+      {
+        "color": "white",
+        "pattern": "border"
+      },
+      {
+        "color": "white",
+        "pattern": "skull"
+      }
+    ],
+    "minecraft:custom_name": {
+      "translate": "djzc.shield_tv",
+      "fallback": "小电视盾牌"
+    }
+  }
+}

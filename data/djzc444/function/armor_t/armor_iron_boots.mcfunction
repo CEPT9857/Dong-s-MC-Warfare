@@ -1,1 +1,0 @@
-give @p iron_boots[trim={material:redstone,pattern:wild},unbreakable={}]

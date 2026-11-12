@@ -1,0 +1,1 @@
+give @p iron_chestplate[trim={material:"minecraft:quartz",pattern:"minecraft:wild"},unbreakable={}]

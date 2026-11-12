@@ -1,0 +1,1 @@
+give @p netherite_helmet[trim={material:"minecraft:quartz",pattern:"minecraft:wild"},enchantments={mending:1,unbreaking:3,protection:3},unbreakable={},custom_name={translate:"djzc.armor_heavy_helmet",fallback:"防弹头盔"}]

@@ -3,7 +3,6 @@
 
 ## 简体中文
 冬季战场的默认语言！
----
 
 ### 一、项目简介
 
@@ -49,8 +48,8 @@
 
 #### 3. 第一次对战流程
 1. **选择阵营**：CT（防守方）或 T（进攻方）。  
-   - CT：阻止T占领全部战区，拖到15分钟结束即赢。  
-   - T：占领全部四个战区（A、B、C、D）即赢。
+  - CT：阻止T占领全部战区，拖到15分钟结束即赢。  
+  - T：占领全部四个战区（A、B、C、D）即赢。
 2. **选择兵种**：从8个兵种中选一个。
 3. **点击“准备”**：等待所有玩家准备，游戏自动开始。
 4. **传送**：在成员用书中打开“传送系统”，选择战区、启动器或队友身边出发。
@@ -100,7 +99,7 @@
 - **导弹类型**：
   - 空空导弹：追踪敌方空中单位。
   - 空地导弹：追踪地面单位。
-- **发射与干扰**：长安右键发射导弹；道具**干扰弹**会吸引导弹追踪，可用于欺骗。
+- **发射与干扰**：长按右键发射导弹；道具**干扰弹**会吸引导弹追踪，可用于欺骗。
 - **告警系统**：当敌方导弹进入100米内，**每0.5秒发出一次告警**。
 - **机场补给**：
   - 己方机场停留30秒 → 获得4枚空空、8枚空地导弹。
@@ -134,7 +133,7 @@
 
 1.0.7 【升火待发】（开发中，预计2026年Q4发布）
 - [ ] 迁移到 Minecraft 26.3
-- [ ] 通过物品模型映射的team类型，根据队伍对盔甲进行自动着色，简化代码
+- [x] 根据玩家所在队伍,自动修改盔甲纹饰颜色和盾牌物品
 - [x] 在代码中解耦游戏地图，并增加一个新地图
 - [ ] 加入地图边界检测系统，防止玩家迷路
 - [x] 重制航空兵的**雷枪**
@@ -156,7 +155,6 @@
 
 ## 繁體中文
 希望使用繁體的同胞們看得舒服一點！
----
 
 ### 一、項目簡介
 
@@ -186,11 +184,11 @@
 
 #### 1. 安裝
 - **資料包**：將 `djzc444.zip` 放入存檔的 `datapacks` 資料夾。（如果您使用了我們提供的存檔進行遊玩，可以跳過這一步）
-- **資源包**：將 `賽揚的冬季戰場v1.0.6.zip` 放入 `resourcepacks` 資料夾，並在遊戲中載入（**將優先級調到最高**）。
+- **資源包**：將 [賽揚的冬季戰場v1.0.6.zip]((https://github.com/CEPT9857/CEPT-s-djzc))放入 `resourcepacks` 資料夾，並在遊戲中載入（**將優先級調到最高**）。
 > 聽說你的網路太卡了下載不到我們的資源包？
 >  沒問題，你可以把*資料包*塞進資源包資料夾，我們往裡面塞了一套備用的檔案！
 > 當然這也只是備用檔案，請下載配套資源包以獲得完整體驗。
-- **可選主題包**：如需「雪域龍騰」或即將推出的「冬季戰場：極地潛兵」，同樣放入資源包資料夾，優先級高於預設包。
+- **可選主題包**：如需[冬季戰場：雪域龍騰]((https://github.com/CEPT9857/Dong-s-MC-Warfare-Red-Loong))或即將推出的「冬季戰場：極地潛兵」，同樣放入資源包資料夾，優先級高於預設包。
 
 - **或者直接使用[冬季戰場優化整合包](https://modrinth.com/modpack/dongs-mc-warfare)**：平常怎麼安裝整合包就怎麼安裝這個。
 
@@ -253,7 +251,7 @@
 - **飛彈類型**：
   - 空對空飛彈：追蹤敵方空中單位。
   - 空對地飛彈：追蹤地面單位。
-- **發射與干擾**：右鍵發射導彈；道具**干擾彈**會吸引導彈追蹤，可用於欺騙。
+- **發射與干擾**：長按右鍵發射飛彈；道具**干擾彈**會吸引飛彈追蹤，可用於欺騙。
 - **警報系統**：當敵方飛彈進入 100 公尺內，**每 0.5 秒發出一次警報**。
 - **機場補給**：
   - 己方機場停留 30 秒 → 獲得 4 枚空對空、8 枚空對地飛彈。
@@ -287,7 +285,7 @@
 
 1.0.7 【升火待發】（開發中，預計 2026 年 Q4 發布）
 - [ ] 遷移到 Minecraft 26.3
-- [ ] 透過物品模型映射的 team 類型，根據隊伍自動為盔甲著色，簡化程式碼
+- [x] 根據玩家所屬隊伍，自動修改盔甲紋飾顏色和盾牌物品
 - [x] 在程式碼中解耦遊戲地圖，並增加一個新地圖
 - [ ] 加入地圖邊界檢測系統，防止玩家迷路
 - [x] 重製航空兵的**雷槍**
@@ -309,7 +307,6 @@
 
 ## English
 Don't worry, we're saving up token money for translation.
----
 
 ### I. Project Overview
 
@@ -339,11 +336,11 @@ Of course, brrowing his name was also used with GNOD728's permission. You are al
 
 #### 1. Installation
 - **Data pack**: Put `djzc444.zip` in the world's `datapacks` folder. (You can skip this step if you are using the world save we provided.)
-- **Resource pack**: Put `CE's MC Warfare v1.0.6.zip` in the `resourcepacks` folder and load it in-game (**set its priority to the highest**).
+- **Resource pack**: Put [CE's MC Warfare v1.0.6.zip]((https://github.com/CEPT9857/CEPT-s-djzc)) in the `resourcepacks` folder and load it in-game (**set its priority to the highest**).
 > Heard your internet is too slow to download our resource pack?
 >  No problem—you can put the *data pack* inside the resource pack folder; we included a backup set for that.
 > Of course, this is only a backup; download the matching resource pack for the full experience.
-- **Optional themed resource packs**: To use Red Loong or the upcoming *Dong's MC Warfare: Polar Diver*, also place the corresponding resource pack in the resource packs folder and give it a higher priority than the default pack.
+- **Optional themed resource packs**: To use [Dong's MC Warfare: Red Loong]((https://github.com/CEPT9857/Dong-s-MC-Warfare-Red-Loong)) or the upcoming *Dong's MC Warfare: Polar Diver*, also place the corresponding resource pack in the resource packs folder and give it a higher priority than the default pack.
 
 - **Or use the [Dong's MC Warfare Optimization Modpack](https://modrinth.com/modpack/dongs-mc-warfare)**: install it the same way you would install any other modpack.
 
@@ -356,7 +353,7 @@ Of course, brrowing his name was also used with GNOD728's permission. You are al
 #### 3. Your First Match
 1. **Choose a team**: CT (defenders) or T (attackers).
   - CT: prevent T from capturing every combat zone. Survive until the 15-minute timer ends to win.
-   - T: capture all four combat zones (A, B, C, and D) to win.
+  - T: capture all four combat zones (A, B, C, and D) to win.
 2. **Choose a class**: select one of the eight classes.
 3. **Click “Ready”**: the game starts automatically when all players are ready.
 4. **Teleport**: open the Teleportation System in the Member Handbook and choose a combat zone, launcher, or teammate.
@@ -367,7 +364,7 @@ Of course, brrowing his name was also used with GNOD728's permission. You are al
 - **Right-click the Member Handbook**: same effect as pressing G
 - **Radio commands**: click preset messages in the main menu, such as “Attack point D!” or “Enemy spotted!”
 - **Fire missiles**: hold a missile, such as an air-to-air missile, and right-click to launch it.
-- **Jamming missiles**: right-click a jamming missile. Several chickens will appear around you, and the missile will track them.
+- **Jamming missiles**: right-click the **jam egg**. Several chickens will appear around you, and the missile will track them.
 
 > ⚠️ Note: Enemy players have **no name above their heads!** Identify players by their armor trim colors (blue for CT / red for T) and their appearance to determine whether they are friend or foe.
 
@@ -406,7 +403,7 @@ Using our first map, **Winter Battlefield (dz_djzc)**, as an example:
 - **Missile types**:
   - Air-to-air missiles: track airborne enemy units.
   - Air-to-ground missiles: track ground units.
-- **Launching and jamming**: right-click to launch a missile; the jamming item attracts incoming missiles and can be used as a decoy.
+- **Launching and jamming**: hold right-click to launch a missile; the **jam egg** attracts incoming missiles and can be used as a decoy.
 - **Warning system**: when an enemy missile comes within 100 meters, a warning is issued **every 0.5 seconds**.
 - **Airfield resupply**:
   - Stay at your team's airfield for 30 seconds → receive 4 air-to-air and 8 air-to-ground missiles.
@@ -440,7 +437,7 @@ Using our first map, **Winter Battlefield (dz_djzc)**, as an example:
 
 1.0.7 [Fired Up and Ready] (In Development, Expected Q4 2026)
 - [ ] Migrate to Minecraft 26.3
-- [ ] Use the team type in item model mappings to automatically tint armor based on each player's team, simplifying the code
+- [x] Automatically update armor trim colors and shield items based on each player's team
 - [x] Decouple the game map from the code and add a new map
 - [ ] Add a map boundary detection system to prevent players from getting lost
 - [x] Rebuild the Air Force's **Thunder Spear**

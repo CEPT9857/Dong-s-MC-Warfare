@@ -1,1 +1,0 @@
-give @p iron_chestplate[trim={material:lapis,pattern:wild},unbreakable={}]

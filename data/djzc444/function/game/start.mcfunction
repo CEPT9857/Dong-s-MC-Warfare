@@ -5,8 +5,6 @@ stopsound @a
 function djzc444:game/time_initialize
 function djzc888:map_swich
 
-function djzc444:game/flow_begin with storage djzc:map map_data
-
 execute as @a[team=CT] run spawnpoint @s -405 30 -809
 execute as @a[team=T] run spawnpoint @s -397 30 -809
 #设定双方默认重生点为dz_djzc配装处，有经费做新地图的配装处以后，转移到unique
@@ -79,3 +77,6 @@ scoreboard objectives setdisplay list djzc.count_kill
 gamemode adventure @a[team=T]
 gamemode adventure @a[team=CT]
 #转为冒险模式
+
+function djzc444:game/flow_begin with storage djzc:map map_data
+#冬战，启动！

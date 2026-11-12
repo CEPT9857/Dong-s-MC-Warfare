@@ -1,4 +1,0 @@
-function djzc444:armor_ct/armor_iron_helmet
-function djzc444:armor_ct/armor_iron_chestplate
-function djzc444:armor_ct/armor_iron_leggings
-function djzc444:armor_ct/armor_iron_boots

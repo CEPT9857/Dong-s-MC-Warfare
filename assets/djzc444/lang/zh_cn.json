@@ -396,6 +396,7 @@
 	"djzc.msg.join_ct": "您已加入CT",
 	"djzc.msg.join_t": "您已加入T",
 	"djzc.msg.no_run": "系统拒绝了你的要求，因为这是叛逃。",
+	"djzc.msg.no_map": "系统拒绝了你的要求，对局中改地图会出BUG。",
 	"djzc.msg.a_occupy_by_ct": "A点已被CT阵营占领!",
 	"djzc.msg.a_occupy_by_t": "A点已被T阵营占领!",
 	"djzc.msg.b_occupy_by_ct": "B点已被CT阵营占领!",

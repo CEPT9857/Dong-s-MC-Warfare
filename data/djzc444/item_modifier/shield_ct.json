@@ -1,0 +1,19 @@
+{
+  "function": "minecraft:set_components",
+  "components": {
+    "minecraft:banner_patterns": [
+      {
+        "color": "blue",
+        "pattern": "base"
+      },
+      {
+        "color": "white",
+        "pattern": "flower"
+      }
+    ],
+    "minecraft:custom_name": {
+      "translate": "djzc.shield_ct",
+      "fallback": "北极星盾牌"
+    }
+  }
+}

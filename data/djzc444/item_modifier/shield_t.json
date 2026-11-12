@@ -1,0 +1,19 @@
+{
+  "function": "minecraft:set_components",
+  "components": {
+    "minecraft:banner_patterns": [
+      {
+        "color": "red",
+        "pattern": "base"
+      },
+      {
+        "color": "yellow",
+        "pattern": "globe"
+      }
+    ],
+    "minecraft:custom_name": {
+      "translate": "djzc.shield_t",
+      "fallback": "普通的盾牌"
+    }
+  }
+}

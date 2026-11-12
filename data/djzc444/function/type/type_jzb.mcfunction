@@ -1,7 +1,7 @@
 clear @s
 #清理物品，防止出错
-execute as @s[team=CT] run function djzc444:type/suit_ct/suit_jzb
-execute as @s[team=T] run function djzc444:type/suit_t/suit_jzb
+execute as @s[team=CT] run function djzc444:type/suit/suit_jzb
+execute as @s[team=T] run function djzc444:type/suit/suit_jzb
 #分阵营发盔甲
 function djzc444:weapon/wea_heavy_axe
 function djzc444:weapon/wea_heavy_sword
@@ -16,3 +16,6 @@ function djzc444:tag_clear
 tag @s add GF
 tag @s add jzb
 #tag相关操作
+
+#发完装备、tag 就位后立刻同步一次，不等下一秒；second 仍在兜底
+function djzc444:game/lib_armor_sync

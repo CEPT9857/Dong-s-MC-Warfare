@@ -1,0 +1,1 @@
+give @p netherite_leggings[trim={material:"minecraft:quartz",pattern:"minecraft:wild"},enchantments={blast_protection:4,protection:1,unbreaking:3,mending:1},unbreakable={},custom_name={translate:"djzc.armor_heavy_leggings",fallback:"防爆裤衩"}]

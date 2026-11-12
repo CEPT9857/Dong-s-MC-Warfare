@@ -1,0 +1,4 @@
+function djzc444:type/armor/armor_default_helmet
+function djzc444:type/armor/armor_default_chestplate
+function djzc444:type/armor/armor_default_leggings
+function djzc444:type/armor/armor_default_boots

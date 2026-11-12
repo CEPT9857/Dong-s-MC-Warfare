@@ -1,0 +1,1 @@
+give @p iron_leggings[trim={material:"minecraft:quartz",pattern:"minecraft:wild"},enchantments={feather_falling:10,fire_protection:10,protection:10,unbreaking:10,mending:1},unbreakable={},custom_name={translate:"djzc.armor_default_leggings",fallback:"铁护腿·雪地精英"}]
