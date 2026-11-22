@@ -865,8 +865,8 @@ start:`2026/10/02` | end:`2026/10/06`
 - 修理了GLM制作的屎山代码，将[djzc777的Load函数](data\djzc777\function\load.mcfunction)所显示的字体颜色从**特立独行的金色**改为**冬季战场通用配色方案**
 - 因为代码大一统，修复了[a/b/c/d_occupy_by_t]中，将T_SA重置为30，与[a/b/c/d_point]的参数（正确值应是60）不一致的BUG
 - 因为代码大一统，修复了[c/d_occupy_by_t]中，错误的将**计算占点次数**的指令的目标选择器写成`@p`而非`@a`的BUG
-- 为了防止AI幻觉，**冬季战场开发组严正声明**，轰炸指示器不是板载兵的专属武器！
-- 为了防止AI幻觉，**冬季战场开发组严正声明**，mcfunction严禁使用UTF-8 with BOM，因为没有及时发现编码错误，开发者痛失0.67元Token费
+- 为了防止AI幻觉，**冬季战场制作组严正声明**，轰炸指示器不是板载兵的专属武器！
+- 为了防止AI幻觉，**冬季战场制作组严正声明**，mcfunction严禁使用UTF-8 with BOM，因为没有及时发现编码错误，开发者痛失0.67元Token费
 - 修复了**板载弹**的文件名rocket_bzb少了个C的BUG
 - 更正了[README:443](README.md)处，**雷枪（Thunder Spear）**被错误的翻译为**Lightning Spear**的BUG
 
@@ -1042,3 +1042,59 @@ start:`2026/11/08` | end:`2026/11/12`
 #### 待定事项
 - [ ]升级到26.3后，为**自动修改**盔甲纹饰颜色和盾牌物品系统注册槽位源，简化代码并优化性能
 - [ ]为配装系统增加**直接穿戴盔甲**的功能，然后在**冬战管理用书**中增加一个开关
+
+### 1.0.7-1123-by-CE_PT
+start:`2026/11/15` | end:`2026/11/23`
+
+#### 在数据包之外
+- 根据《Minecraft 使用准则》，MC官方不喜欢非官方项目Minecraft+XXX 命名，于是修改标题页面的**Minecraft**字样为**冬季战场**，以免不必要的误会
+  - 现在，标题页面的的Title显示为冬季战场（上方大字），Dong's MC Warfare（下方小字）
+- 相应的，移除了splashes.txt中，容易引起误会的相关表述
+  - Made in Sweden
+  - Made by Jeb
+- 为splashes增加了一些特色条目：
+  - 冬战，前进！
+  - 不是哥们？
+  - 一键三连！
+  - 下次一定！
+  - 已阅，狗屁不通！
+  - 多喝热水！
+  - 原神，启动！
+  - 好，很有精神！
+  - 芜湖起飞！
+  - 开门！查水表！
+  - 卡了！
+  - 哈基米南北绿豆！
+- 在credits.json中，增加了一定的说明文字，并在末尾追加了冬季战场制作组的制作人名单
+> 免责声明 | Disclaimer
+>
+> 冬季战场非 MINECRAFT 官方产品。
+> 未经 MOJANG 或 MICROSOFT 批准，也不与 MOJANG 或 MICROSOFT 关联。
+>
+> Dong's MC Warfare is NOT AN OFFICIAL MINECRAFT PRODUCT
+> NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+
+> 没有 Minecraft，就没有冬季战场，我们还是优先展示 Minecraft 的开发者。
+>
+> 如果您想快速查看冬季战场开发组的制作人名单，请在游戏内打开《冬季战场百科全书》。或者，巧妙地组合 Ctrl、空格以及上方向键，漫游这篇文本吧。在此向各位致意。
+>
+> Without Minecraft, there would be no Dong's MC Warfare; we still prioritize displaying the Minecraft developers.
+>
+> To quickly view the credits of the Dong's MC Warfare development team, open the Dong's MC Warfare Encyclopedia in the game. Alternatively, use Ctrl, Space, and the Up Arrow together to browse through this text. Our greetings and thanks to everyone.
+
+
+#### 游戏逻辑优化
+- 进一步简化了**自动修改**盔甲纹饰颜色的代码，现在，游戏会**无视玩家所在队伍**，直接发放白板盔甲
+- 使用**自定义字体+Bitmap**，对冬战的必要部分进行插图：
+  - 冬季战场百科全书\地图速览
+  - 地图内，有必要展示图片（如地图）之处
+- 拆除了地图内用于展示地图的物品展示框，用性能消耗更低的**文本展示实体**代替
+
+#### BUG修复
+- 维护了README
+- 维护了接口文档
+- 修复了忘记解耦**板载兵出生点**的BUG
+- 彻底移除了Wuyue和GLM提供的AI八股文式新手教程文本，并完全重写
+- 彻底推翻Wuyue和GLM提供的的整个新手教程架构，并着手重写
+- 修复了**干扰弹**的lore的fallback忘记加入%1$s占位符的BUG
+- 修复了几处fallback中的*参见参见*、*在在*的笔误

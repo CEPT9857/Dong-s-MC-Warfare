@@ -4,9 +4,7 @@
     "title": [
         {
             "translate": "djzc777.dialog.root.title",
-            "fallback": "冬战新手教程",
-            "color": "gold",
-            "bold": true
+            "fallback": "要试试新手教程吗？"
         }
     ],
     "body": [
@@ -14,17 +12,8 @@
             "type": "plain_message",
             "width": 500,
             "contents": {
-                "translate": "djzc777.dialog.root.body1",
-                "fallback": "欢迎来到栋记（冬季）战场！",
-                "color": "yellow"
-            }
-        },
-        {
-            "type": "plain_message",
-            "width": 500,
-            "contents": {
                 "translate": "djzc777.dialog.root.body2",
-                "fallback": "跟随实境引导熟悉占点、启动器、成员用书和兵种装备，在模拟靶场完成第一次出击。"
+                "fallback": "新手教程大约需要5分钟，如果你是熟悉《冬季战场》的老玩家，可以直接跳过。"
             }
         },
         {
@@ -32,73 +21,22 @@
             "width": 500,
             "contents": {
                 "translate": "djzc777.dialog.root.body3",
-                "fallback": "可随时通过暂停菜单或 /function djzc777:open 返回本页；完成后也能从冬战百科全书重播。",
-                "with": [
-                    {
-                        "keybind": "key.quickActions",
-                        "color": "gold",
-                        "bold": true
-                    }
-                ],
-                "color": "gray"
-            }
-        },
-        {
-            "type": "plain_message",
-            "width": 500,
-            "contents": {
-                "translate": "djzc777.dialog.root.body4",
-                "fallback": "选择下方入口重新开始新手教程。进阶教程模块仍在设计中。",
-                "with": [
-                    {
-                        "translate": "djzc.dialog.userbook.to_prepare"
-                    },
-                    {
-                        "translate": "djzc.dialog.userbook.type_choose"
-                    },
-                    {
-                        "translate": "djzc.dialog.tp_system.title"
-                    },
-                    {
-                        "translate": "djzc.dialog.userbook.msg"
-                    }
-                ],
-                "color": "gray"
-            }
-        },
-        {
-            "type": "plain_message",
-            "width": 500,
-            "contents": {
-                "translate": "djzc777.dialog.root.body5",
-                "fallback": "沿着光柱前进，战场上的每一步都会教会你新的东西。%1$s",
-                "with": [
-                    {
-                        "translate": "djzc.msg.ciallo",
-                        "color": "light_purple"
-                    }
-                ],
-                "color": "light_purple"
+                "fallback": "不过，作为冬季战场的开发者，我有必要提醒屏幕前的你，如果你不了解这个游戏，就会输得很惨。"
             }
         }
     ],
     "columns": 2,
     "dialogs": [
-        "djzc777:tutorial_skip"
+        "djzc444:team_selection"
     ],
     "exit_action": {
         "label": {
-            "translate": "djzc777.dialog.nav.book",
-            "fallback": "返回%1$s",
-            "with": [
-                {
-                    "translate": "djzc.book_userbook"
-                }
-            ]
+            "translate": "djzc777.dialog.root.start",
+            "fallback": "开始新手教程"
         },
         "action": {
-            "type": "show_dialog",
-            "dialog": "djzc444:userbook"
+            "type": "run_command",
+            "command": "function djzc777:tutorial/start"
         }
     }
 }

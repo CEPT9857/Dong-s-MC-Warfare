@@ -1,8 +1,7 @@
 clear @s
 #清理物品，防止出错
-execute as @s[team=CT] run function djzc444:type/suit/suit_ggne
-execute as @s[team=T] run function djzc444:type/suit/suit_ggne
-#分阵营发盔甲
+execute as @s run function djzc444:type/suit/suit_ggne
+#发白板盔甲
 function djzc444:weapon/wea_cl
 function djzc444:weapon/trident_ggne
 function djzc666:weapon/missile_ga

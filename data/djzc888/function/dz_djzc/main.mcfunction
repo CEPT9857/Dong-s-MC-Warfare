@@ -34,6 +34,9 @@ data merge storage djzc:map {tp_af1:{x:-445,y:189,z:-693}}
 data merge storage djzc:map {tp_af2:{x:-448,y:73,z:-535}}
 data merge storage djzc:map {tp_af3:{x:-181,y:189,z:-829}}
 data merge storage djzc:map {tp_af4:{x:-36,y:68,z:-841}}
+#板载兵的隐藏传送点
+data merge storage djzc:map {tp_ct_bzb:{x:-434,y:68,z:-761}}
+data merge storage djzc:map {tp_t_bzb:{x:-168,y:70,z:-823}}
 
 #向storage djzc:game中写入地图元数据
 data merge storage djzc:game {map_name:dz_djzc}

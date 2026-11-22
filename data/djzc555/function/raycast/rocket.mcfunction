@@ -28,6 +28,7 @@ function djzc555:raycast/particle/campfire_cosy_smoke
 #启用射线路径粒子特效（防止玩家看不见）
 scoreboard players set @s djzc555.ray_particle 1
 
+#禁用 sleep（即时返回结果）
 scoreboard players set @s djzc555.ray_sleep 0
 
 #启动射线检测

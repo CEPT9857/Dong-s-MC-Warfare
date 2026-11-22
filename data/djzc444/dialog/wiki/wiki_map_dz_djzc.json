@@ -22,11 +22,25 @@
      "body":[
     {
         "type": "plain_message",
-        "contents":{
-        "translate": "djzc.dialog.wiki.map_dz_djzc.body1",
-        "fallback": "冬季战场是我们的第一张地图，冬战诞生的地方:)",
-        "color": "yellow"
+        "contents":[
+            {
+                "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+                "font": "minecraft:default"
+            },
+            {
+                "text": "\uE000",
+                "font": "djzc444:djzc_map"
+            }
+        ],
+        "width": 256
     },
+    {
+        "type": "plain_message",
+        "contents":{
+                "translate": "djzc.dialog.wiki.map_dz_djzc.body1",
+                "fallback": "冬季战场是我们的第一张地图，冬战诞生的地方:)",
+                "color": "yellow"
+            },
         "width": 500
     },
     {

@@ -1,0 +1,44 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_advanced.title",
+        "fallback": "教程-进阶教程",
+        "color": "yellow",
+        "bold": true,
+        "hover_event": {
+            "action": "show_text",
+            "value": {
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with": [
+                    {
+                        "translate": "djzc.dialog.author1",
+                        "fallback": "冬战制作组"
+                    }
+                ]
+            }
+        }
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 440,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_advanced.body1",
+                "fallback": "施工中……"
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.tutorial_advanced.back",
+            "fallback": "返回基础教程结尾",
+            "color": "aqua"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/tutorial_end"
+        }
+    }
+}

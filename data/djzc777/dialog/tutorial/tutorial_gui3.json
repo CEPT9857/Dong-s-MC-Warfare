@@ -1,0 +1,54 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_gui3.title",
+        "fallback": "冬战成员用书",
+        "color": "yellow",
+        "bold": true,
+        "hover_event": {
+            "action": "show_text",
+            "value": {
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with": [
+                    {
+                        "translate": "djzc.dialog.author1",
+                        "fallback": "冬战制作组"
+                    }
+                ]
+            }
+        }
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_gui3.body1",
+                "fallback": "准备表示你已完成开战前的装备检查；取消准备可撤回状态。只有所有玩家都准备后，对局才会开始。",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_gui3.body2",
+                "fallback": "现在打开兵种选择，选一套装备到靶场试用。体验结束后，从靶场出口离开即可完成基础教程。",
+                "color": "white"
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.tutorial_gui3.next",
+            "fallback": "前往兵种选择",
+            "color": "green"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/tutorial_choose"
+        }
+    }
+}

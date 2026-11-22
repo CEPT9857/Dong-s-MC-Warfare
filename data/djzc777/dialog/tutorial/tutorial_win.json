@@ -1,0 +1,54 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_win.title",
+        "fallback": "占领D点",
+        "color": "yellow",
+        "bold": true,
+        "hover_event": {
+            "action": "show_text",
+            "value": {
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with": [
+                    {
+                        "translate": "djzc.dialog.author1",
+                        "fallback": "冬战制作组"
+                    }
+                ]
+            }
+        }
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_win.body1",
+                "fallback": "进攻D点！干得好，特种兵！",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_win.body2",
+                "fallback": "接下来前往模拟配装处与靶场，认识成员用书，并亲手试用一套兵种装备。",
+                "color": "white"
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.tutorial_win.dismiss",
+            "fallback": "进入配装教学",
+            "color": "green"
+        },
+        "action": {
+            "type": "run_command",
+            "command": "dialog clear @s"
+        }
+    }
+}

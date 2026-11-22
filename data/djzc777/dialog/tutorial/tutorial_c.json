@@ -1,0 +1,50 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_c.title",
+        "fallback": "占领C点",
+        "color": "yellow",
+        "bold": true,
+        "hover_event": {
+            "action": "show_text",
+            "value": {
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with": [
+                    {
+                        "translate": "djzc.dialog.author1",
+                        "fallback": "冬战制作组"
+                    }
+                ]
+            }
+        }
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_c.body1",
+                "fallback": "事到如今，已经没什么好说的了。",
+                "color": "yellow",
+                "with": [
+                    {
+                        "keybind": "key.use"
+                    }
+                ]
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.tutorial_c.dismiss",
+            "fallback": "进攻D点！",
+            "color": "dark_red"
+        },
+        "action": {
+            "type": "run_command",
+            "command": "dialog clear @s"
+        }
+    }
+}

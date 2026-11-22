@@ -24,7 +24,7 @@
         "type": "plain_message",
         "contents":{
         "translate": "djzc.dialog.wiki.map.body1",
-        "fallback": "· 温馨提示：战区和启动器的位置已被信标和悬浮文字标识在在地图上",
+        "fallback": "· 温馨提示：战区和启动器的位置已被信标和悬浮文字标识在地图上",
         "color": "yellow"
     },
         "width": 500

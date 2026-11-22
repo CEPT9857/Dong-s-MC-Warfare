@@ -10,7 +10,7 @@
         },
         "description": {
             "translate": "djzc.advancement.wea_ga.desc",
-            "fallback": "使用一次%1$s",
+            "fallback": "投射一枚%1$s",
             "italic": true,
             "with": [
                 {

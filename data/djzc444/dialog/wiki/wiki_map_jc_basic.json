@@ -22,11 +22,25 @@
      "body":[
     {
         "type": "plain_message",
+        "contents":[
+            {
+                "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+                "font": "minecraft:default"
+            },
+            {
+                "text": "\uE001",
+                "font": "djzc444:djzc_map"
+            }
+        ],
+        "width": 144
+    },
+    {
+        "type": "plain_message",
         "contents":{
         "translate": "djzc.dialog.wiki.map_jc_basic.body1",
         "fallback": "我们的第二张地图，新手教程就是在这里进行的",
         "color": "yellow"
-    },
+        },
         "width": 500
     },
     {

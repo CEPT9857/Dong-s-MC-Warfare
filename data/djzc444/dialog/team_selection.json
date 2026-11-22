@@ -1,7 +1,7 @@
 {
      "title":{
         "translate": "djzc.dialog.team_selection.title",
-        "fallback":"冬季战场 阵营选择",
+        "fallback":"跳过教程并选择阵营",
         "color":"yellow",
         "bold": true,
         "hover_event": {
@@ -71,6 +71,16 @@
             "action": {
                 "type": "run_command",
                 "command": "trigger djzc.option set 10"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc777.dialog.tutorial_skip.start",
+                "fallback": "按错了，返回新手教程"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/root"
             }
         }
     ]

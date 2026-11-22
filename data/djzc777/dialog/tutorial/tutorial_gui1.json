@@ -1,0 +1,54 @@
+{
+    "type": "notice",
+    "pause": false,
+    "title": {
+        "translate": "djzc777.dialog.tutorial_gui1.title",
+        "fallback": "冬战成员用书",
+        "color": "yellow",
+        "bold": true,
+        "hover_event": {
+            "action": "show_text",
+            "value": {
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with": [
+                    {
+                        "translate": "djzc.dialog.author1",
+                        "fallback": "冬战制作组"
+                    }
+                ]
+            }
+        }
+    },
+    "body": [
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_gui1.body1",
+                "fallback": "加入 CT 或 T 可选择防守方或进攻方；兵种选择用于更换职业与装备。",
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc777.dialog.tutorial_gui1.body2",
+                "fallback": "在本页的兵种选择引导中，你可以打开真实菜单，挑选兵种并体验对应武器。",
+                "color": "white"
+            }
+        }
+    ],
+    "action": {
+        "label": {
+            "translate": "djzc777.dialog.common.next",
+            "fallback": "下一页",
+            "color": "aqua"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "djzc777:tutorial/tutorial_gui2"
+        }
+    }
+}

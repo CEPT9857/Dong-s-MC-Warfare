@@ -20,7 +20,7 @@
         {
             "label":{
                 "translate": "djzc.msg.allow",
-                "fallback": "赞成!",
+                "fallback": "赞成！",
                 "color":"green"
             },
             "action": {
@@ -31,7 +31,7 @@
         {
             "label":{
                 "translate": "djzc.msg.oppose",
-                "fallback": "反对!",
+                "fallback": "反对！",
                 "color":"red"
             },
             "action": {
@@ -92,7 +92,7 @@
         {
             "label":{
                 "translate": "djzc.msg.ciallo",
-                "fallback": "Ciallo～(∠・ω< )⌒★",
+                "fallback": "Ciallo～(∠・ω< )⌒★！",
                 "color":"light_purple"
             },
             "tooltip": {
@@ -108,7 +108,7 @@
         {
             "label":{
                 "translate": "djzc.msg.attack_a",
-                "fallback": "进攻A点",
+                "fallback": "进攻A点！",
                 "color":"dark_red"
             },
             "action": {
@@ -119,7 +119,7 @@
         {
             "label":{
                 "translate": "djzc.msg.attack_b",
-                "fallback": "进攻B点",
+                "fallback": "进攻B点！",
                 "color":"dark_red"
             },
             "action": {
@@ -130,7 +130,7 @@
         {
             "label":{
                 "translate": "djzc.msg.attack_c",
-                "fallback": "进攻C点",
+                "fallback": "进攻C点！",
                 "color":"dark_red"
             },
             "action": {
@@ -141,7 +141,7 @@
         {
             "label":{
                 "translate": "djzc.msg.attack_d",
-                "fallback": "进攻D点",
+                "fallback": "进攻D点！",
                 "color":"dark_red"
             },
             "action": {
@@ -152,7 +152,7 @@
         {
             "label":{
                 "translate": "djzc.msg.defend_a",
-                "fallback": "防守A点",
+                "fallback": "防守A点！",
                 "color":"blue"
             },
             "action": {
@@ -163,7 +163,7 @@
         {
             "label":{
                 "translate": "djzc.msg.defend_b",
-                "fallback": "防守B点",
+                "fallback": "防守B点！",
                 "color":"blue"
             },
             "action": {
@@ -174,7 +174,7 @@
         {
             "label":{
                 "translate": "djzc.msg.defend_c",
-                "fallback": "防守C点",
+                "fallback": "防守C点！",
                 "color":"blue"
             },
             "action": {
@@ -185,7 +185,7 @@
         {
             "label":{
                 "translate": "djzc.msg.defend_d",
-                "fallback": "防守D点",
+                "fallback": "防守D点！",
                 "color":"blue"
             },
             "action": {

@@ -11,7 +11,7 @@
 取名为*栋记*战场，是为了以此纪念为《冬季战场》开发提供宝贵支持的Minecraft超级栋服腐竹**GNOD728**，没有超级栋服的支持，我们做不出来这个小东西。
 当然，我们*号为张楚*也是经过了GNOD728本人的允许，也欢迎大家去玩他做的*冬季战场：极地潜兵*。
 
-~~其实本来叫Winter Battlefield的，但是这和EA的Battlefield太像了，所以改成现在的名字，大家感觉我们的谐音梗水平怎么样呢？~~
+~~其实本来打算翻译成Winter Battlefield的，但是这和EA的Battlefield太像了，所以改成现在的译法，大家感觉我们的谐音梗水平怎么样呢？~~
 
 **核心理念**：免费、公平、开放、自定义
 
@@ -47,8 +47,8 @@
 - **按 G 键**（或右键成员用书）打开主菜单。记得调整视频设置，否则*GUI会被截断*
 
 #### 3. 第一次对战流程
-1. **选择阵营**：CT（防守方）或 T（进攻方）。  
-  - CT：阻止T占领全部战区，拖到15分钟结束即赢。  
+1. **选择阵营**：CT（防守方）或 T（进攻方）。
+  - CT：阻止T占领全部战区，拖到15分钟结束即赢。
   - T：占领全部四个战区（A、B、C、D）即赢。
 2. **选择兵种**：从8个兵种中选一个。
 3. **点击“准备”**：等待所有玩家准备，游戏自动开始。
@@ -137,7 +137,7 @@
 - [x] 在代码中解耦游戏地图，并增加一个新地图
 - [ ] 加入地图边界检测系统，防止玩家迷路
 - [x] 重制航空兵的**雷枪**
-- [ ] 性能优化
+- [x] 性能优化
 - [ ] 小bug修复
 
 1.1 【走向深蓝】（2027年Q1）
@@ -163,7 +163,7 @@
 取名為*棟記*戰場，是為了紀念為《冬季戰場》開發提供寶貴支援的 Minecraft 超級棟服腐竹**GNOD728**。沒有超級棟服的支援，我們做不出這個小東西。
 當然，我們*號為張楚*也是經過了 GNOD728 本人的允許，也歡迎大家去玩他製作的*冬季戰場：極地潛兵*。
 
-~~其實本來叫 Winter Battlefield 的，但是這和 EA 的 Battlefield 太像了，所以改成現在的名字，大家覺得我們的諧音梗水準怎麼樣呢？~~
+~~其實本來打算翻譯成 Winter Battlefield 的，但是這和 EA 的 Battlefield 太像了，所以改成現在的譯法，大家覺得我們的諧音梗水準怎麼樣呢？~~
 
 **核心理念**：免費、公平、開放、自訂
 
@@ -289,7 +289,7 @@
 - [x] 在程式碼中解耦遊戲地圖，並增加一個新地圖
 - [ ] 加入地圖邊界檢測系統，防止玩家迷路
 - [x] 重製航空兵的**雷槍**
-- [ ] 效能優化
+- [x] 效能優化
 - [ ] 小 bug 修復
 
 1.1 【走向深藍】（2027 年 Q1）
@@ -303,7 +303,7 @@
 - [x] 加入一些無人裝備
 ……
 
-根據《Minecraft 使用準則》，特此加入免責聲明：冬季戰場非 MINECRAFT 官方產品。未經 MOJANG 或 MICROSOFT 批准，也不與 MOJANG 或 MICROSOFT 關聯
+根據《Minecraft 使用準則》，特此加入免責聲明：冬季戰場非 MINECRAFT 官方產品。未經 MOJANG 或 MICROSOFT 批准，也不與 MOJANG 或 MICROSOFT 關聯。
 
 ## English
 Don't worry, we're saving up token money for translation.
@@ -315,7 +315,7 @@ Don't worry, we're saving up token money for translation.
 The name *Dong's MC Warfare* commemorates **GNOD728**, the owner of **Super Dong Server**, whose valuable support helped develop the original Dong's MC Warfare project. Without Super Dong Server's support, we could not have made this little project.
 Of course, brrowing his name was also used with GNOD728's permission. You are also welcome to try his project, *Dong's MC Warfare: Polar Diver Pack*.
 
-~~It was originally going to be called Winter Battlefield, but that sounded too much like EA's Battlefield, so we changed it to its current name. What do you think of our pun?~~
+~~We originally planned to translate the name as Winter Battlefield, but that sounded too much like EA's Battlefield, so we changed to the current translation. What do you think of our pun?~~
 
 **Core principles**: free, fair, open, and customizable.
 
@@ -441,7 +441,7 @@ Using our first map, **Winter Battlefield (dz_djzc)**, as an example:
 - [x] Decouple the game map from the code and add a new map
 - [ ] Add a map boundary detection system to prevent players from getting lost
 - [x] Rebuild the Air Force's **Thunder Spear**
-- [ ] Performance optimization
+- [x] Performance optimization
 - [ ] Minor bug fixes
 
 1.1 [To the Deep Blue] (Q1 2027)

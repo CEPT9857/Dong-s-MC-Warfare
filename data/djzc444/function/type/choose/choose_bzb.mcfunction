@@ -8,6 +8,5 @@ execute if score @s djzc.type > 神风特攻 djzc.type run title @s title [{tran
 #判断本局有没有使用过板载兵,如果用过，拒绝请求
 execute if score @s djzc.type <= 神风特攻 djzc.type run function djzc444:type/type_bzb
 execute if score @s djzc.type <= 神风特攻 djzc.type run function djzc444:weapon/books_all
-execute if score @s djzc.type <= 神风特攻 djzc.type run tp @s[team=T] -167.5 70 -822.5
-execute if score @s djzc.type <= 神风特攻 djzc.type run tp @s[team=CT] -433.5 68 -760.5
-#判断本局有没有使用过板载兵,如果没用过，分发装备，并送往起始点
+$execute if score @s djzc.type <= 神风特攻 djzc.type run tp @s $(x) $(y) $(z)
+#判断本局有没有使用过板载兵,如果没用过，分发装备，然后强行送进战场

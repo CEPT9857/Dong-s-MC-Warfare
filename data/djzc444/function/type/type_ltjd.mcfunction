@@ -1,8 +1,7 @@
 clear @s
 #清理物品，防止出错
-execute as @s[team=CT] run function djzc444:type/suit/suit_ltjd
-execute as @s[team=T] run function djzc444:type/suit/suit_ltjd
-#分阵营发盔甲
+execute as @s run function djzc444:type/suit/suit_ltjd
+#发白板盔甲
 
 give @s iron_sword[enchantments={sharpness:90,knockback:1,fire_aspect:2},unbreakable={},custom_name={translate:"djzc.type_ltjd.sword",fallback:"裁纸刀"}]
 function djzc444:weapon/wea_sanlian_fly

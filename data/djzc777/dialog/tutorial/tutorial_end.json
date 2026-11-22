@@ -3,9 +3,22 @@
     "pause": false,
     "title": {
         "translate": "djzc777.dialog.tutorial_end.title",
-        "fallback": "基础教程完成 · 下一步？",
-        "color": "gold",
-        "bold": true
+        "fallback": "下一步？",
+        "color": "yellow",
+        "bold": true,
+        "hover_event": {
+            "action": "show_text",
+            "value": {
+                "translate": "djzc.dialog.author_write",
+                "fallback": "%1$s 编写",
+                "with": [
+                    {
+                        "translate": "djzc.dialog.author1",
+                        "fallback": "冬战制作组"
+                    }
+                ]
+            }
+        }
     },
     "body": [
         {
@@ -13,7 +26,8 @@
             "width": 440,
             "contents": {
                 "translate": "djzc777.dialog.tutorial_end.body1",
-                "fallback": "基础教程到此结束。以后可以在冬季战场百科全书中重新打开新手教程。"
+                "fallback": "基础教程到此结束。以后可以在冬季战场百科全书中重新打开新手教程。",
+                "color": "yellow"
             }
         },
         {
@@ -21,7 +35,8 @@
             "width": 440,
             "contents": {
                 "translate": "djzc777.dialog.tutorial_end.body2",
-                "fallback": "要继续学习进阶教程吗？进阶内容将按模块开放；模块清单仍在设计中。"
+                "fallback": "我们还为冬战的其他机制设计了进阶教程，帮助你了解这个游戏。",
+                "color": "white"
             }
         }
     ],
@@ -30,7 +45,7 @@
         {
             "label": {
                 "translate": "djzc777.dialog.tutorial_end.finish",
-                "fallback": "暂不学习，结束教程",
+                "fallback": "无视风险，结束教程",
                 "color": "gray"
             },
             "action": {
@@ -41,12 +56,12 @@
         {
             "label": {
                 "translate": "djzc777.dialog.tutorial_end.advanced",
-                "fallback": "了解进阶教程",
+                "fallback": "学习进阶教程",
                 "color": "green"
             },
             "action": {
                 "type": "show_dialog",
-                "dialog": "djzc777:tutorial_advanced"
+                "dialog": "djzc777:tutorial/tutorial_advanced"
             }
         },
         {
