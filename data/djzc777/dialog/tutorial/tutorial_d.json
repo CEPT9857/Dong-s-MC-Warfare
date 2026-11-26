@@ -2,7 +2,7 @@
     "type": "notice",
     "pause": false,
     "title": {
-        "translate": "djzc777.dialog.tutorial_win.title",
+        "translate": "djzc.dialog.tutorial_win.title",
         "fallback": "占领D点",
         "color": "yellow",
         "bold": true,
@@ -25,8 +25,8 @@
             "type": "plain_message",
             "width": 420,
             "contents": {
-                "translate": "djzc777.dialog.tutorial_win.body1",
-                "fallback": "进攻D点！干得好，特种兵！",
+                "translate": "djzc.dialog.tutorial_win.body1",
+                "fallback": "干得好！胜败乃兵家常事，这一次算你赢了！",
                 "color": "yellow"
             }
         },
@@ -34,21 +34,20 @@
             "type": "plain_message",
             "width": 420,
             "contents": {
-                "translate": "djzc777.dialog.tutorial_win.body2",
-                "fallback": "接下来前往模拟配装处与靶场，认识成员用书，并亲手试用一套兵种装备。",
+                "translate": "djzc.dialog.tutorial_win.body2",
+                "fallback": "接下来是认识《冬战成员用书》的环节",
                 "color": "white"
             }
         }
     ],
     "action": {
         "label": {
-            "translate": "djzc777.dialog.tutorial_win.dismiss",
-            "fallback": "进入配装教学",
-            "color": "green"
+            "translate": "djzc.dialog.tutorial_win.dismiss",
+            "fallback": "进入配装教学"
         },
         "action": {
             "type": "run_command",
-            "command": "dialog clear @s"
+            "command": "trigger djzc.option set 104"
         }
     }
 }

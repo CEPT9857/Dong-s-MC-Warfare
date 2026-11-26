@@ -8,8 +8,8 @@
 | --- | --- |
 | 数据包 | 冬季战场（Dong's MC Warfare） |
 | 当前文档对象 | 工作区当前代码 |
-| 版本名 | `1.0.7-1111-by-CE_PT` |
-| Git HEAD | `55a55ec`（`1.0.7 1104-by-CE_PT`） |
+| 版本名 | `1.0.7-1128-by-CE_PT`（CHANGELOG 已开条目，`end` 日期待补） |
+| Git HEAD | `72cd29c`（`1.0.7-1123-by-CE_PT`）；此后为未提交的工作区改动 |
 | Minecraft 版本 | Java 版 1.21.11 |
 | 数据包格式 | `min_format` `94.1`，`max_format` `101.1` |
 | 主要命名空间 | `djzc444` |
@@ -60,7 +60,7 @@ datapacks/djzc444/
     │       ├── buff/              增益效果与清理
     │       ├── ctmsg/ tmsg/       两阵营步话机消息处理
     │       ├── dialog/            动态对话框宏函数，从 storage 读参数
-    │       ├── game/              对局流程、时钟、输入分发，以及战斗、支援和护甲同步
+    │       ├── game/              对局流程、时钟、输入分发、战斗、支援、护甲同步和空战曲 `music_af`
     │       ├── option/            管理选项、阵营、统计、测试工具
     │       ├── points/            A-D 战区、启动器、机场
     │       ├── support/           手动支援工具函数，没接进主 tick
@@ -97,14 +97,14 @@ datapacks/djzc444/
     │   └── function/              game/ 导弹逻辑，option/ 模式开关，weapon/ 发放
     ├── djzc777/                   新手教程
     │   ├── dialog/tutorial/       教程主页、实境提示、成员用书说明、结束页
-    │   └── function/tutorial/     教程开始与结束
+    │   └── function/tutorial/     `start`、`end`、`advance`，以及 `option.mcfunction` + `option/` 六个按钮子函数
     └── djzc888/                   地图系统
         └── function/
             ├── map_swich.mcfunction    按 map djzc.map 选地图
             ├── game_map_selection.mcfunction 读玩家提交的地图编号
             ├── tick.mcfunction         每 tick 处理地图选择
             ├── dz_djzc/               冬季战场地图的 main 与 unique
-            └── jc_basic/              基础教程地图的 main 与 unique
+            └── jc_basic/              基础教程地图的 main、unique（事件触发）与 unique_tick（区域检测）
 ```
 
 命名空间各管一摊。
@@ -130,6 +130,8 @@ datapacks/djzc444/
 按领域拆函数。命名空间区分组件，`game/`、`points/`、`tp/`、`type/`、`weapon/`、`dialog/` 再按职责分文件。入口负责编排，具体动作丢给子函数。
 
 调度靠 `load` 和 `tick` 标签。`tick` 每个游戏刻查一次对局阶段、玩家分数和谓词，然后调对应处理函数。菜单请求写进 `trigger` 目标，也是 tick 来收。
+
+高频路径用 Guard Clause 提前返回：`execute if <条件> run return fail` / `return run function` 挡在开头，后面的命令就不必每条再挂同一个 `if/unless`。`game/lib_books`（右键成书分发）、`game/time_custom`（常驻时钟）、`djzc666:game/lib_missile_track_do`（导弹制导分发）已这么改。低频函数（60 秒调度、按钮触发）不必为结构改动冒风险，保持原样。
 
 状态放计分板。玩家状态、统计、对局流程、战区进度、菜单请求都在里面，函数用 `execute if/unless score` 判断和推进。结构化参数和动态界面数据走 Storage。
 
@@ -194,7 +196,7 @@ trigger <objective> set <value>
 | `djzc.tp` | 选传送目的地 | 编号见[5.1](#51-传送编号)，能不能去由对应 `tp/` 函数判 |
 | `djzc.ctmsg` | CT 步话机 | `1` 赞成、`2` 反对、`3` 冲锋、`4` 撤退、`5` 发现敌人、`6` 请求支援、`7` 掩护、`8` 彩蛋、`9-12` 进攻 A-D、`13-16` 防守 A-D |
 | `djzc.tmsg` | T 步话机 | 编号同上，由 `function/tmsg/` 里对应编号的函数处理 |
-| `djzc.option` | 成员用书和菜单操作 | `1-7` 侧边栏统计、`8` 统计菜单、`9` 加入 CT、`10` 加入 T、`11` 兵种选择、`12` 步话机、`13` 重新部署、`14` 中止个人音乐、`15` 成员用书、`16` 传送系统、`17` 兵种管理、`18` 地图选择 |
+| `djzc.option` | 成员用书和菜单操作 | `1-7` 侧边栏统计、`8` 统计菜单、`9` 加入 CT、`10` 加入 T、`11` 兵种选择、`12` 步话机、`13` 重新部署、`14` 中止个人音乐、`15` 成员用书、`16` 传送系统、`17` 兵种管理、`18` 地图选择；`100-105` 为新手教程按钮（见[7.5](#75-新手教程djzc777)），由 `djzc777:tutorial/option` 每 tick 消费。`19` 号段空闲 |
 | `djzc.eula` | 用户协议 | 点同意提交 `-1`，tick 处理成 `1` 并打开阵营选择。`1` 表示已同意 |
 | `djzc.map` | 地图选择 | `1` 冬季战场（`dz_djzc`）、`2` 教程-基础教程（`jc_basic`） |
 
@@ -217,7 +219,7 @@ trigger <objective> set <value>
 | 值 | 地图代码 | 说明 |
 | --- | --- | --- |
 | `1` | `dz_djzc` | 冬季战场，第一张地图，带机场和空中出生点 |
-| `2` | `jc_basic` | 教程-基础教程，目前没机场也没有空中出生点 |
+| `2` | `jc_basic` | 教程-基础教程，用于新手教程，也带机场和“空中出生点” |
 
 玩家交上来的 `djzc.map` 分值由 `djzc888:game_map_selection` 读走，写进虚拟玩家 `map djzc.map`，`djzc888:map_swich` 再按它加载地图配置。
 
@@ -296,7 +298,7 @@ function djzc444:weapon/book_opbook
 | `djzc444:team_selection` | 阵营选择 | 玩家交 `djzc.eula=-1` 后由 tick 打开 |
 | `djzc444:scoreboard` | 统计信息菜单 | `djzc.option=8` |
 | `djzc444:ctmsg` / `djzc444:tmsg` | CT/T 步话机 | 右键带 `msg` 标签的成书，或 `djzc.option=12` |
-| `djzc444:type_choose` | 静态兵种选择页（8 个按钮） | `djzc777:tutorial_choose` 里的链接 |
+| `djzc444:type_choose` | 静态兵种选择页（8 个按钮） | `tutorial_gui3` 里的「兵种选择」链接 |
 | `djzc444:userbook` | 静态成员用书 | G 键快捷菜单、暂停菜单、百科返回链接 |
 | `djzc444:op` | 静态管理用书 | `/dialog show @s djzc444:op` |
 | `djzc444:wiki/wiki_notice` | 百科全书主页 | 成员用书里的「百科全书」链接 |
@@ -309,13 +311,16 @@ function djzc444:weapon/book_opbook
 | `djzc444:wiki/wiki_type_jzb` 等 8 个页面 | 八个兵种介绍 | 兵种介绍目录 |
 | `djzc444:wiki/wiki_credits` | 制作人名单 | 百科主页 |
 | `djzc777:tutorial/root` | 新手教程主页 | `function djzc777:open`、暂停菜单 |
-| `djzc777:tutorial_skip` | 教程跳过/入门选择 | 教程主页 |
-| `djzc777:tutorial_a` / `b` / `c` | 实境教程提示页 | 教程流程 |
-| `djzc777:tutorial_gui1` / `gui2` / `gui3` | 成员用书说明页 | 教程流程 |
-| `djzc777:tutorial_choose` | 教程中的兵种选择页 | 教程流程 |
-| `djzc777:tutorial_end` | 基础教程结束页 | 教程流程 |
-| `djzc777:tutorial_advanced` | 进阶教程占位页 | 教程结束页 |
-| `djzc777:tutorial_win` | 胜利提示页 | 教程流程 |
+| `djzc777:tutorial/tutorial_skip` | 教程跳过/入门选择 | 教程主页 |
+| `djzc777:tutorial/tutorial_a` / `b` | 实境教程提示页 | 首次进入 A/B 点区域（`unique_tick`，阶段 1/3） |
+| `djzc777:tutorial/tutorial_starter` | 启动器教学页 | 激活任意 C 点启动器（`C1/C2/C3=1`，阶段 5） |
+| `djzc777:tutorial/tutorial_c` | C 点占领教学页 | C123=3 全部激活、C 点开放占领（阶段 7） |
+| `djzc777:tutorial/tutorial_d` | D 点占领教学页 | 占领 D 点（`D=2`，阶段 9） |
+| `djzc777:tutorial/tutorial_gui1` / `gui2` / `gui3` | 成员用书说明页（multi_action）；gui3 含「兵种选择」按钮 | 教程流程，gui1 由 104 号段传送后拉起 |
+| `djzc777:tutorial/tutorial_end` | 基础教程结束页 | 任意玩家进入靶场出口区域（x=-388..-386,y=19,z=-749..-751），弹出后置阶段 -2 防重复 |
+| `djzc777:tutorial/tutorial_advanced` | 进阶教程占位页 | 教程结束页 |
+
+教程对话框实际在 `data/djzc777/dialog/tutorial/` 子目录下，ID 必须带 `tutorial/` 前缀；原 `tutorial_win` 和 `tutorial_choose` 已删，分别由 `tutorial_d` 和 `tutorial_gui3` 的「兵种选择」按钮接替。
 
 ### 6.2 动态（内联）对话框
 
@@ -345,7 +350,7 @@ function djzc444:weapon/book_opbook
 - `wiki_type_intro` 连到八个 `wiki_type_*`，每页回兵种介绍目录。
 - `wiki_before_play` 和 `wiki_how_to_play` 的正文链接指向 `wiki_map`，退出按钮都回 `wiki_notice`。
 - `userbook` 静态和动态版的正文链接都含百科、统计、地图选择、管理用书，退出按钮进传送系统。
-- `tutorial_end` 能结束教程、看进阶占位页或重播教程主页，`tutorial_choose` 可以直接打开静态 `djzc444:type_choose`。
+- `tutorial_end` 能结束教程、看进阶占位页或重播教程主页；`tutorial_gui3` 的「兵种选择」按钮直接打开静态 `djzc444:type_choose`。
 
 ### 6.4 快捷入口标签
 
@@ -417,8 +422,8 @@ function djzc444:weapon/book_opbook
 - 武器。空空导弹 `blaze_rod`，`custom_data.tags=["djzc.missile.aa"]`，每次发 `4` 个，冷却 `3` 秒；空地导弹 `breeze_rod`，标签 `djzc.missile.ag`，每次 `8` 个，冷却 `3` 秒；地空导弹发射器 `bone`，标签 `djzc.missile.ga`，每次 `8` 个，冷却 `3` 秒。
 - 发射和扫描由隐藏成就触发。消耗 `djzc.missile.aa` 走 `djzc666:tool/missile_fox` → `missile_fox`，`djzc.missile.ag` 走 `missile_rifle`，`djzc.missile.ga` 走 `missile_sam`。长按 `blaze_rod` / `breeze_rod` / `bone` 走 `missile_scan` / `missile_ag_scan` / `missile_ga_scan`，扫锥形范围内的玩家并让他们发光。
 - 导弹实体是 `minecraft:snowball`，带 `missile`、`AA` / `AG` / `GF_AA` 和 `CT_*` / `T_*` 标签，`Owner` 存发射者 UUID，`PortalCooldown` 当引信倒计时。
-- 制导模式看 `missile_mode djzc.option`，`0` TP 瞬移制导，`1` 向量法 Motion 制导。目标判定看 `track_type djzc.option`，`0` 用 `AF` / `GF` 标签，`1` 用 `is_on_ground` / `no_on_ground` 谓词。
-- 近炸引信，敌方 `AF` / `GF` 单位进导弹 `3` 格内就把 `PortalCooldown` 置 `0`；导弹撞上非可替换方块也会自爆。
+- 制导模式看 `missile_mode djzc.option`，`1`（默认，`initialize` 复位值）向量法 Motion 制导，`0` TP 瞬移制导。分发器 `lib_missile_track_do` 用 `if matches 1 run return run function` 提前返回，模式 0 的两条 `tp` 不再重复挂 `unless` 条件。目标判定看 `track_type djzc.option`，默认 `0` 用 `AF` / `GF` 标签，`1` 用 `is_on_ground` / `no_on_ground` 谓词。
+- 近炸引信，敌方 `AF` / `GF` 单位进导弹 `3` 格内就把 `PortalCooldown` 置 `0`；导弹撞上非可替换方块也会自爆。干扰弹现在直接当作敌方单位被追踪，旧版「命中抛出的物品」诱饵逻辑已删。
 - 伤害，`lib_missile_damage` 对 `AA` 造成 `84` 点、半径 `5` 格，对 `AG` 造成 `46` 点、半径 `5` 格。`GF_AA` 导弹同时带 `AA` 标签，吃 `84` 点那档。
 - 敌导弹告警在 `djzc.time2` 的 `刻=20` 和 `刻=10` 执行，每 0.5 秒一次，给 `100` 格内的敌方空军/地面单位显示「敌导弹」。
 
@@ -476,17 +481,23 @@ function djzc444:weapon/book_opbook
 ### 7.5 新手教程（`djzc777`）
 
 - 主页入口 `function djzc777:open`，以当前玩家 `@s` 显示 `djzc777:tutorial/root`。ESC 暂停菜单的 `pause_screen_actions` 也能开。
-- `function djzc777:tutorial/start` 在 `djzc.gameflow` 的虚拟玩家 `game` 为 `1` 时拒绝开始，提示「对局进行中，暂时不能进入新手教程。」。其余情况把玩家加进 T 队，`djzc777.tutorial=1`，重生点和玩家位置设 `(-434, 41, -709)`，调 `djzc444:type/type_fkb`，显示「按%1$s前进」。它会动阵营和装备，只开对话框的别调这个。
-- `function djzc777:tutorial/end` 要求执行玩家已加入 T 或 CT。没选阵营只提示、不改状态；T/CT 玩家把 `djzc777.tutorial` 设 `-1`，分别传到 T `(-397, 30, -809)` 或 CT `(-405, 30, -809)` 出生位置，设好重生点，发「加油，特种兵！」。
-- `djzc777:load` 创建 dummy 目标 `djzc777.tutorial`，已确认的值 `1` 教程进行中、`-1` 完成。函数没给玩家设默认值，目标也不是 `trigger`，别用 `/trigger` 交。
-- 当前对话框 ID，主页 `tutorial/root`、开始选择 `tutorial_skip`、实境提示 `tutorial_a`/`tutorial_b`/`tutorial_c`、成员用书说明 `tutorial_gui1`/`tutorial_gui2`/`tutorial_gui3`、兵种选择 `tutorial_choose`、基础教程结束 `tutorial_end`、进阶占位 `tutorial_advanced`、胜利提示 `tutorial_win`。
-- 旧版 `djzc777:tutorial/ch01` 至 `ch08` 已删，调用方改用当前页面 ID。`tutorial/start` 和 `tutorial/end` 用固定地图坐标，迁移地图前核传送点、阵营和兵种效果；直接调也可能改玩家队伍或装备。进阶页目前只是占位。
+- `function djzc777:tutorial/start` 在 `game=1`（对局进行中）时用 `return run tellraw` 提前拒绝，提示「对局进行中，暂时不能进入新手教程。」。否则切地图到 `jc_basic`（`map djzc.map=2` → `map_swich` → `game/start`），把玩家加进 T 队，`djzc777.tutorial=1`，重生点和位置设 `(-434, 41, -709)`，发 `type_fkb` 装备，并清掉出口弹窗防重复标记。它会切图、改阵营和装备，只开对话框的别调这个。
+- `function djzc777:tutorial/end` 用 `as @s` 直接把执行玩家 `djzc777.tutorial` 设 `-1`，按队伍设重生点并传到 T `(-397, 30, -809)` / CT `(-405, 30, -809)`，发「点此准备开一局」的 tellraw（点击交 `djzc.prepare=1`）。执行者必须是玩家。
+- `djzc777:load` 创建 dummy 目标 `djzc777.tutorial`。阶段值：`1`/`3`/`5`/`7`/`9` 是各触发前的等待态，弹窗后推进到偶数 `2`/`4`/`6`/`8`/`10`，按钮再 +1 进入下一等待态；`-1` 主动结束、`-2` 已看过出口结束页（防重复弹）。目标不是 `trigger`，别用 `/trigger` 交。
+- 阶段推进链（由 `djzc888:jc_basic/unique.mcfunction` 事件触发 + `unique_tick.mcfunction` 区域触发）：进入 A 点（1→2）→ 进 B 点（3→4）→ 激活任意 C 启动器（5→6，`C1/C2/C3=1`）→ C123=3 全激活开放占领（7→8，`tutorial_c`）→ 占领 D 点 `D=2`（9→10，`tutorial_d`）。按钮 `advance` 统一 +1 并 `dialog clear`。
+- 按钮走 `djzc.option` 的 `100-105` 号段，由 tick 里的 `djzc777:tutorial/option` 分发到 `option/` 六个子函数：`100` 一键占领 A（`T_SA=0`）、`101` 一键占领 B（`T_SB=0`）、`102` 进攻 C（广播步话机 `tmsg=11`）、`103` 进攻 D（广播 `tmsg=12` + `T_SC=0` 一键占领 C）、`104` 进入配装教学（传送 `(-380,20,-748)` → `advance` → 拉起 `tutorial_gui1`）、`105` 无视风险结束教程（`function djzc777:tutorial/end`）。一键占领靠把倒计时分数归零，交给每 tick 的 `x_point` 走正常占领流程，不绕过 gameflow。
+- 注意 `advance` 内含 `dialog clear`，需要在 `dialog show` **之前**调用；`gui1` 曾因顺序颠倒导致新开的页面被立刻关掉。
+- 对话框 ID 全在 `tutorial/` 子目录下，路径带 `tutorial/` 前缀。主页 `tutorial/root`、实境提示 `tutorial_a`/`tutorial_b`/`tutorial_starter`/`tutorial_c`/`tutorial_d`、成员用书说明 `tutorial_gui1`/`gui2`/`gui3`、结束页 `tutorial_end`、进阶占位 `tutorial_advanced`。原 `tutorial_win`、`tutorial_choose` 已删除，分别由 `tutorial_d`、`tutorial_gui3` 的「兵种选择」按钮接替。
+- 三个成员用书说明页是 `multi_action`：从 `djzc444:userbook` 按语义复制来的按钮（加入CT/T、兵种选择、步话机、重新部署、中止音乐、准备/取消准备），有 tooltip 的只有 join_ct/join_t/redeploy 三项，与 userbook 严格一致；gui1/gui2 翻页按钮在 `exit_action`，gui3 的 `exit_action` 已移除、兵种选择按钮放 `actions`。
+- `tutorial_starter` 现有三段 body：`body1` 教激活（含 `%1$s` keybind）、`body2` 说可分几次转动展示框、`body3` 说找不到就看定位栏。教程页翻译键从 `djzc777.dialog.*` 改名并入 `djzc.dialog.*`，条目仍在 `assets/djzc777/lang/`；dialog fallback 与 zh_cn 值已逐键对齐（37 处一致）。
+- 出口区域检测在 `unique_tick.mcfunction`：任意玩家进入 `x=-388..-386,y=19,z=-749..-751` 弹 `tutorial_end` 并把该玩家阶段置 `-2`，`unless matches -2` 挡住每 tick 重复弹；重播时 `start` 把阶段重置为 1，下次经过还能再触发。
+- 旧版 `djzc777:tutorial/ch01` 至 `ch08` 已删。`tutorial/start` 和 `tutorial/end` 仍用固定地图坐标，迁移地图前核传送点、阵营和兵种效果。进阶页目前只是占位。
 
 ### 7.6 统计与其他系统
 
 - `option/scoreboard_*` 把对应统计目标显示到侧边栏，顺手清 `djzc.option`。`1` 总击杀数（`djzc.stat_kill`）、`2` 总阵亡数（`djzc.stat_death`）、`3` CT 击杀数（`djzc.CT`）、`4` T 击杀数（`djzc.T`）、`5` 战斗场次（`djzc.fight`）、`6` 胜利场次（`djzc.fight_win`）、`7` 失败场次（`djzc.fight_lost`）。
 - `game/death_scoreboard` 处理无归属死亡，T 玩家不是被 CT 击杀就把最近 CT 的 `djzc.CT` 和 `djzc.count_kill` 加 `1`，CT 玩家反过来同理。处理完清 `djzc.count_die1`、`djzc.T_D_by_CT`、`djzc.CT_D_by_T`。
-- `game/music_stop` 停所有玩家声音，`end_custom` 结束后 10 秒调度一次。`music_af` 停所有声音并播 `music.dragon`（空战曲）。
+- `game/music_stop` 停所有玩家声音，`end_custom` 结束后 10 秒调度一次。`game/music_af` 停所有声音并播 `music.dragon`（空战曲）。
 - `tag_clear` 清当前玩家的 `GF`、`AF` 和八个兵种标签，兵种函数发装备前调。
 - `support/mechanic_wolf`、`support/allay_drone`、`support/swarm_drones`、`support/smoke` 是独立的手动支援工具函数，目前主要给开发测试或手动发放用，没接进主 tick 流程。
 - `game/lib_armor_sync` 是全场扫描，看玩家队伍和 `djzc444.armor_team`，不一致才调 `game/lib_armor_sync/ct` 或 `/t`。新发的白板 `quartz` 也会触发一次，装备和背包都看。两个函数用 `item_modifier` 把身上所有带 `trim` 的装备材料改成 `lapis`（CT）或 `redstone`（T）。`all_of_player` 的参数是物品谓词 `filter` 和目标 `modifier`，遍历背包、护甲、主手、副手、光标和合成格，盔甲和盾牌共用这一套。发放统一在 `type/armor`，发石英白板；`type/suit` 只负责按兵种挑部位，不再分 CT/T 两套。
@@ -506,7 +517,7 @@ function djzc444:weapon/book_opbook
 | `djzc.type` | 兵种选择、启用状态、预设及相关常量 | 内部状态 |
 | `djzc.r_click2`、`djzc.r_click3`、`djzc.r_click4`、`djzc.r_click5`、`djzc.r_click6`、`djzc.r_click7` | 物品使用行为检测 | 内部状态，由 `minecraft.used:*` 准则驱动。`r_click5` 轰炸指示器，`r_click6` 雷枪，`r_click4`（棕色鸡蛋）当前无读写方 |
 | `djzc.prepare`、`djzc.tp`、`djzc.type_choose`、`djzc.ctmsg`、`djzc.tmsg`、`djzc.eula`、`djzc.map` | 玩家输入 trigger | 交互入口，值域见[第 5 节](#5-玩家输入接口trigger) |
-| `djzc777.tutorial` | 新手教程状态 | 普通 dummy，`1` 已开始、`-1` 已完成，不是玩家 trigger |
+| `djzc777.tutorial` | 新手教程阶段 | 普通 dummy。等待态 `1`/`3`/`5`/`7`/`9`，弹窗后偶数 `2`/`4`/`6`/`8`/`10`，按钮 +1 推进；`-1` 主动结束、`-2` 已看过出口结束页。不是玩家 trigger |
 | `djzc.stat_*`、`djzc.count_*`、`djzc.fight*`、`djzc.CT`、`djzc.T`、`djzc.occupy` | 统计数据和对局记录 | 用于统计或展示，写入规则见[7.6](#76-统计与其他系统) |
 | `djzc.airport_ct`、`djzc.airport_t` | 机场补给倒计时 | 内部状态，由 `airport_x` 改 |
 | `djzc555.ray_*` | 射线检测参数与运行状态 | 内部状态。含 `ray_dist`、`ray_max`、`ray_type`、`ray_step`、`ray_particle`、`ray_sleep`（每步间隔 tick）、`ray_timer`（运行态倒计时）、`ray_uid`（关联施法者与 marker） |
@@ -605,7 +616,8 @@ function djzc444:weapon/book_opbook
 - 地图相关显示文本统一用 `djzc.map.<地图代码>.*`，例如 `djzc.map.dz_djzc.point_a`、`djzc.map.jc_basic.respawn_sky_ct`。
 - 百科地图页标题和简介用 `djzc.dialog.wiki.map_<地图代码>.title` / `.body1`。
 - 新增地图时一起补 `assets/djzc444/lang/*.json` 里的 `djzc.map.<code>.*` 键，`djzc.dialog.wiki.map_<code>.title` / `.body1` 键，`data/djzc444/dialog/wiki/wiki_map_<code>.json`，`wiki_map.json` 里的页面链接，以及 `djzc888:<code>/main.mcfunction` 和 `unique.mcfunction`。
-- 数据包内 `assets/djzc444/lang/` 提供备用翻译（当前 617 键 × 4 语言），`assets/minecraft/lang/` 另有 43 键 × 4 语言，配套资源包给的是更完整的 620 键 × 4 语言。对话框带 `fallback`，完整本地化还是得加载资源包。
+- 数据包内 `assets/djzc444/lang/` 提供备用翻译（当前 624 键 × 4 语言），`assets/minecraft/lang/` 另有 43 键 × 4 语言，配套资源包的 `assets/djzc444/lang/` 同为 624 键 × 4 语言（两侧逐字节一致）。对话框带 `fallback`，完整本地化还是得加载资源包。
+- 新手教程的翻译从 `djzc777.dialog.*` 改名并入通用体系，现为 `djzc.dialog.*`（教程页专属键），条目仍放在配套资源包的 `assets/djzc777/lang/`（47 键 × 4 语言）。`djzc777.load.msg`、`djzc777.tutorial.start.denied`、`djzc777.tutorial.end.complete` 三个键保留原命名空间不变。教程页 dialog 的 fallback 与 zh_cn 已对齐，改文案时两边一起维护。
 
 ### 8.9 实测注意事项
 
@@ -625,7 +637,7 @@ function djzc444:weapon/book_opbook
 
 ## 9. 配套资源包接口
 
-这一节按 `赛扬的冬季战场 v1.0.6 Ultimate` 资源包整理。资源包是客户端资源层，没有数据包函数和 `trigger` 入口，集成点在原版声音事件替换、音频文件和语言键。元数据把 `min_format` 和 `max_format` 都写 `75`，实际以目标客户端加载结果为准。
+这一节按 `赛扬的冬季战场 v1.0.7` 资源包整理。资源包是客户端资源层，没有数据包函数和 `trigger` 入口，集成点在原版声音事件替换、音频文件和语言键。元数据把 `min_format` 和 `max_format` 都写 `75`，实际以目标客户端加载结果为准。
 
 ### 9.1 声音事件
 
@@ -653,8 +665,9 @@ function djzc444:weapon/book_opbook
 
 | 目录 | 用途 | 当前键数 |
 | --- | --- | --- |
-| `assets/djzc444/lang/` | 冬战自定义界面、物品/成就文本、死亡提示、步话机及占点字幕，含资源包元数据描述键 `djzc.resourcepack.mcmeta.desc` | 620 |
+| `assets/djzc444/lang/` | 冬战自定义界面、物品/成就文本、死亡提示、步话机及占点字幕，含资源包元数据描述键 `djzc.resourcepack.mcmeta.desc` 和新增的 `djzc.map.jc_basic.exit` | 624 |
 | `assets/minecraft/lang/` | 覆盖原版死亡文本、旗帜图案名称和唱片曲目名称等 Minecraft 翻译键 | 43 |
+| `assets/djzc777/lang/` | 新手教程页文本，键名已并入 `djzc.dialog.*` 通用体系，另有三个保留的 `djzc777.*` 键 | 47 |
 
 声音字幕读 `djzc.msg.*`、`djzc.type_bzb` 这些键，元数据描述走 `translate` 读 `djzc.resourcepack.mcmeta.desc`，带 `fallback` 兜底。依赖这些文本的集成要保留键名和 `%1$s` 之类格式占位符，四种语言文件一起维护。
 
@@ -664,6 +677,29 @@ function djzc444:weapon/book_opbook
 - 同名声音事件是整体替换，不会叠加。跟别的资源包一起开，优先级高的 `sounds.json` 可能盖掉冬战映射，得到目标客户端上看实际结果。
 - 资源包格式范围钉在 `75`。升级 Minecraft 或改格式元数据之后，实际加载一遍，验声音、字幕、唱片曲目和各语言文本。
 - 当前 56 个被引用的冬战 OGG 都有对应文件。新增或重命名资源时同步改声音注册表，顺手核路径大小写和拼写。1.0.7 把早期误拼的 `pionts` 改成 `points`，旧文档里的 `pionts` 说明已经作废。
+
+### 9.4 翻译参考（术语对照）
+
+冬战自有术语以已有语言文件里的译法为准，新增文本沿用下表，别另造近义词。英文只走这一套，避免同一概念出现多种写法。
+
+| 中文 | 英文（en_us） | 繁体（zh_hk / zh_tw） | 说明 |
+| --- | --- | --- | --- |
+| 战区、点位 | Point（如 `A Point`） | 戰區、點位 | 用 `Point`，**不用** `Zone` / `Combat Zone`；顺序恒为「字母 + Point」，写 `D Point` 不写 `Point D` |
+| 占领 | capture / capture the point | 佔領 | 地图点位名作 `A Point`、`C Point`，句首大写 |
+| 进攻 X 点 | Attack the X point! | 進攻X點！ | 沿用 `djzc.msg.attack_a~d`，小写 `point` + 冠词 the；不要写成 `Attack Zone X` |
+| 防守 X 点 | Defend the X point! | 防守X點！ | 沿用 `djzc.msg.defend_a~d` |
+| 启动器 | activator | 啟動器 | 点位启动器，如 `C Point activators` |
+| 兵种 / 兵种选择 | class / Class Selection | 兵種 / 兵種選擇 | 沿用 `djzc.dialog.userbook.type_choose` |
+| 冬战成员用书 | Dong's MC Warfare Member's Handbook | 冬戰成員用書 | 沿用 `djzc.book_userbook`、`djzc.dialog.userbook` |
+| 冬战制作组 | the Dong's MC Warfare Team | 冬戰製作組 | 署名 `djzc.dialog.author1`，配 `Written by %1$s` / `%1$s 編寫` |
+| 冬季战场 | Dong's MC Warfare | 冬季戰場 | 项目名，不用 "Minecraft XXX" 这类官方关联命名 |
+| 百科全书 | Encyclopedia | 百科全書 | 沿用 `djzc.dialog.wiki` |
+| 传送系统 | Teleportation System | 傳送系統 | 成员用书里的传送入口 |
+| 步话机 | walkie-talkie | 步話機 | 沿用 `djzc.dialog.userbook.msg` |
+| 重新部署 | Redeploy | 重新部署 | 沿用 `djzc.dialog.userbook.redeploy` |
+| CT / T 阵营 | Team CT / Team T | CT / T 陣營 | 占点播报用 `... captured by Team T!` |
+
+格式约定：`Zone` 一律改 `Point`（含 README 英文正文）；`Point X` 一律写成 `X Point`；`the X point` 这类带冠词的句式保留小写 point，不算词序问题。`%1$s`、`%2$s` 等占位符和 `keybind` 组件在四种语言里都要原样保留，改译文时不能替换掉。
 
 ## 10. 调用示例
 
@@ -715,24 +751,27 @@ sleep 模式的结果要等若干 tick，后续逻辑写在 `djzc555:raycast/int
 - 一部分坐标仍然硬编码。`game/start` 把 CT/T 传到 `-405 30 -809` / `-397 30 -809`，`end_custom` 和 `load` 用 `-434 41 -709`，`tutorial/end` 也用这两组。它们属于 `dz_djzc` / `jc_basic` 起始区域，加新地图前得迁走。
 - `initialize`、开局/结束、boost 配置这些函数副作用很大，开放给外部调用前先把权限和适用场景说清楚。
 - `game/start` 会关命令方块输出、关 `mob_griefing`，重置一大堆计分板、BossBar、展示框和启动器状态，别在对局管理之外随手调
-- 管理菜单的 `djzc.option=17` 分发没判 OP，`select_opbook` 只挡右键展示入口，挡不住玩家直接交 trigger。
 
 ## 12. 后续维护清单
 
-- [ ] 切地图时清 `storage djzc:map` 里没被新图覆盖的旧键（机场、空中出生点等）
-- [ ] 把 `game/start`、`end_custom`、`tutorial/start`、`tutorial/end` 的固定坐标迁到地图元数据或 `unique` 函数
-- [ ] 给管理菜单 `djzc.option=17` 补 OP 校验
+- [ ] 把 `game/start`、`end_custom` 的固定坐标迁到地图元数据或 `unique` 函数（`tutorial/start`、`tutorial/end` 的传送坐标仍写死，一并核）
 - [ ] 把 `data/minecraft/tags/block/raycast.json` 接进射线检测，或者明确弃用删掉
-- [x] sleep 模式多条射线并存的结果隔离，marker 副本加 `ray_keep` 分槽，`on_result` 改成带参数的宏调用
 - [ ] 施法者标签清理靠 `sort=nearest` 找当前 marker，多人挤在一起同时开火有边缘情况
 - [ ] 逐项登记跨命名空间函数、Storage 键、实体标签、谓词和地图依赖
 - [ ] 在目标 Minecraft 版本里验传送、兵种限制、地图切换和管理菜单权限
-- [ ] 给需要长期支持的外部调用定稳定性等级和回归用例
 
-### 12.1 不是BUG的部分
-- [x]  `djzc444:damage_half` / `damage_ltjd` 的 `set_damage` 负值方向，`lib_boom_marker` / `lib_rocket_ltjd` 按扣耐久用，看起来很奇怪，但是，这是有用的
+### 12.1 不是BUG/已修复的部分
+- [x]  `djzc444:damage_half` / `damage_ltjd` 的 `set_damage` 负值方向，`lib_boom_marker` / `lib_rocket_ltjd` 按扣耐久用（看起来很奇怪，但是，这是有用的）
 - [x]  `pack.mcmeta` 声明的数据包格式范围是 `94.1` 到 `101.1`，实际能不能跑还得在目标 Minecraft 版本里验。（其实就是能跑）
-
+- [x] 给管理菜单 `djzc.option=17` 补 OP 校验（启动的管理页面中的所有操作都需要OP权限）
+- [x] sleep 模式多条射线并存的结果隔离，marker 副本加 `ray_keep` 分槽，`on_result` 改成带参数的宏调用
+- [x] 给需要长期支持的外部调用定稳定性等级和回归用例（这是用于专用地图的项目，一般情况下不会被外部调用）
+- [x] 切地图时清 `storage djzc:map` 里没被新图覆盖的旧键（在元数据中添加了机场）
+- [x] 高频路径的 Guard Clause 优化：`lib_books`、`time_custom`、`lib_missile_track_do` 改用 `return` 提前终止，省掉重复条件判断；低频的 `game_eula`（60 秒）和 `tutorial/end`（按钮触发）保持原样
+- [x] 教程 dialog 的 fallback 与 zh_cn 值逐键对齐；`tutorial_starter` 拆出 body3、`tutorial_c.body2` 与「找不到启动器」文案互换，译文已同步
+- [x] `music_af` 从 `djzc444:function/` 迁到 `djzc444:function/game/music_af`，调用方 `type_bzb`、`type_ltjd` 同步改路径
+- [x] 启动器高亮去掉多余的 `sort=nearest`（`game_starter_display` / `game_starter_nodisplay`），`@n` 本来就是单个目标
+- [x] `djzc.map.jc_basic.exit`「离开靶场」补进四语言，资源包与数据包两侧一致
 
 ## 13. Git 提交与更新日志范式
 

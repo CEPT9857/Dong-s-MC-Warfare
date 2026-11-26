@@ -2,7 +2,7 @@
     "type": "multi_action",
     "pause": false,
     "title": {
-        "translate": "djzc777.dialog.tutorial_end.title",
+        "translate": "djzc.dialog.tutorial_end.title",
         "fallback": "下一步？",
         "color": "yellow",
         "bold": true,
@@ -25,7 +25,7 @@
             "type": "plain_message",
             "width": 440,
             "contents": {
-                "translate": "djzc777.dialog.tutorial_end.body1",
+                "translate": "djzc.dialog.tutorial_end.body1",
                 "fallback": "基础教程到此结束。以后可以在冬季战场百科全书中重新打开新手教程。",
                 "color": "yellow"
             }
@@ -34,7 +34,7 @@
             "type": "plain_message",
             "width": 440,
             "contents": {
-                "translate": "djzc777.dialog.tutorial_end.body2",
+                "translate": "djzc.dialog.tutorial_end.body2",
                 "fallback": "我们还为冬战的其他机制设计了进阶教程，帮助你了解这个游戏。",
                 "color": "white"
             }
@@ -44,18 +44,17 @@
     "actions": [
         {
             "label": {
-                "translate": "djzc777.dialog.tutorial_end.finish",
-                "fallback": "无视风险，结束教程",
-                "color": "gray"
+                "translate": "djzc.dialog.tutorial_end.finish",
+                "fallback": "无视风险，结束教程"
             },
             "action": {
                 "type": "run_command",
-                "command": "function djzc777:tutorial/end"
+                "command": "trigger djzc.option set 105"
             }
         },
         {
             "label": {
-                "translate": "djzc777.dialog.tutorial_end.advanced",
+                "translate": "djzc.dialog.tutorial_end.advanced",
                 "fallback": "学习进阶教程",
                 "color": "green"
             },
@@ -66,7 +65,7 @@
         },
         {
             "label": {
-                "translate": "djzc777.dialog.tutorial_end.replay",
+                "translate": "djzc.dialog.tutorial_end.replay",
                 "fallback": "重播新手教程",
                 "color": "aqua"
             },

@@ -1,8 +1,8 @@
 {
-    "type": "notice",
+    "type": "multi_action",
     "pause": false,
     "title": {
-        "translate": "djzc777.dialog.tutorial_gui2.title",
+        "translate": "djzc.dialog.tutorial_gui2.title",
         "fallback": "冬战成员用书",
         "color": "yellow",
         "bold": true,
@@ -25,24 +25,55 @@
             "type": "plain_message",
             "width": 420,
             "contents": {
-                "translate": "djzc777.dialog.tutorial_gui2.body1",
-                "fallback": "步话机用于向队友发送战场指令；重新部署会让你返回部署流程；中止音乐只影响你自己。",
-                "color": "yellow"
-            }
-        },
-        {
-            "type": "plain_message",
-            "width": 420,
-            "contents": {
-                "translate": "djzc777.dialog.tutorial_gui2.body2",
-                "fallback": "这三项分别负责沟通、重新进入战场和个人音频，不会改变队伍的战斗目标。",
-                "color": "white"
+                "translate": "djzc.dialog.tutorial_gui2.body1",
+                "fallback": "步话机可以向队友发送快捷消息；重新部署会让你回到配装处；中止音乐会关掉你的BGM"
             }
         }
     ],
-    "action": {
+    "columns": 3,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.msg",
+                "fallback": "转到步话机",
+                "color": "gold",
+                "underlined": true
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/tutorial_gui2"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.redeploy",
+                "fallback": "重新部署",
+                "color": "dark_gray"
+            },
+            "tooltip": {
+                "translate": "djzc.dialog.userbook.redeploy.desc",
+                "fallback": "会死。"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/tutorial_gui2"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.stop_music",
+                "fallback": "中止音乐（仅个人）",
+                "color": "gold"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/tutorial_gui2"
+            }
+        }
+    ],
+    "exit_action": {
         "label": {
-            "translate": "djzc777.dialog.common.next",
+            "translate": "djzc.dialog.common.next",
             "fallback": "下一页",
             "color": "aqua"
         },

@@ -2,7 +2,7 @@
     "type": "notice",
     "pause": false,
     "title": {
-        "translate": "djzc777.dialog.tutorial_c.title",
+        "translate": "djzc.dialog.tutorial_c.title",
         "fallback": "占领C点",
         "color": "yellow",
         "bold": true,
@@ -25,26 +25,28 @@
             "type": "plain_message",
             "width": 420,
             "contents": {
-                "translate": "djzc777.dialog.tutorial_c.body1",
-                "fallback": "事到如今，已经没什么好说的了。",
-                "color": "yellow",
-                "with": [
-                    {
-                        "keybind": "key.use"
-                    }
-                ]
+                "translate": "djzc.dialog.tutorial_c.body1",
+                "fallback": "事到如今，已经没什么好说的了。"
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc.dialog.tutorial_c.body2",
+                "fallback": "一键占领C点，然后——"
             }
         }
     ],
     "action": {
         "label": {
-            "translate": "djzc777.dialog.tutorial_c.dismiss",
+            "translate": "djzc.dialog.tutorial_c.dismiss",
             "fallback": "进攻D点！",
             "color": "dark_red"
         },
         "action": {
             "type": "run_command",
-            "command": "dialog clear @s"
+            "command": "trigger djzc.option set 103"
         }
     }
 }

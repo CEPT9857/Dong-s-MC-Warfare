@@ -11,7 +11,7 @@ tag @s add bzb
 #tag相关操作
 
 advancement grant @s only djzc444:fight/wea_bzb
-function djzc444:music_af
+function djzc444:game/music_af
 playsound minecraft:entity.zombie.ambient player @a ~ ~ ~ 1000
 #一阵强劲的音乐响起
 

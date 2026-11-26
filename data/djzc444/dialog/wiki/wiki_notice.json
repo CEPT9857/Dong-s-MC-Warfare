@@ -44,7 +44,8 @@
         "djzc444:wiki/wiki_map",
         "djzc444:wiki/wiki_how_to_play",
         "djzc444:wiki/wiki_type_intro",
-        "djzc444:wiki/wiki_credits"
+        "djzc444:wiki/wiki_credits",
+        "djzc777:tutorial/root"
      ],
      "exit_action": {
         "label": {

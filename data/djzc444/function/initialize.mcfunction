@@ -4,8 +4,8 @@ function djzc444:option/boost
 scoreboard players set debug djzc.option 0
 #复位debug模式
 
-scoreboard players set missile_mode djzc.option 0
-#复位导弹制导模式（0=TP制导）
+scoreboard players set missile_mode djzc.option 1
+#复位导弹制导模式（1=向量制导）
 
 scoreboard players set track_type djzc.option 0
 #复位导弹目标判定模式（0=Tag判定）

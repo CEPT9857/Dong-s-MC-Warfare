@@ -2,8 +2,8 @@
     "type": "notice",
     "pause": false,
     "title": {
-        "translate": "djzc777.dialog.tutorial_starter.title",
-        "fallback": "你是怎么学会激活启动器的",
+        "translate": "djzc.dialog.tutorial_starter.title",
+        "fallback": "激活启动器",
         "color": "yellow",
         "bold": true,
         "hover_event": {
@@ -25,7 +25,7 @@
             "type": "plain_message",
             "width": 420,
             "contents": {
-                "translate": "djzc777.dialog.tutorial_starter.body1",
+                "translate": "djzc.dialog.tutorial_starter.body1",
                 "fallback": "对的对的，对着启动器按着%1$s不放就能激活启动器。",
                 "color": "yellow",
                 "with": [
@@ -39,7 +39,16 @@
             "type": "plain_message",
             "width": 420,
             "contents": {
-                "translate": "djzc777.dialog.tutorial_c.body2",
+                "translate": "djzc.dialog.tutorial_starter.body2",
+                "fallback": "当然，分几次转动启动器上物品展示框也是可以的",
+                "strikethrough": true
+            }
+        },
+        {
+            "type": "plain_message",
+            "width": 420,
+            "contents": {
+                "translate": "djzc.dialog.tutorial_starter.body3",
                 "fallback": "如果你找不到启动器，可以看看HUD上的定位栏，白色的点就是启动器。",
                 "color": "white"
             }
@@ -47,13 +56,13 @@
     ],
     "action": {
         "label": {
-            "translate": "djzc777.dialog.tutorial_starter.dismiss",
+            "translate": "djzc.dialog.tutorial_starter.dismiss",
             "fallback": "进攻C点！",
             "color": "dark_red"
         },
         "action": {
             "type": "run_command",
-            "command": "dialog clear @s"
+            "command": "trigger djzc.option set 102"
         }
     }
 }

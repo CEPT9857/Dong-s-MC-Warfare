@@ -3,8 +3,9 @@
     "pause": false,
     "title": [
         {
-            "translate": "djzc777.dialog.root.title",
-            "fallback": "要试试新手教程吗？"
+            "translate": "djzc.dialog.root.title",
+            "fallback": "要试试新手教程吗？",
+            "color": "green"
         }
     ],
     "body": [
@@ -12,7 +13,7 @@
             "type": "plain_message",
             "width": 500,
             "contents": {
-                "translate": "djzc777.dialog.root.body2",
+                "translate": "djzc.dialog.root.body2",
                 "fallback": "新手教程大约需要5分钟，如果你是熟悉《冬季战场》的老玩家，可以直接跳过。"
             }
         },
@@ -20,7 +21,7 @@
             "type": "plain_message",
             "width": 500,
             "contents": {
-                "translate": "djzc777.dialog.root.body3",
+                "translate": "djzc.dialog.root.body3",
                 "fallback": "不过，作为冬季战场的开发者，我有必要提醒屏幕前的你，如果你不了解这个游戏，就会输得很惨。"
             }
         }
@@ -31,7 +32,7 @@
     ],
     "exit_action": {
         "label": {
-            "translate": "djzc777.dialog.root.start",
+            "translate": "djzc.dialog.root.start",
             "fallback": "开始新手教程"
         },
         "action": {

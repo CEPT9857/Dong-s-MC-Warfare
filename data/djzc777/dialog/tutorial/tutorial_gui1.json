@@ -1,8 +1,8 @@
 {
-    "type": "notice",
+    "type": "multi_action",
     "pause": false,
     "title": {
-        "translate": "djzc777.dialog.tutorial_gui1.title",
+        "translate": "djzc.dialog.tutorial_gui1.title",
         "fallback": "冬战成员用书",
         "color": "yellow",
         "bold": true,
@@ -25,24 +25,61 @@
             "type": "plain_message",
             "width": 420,
             "contents": {
-                "translate": "djzc777.dialog.tutorial_gui1.body1",
-                "fallback": "加入 CT 或 T 可选择防守方或进攻方；兵种选择用于更换职业与装备。",
-                "color": "yellow"
-            }
-        },
-        {
-            "type": "plain_message",
-            "width": 420,
-            "contents": {
-                "translate": "djzc777.dialog.tutorial_gui1.body2",
-                "fallback": "在本页的兵种选择引导中，你可以打开真实菜单，挑选兵种并体验对应武器。",
-                "color": "white"
+                "translate": "djzc.dialog.tutorial_gui1.body1",
+                "fallback": "加入 CT 或 T 是选择防守方或进攻方；兵种选择用于更换兵种与装备"
             }
         }
     ],
-    "action": {
+    "columns": 3,
+    "actions": [
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.join_ct",
+                "fallback": "加入CT",
+                "color": "blue",
+                "underlined": true
+            },
+            "tooltip": {
+                "translate": "djzc.dialog.userbook.join_ct.desc",
+                "fallback": "冬季战场的防守方，阻止T方占领全部战区，坚持到时间结束即获胜。"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/tutorial_gui1"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.join_t",
+                "fallback": "加入T",
+                "color": "red",
+                "underlined": true
+            },
+            "tooltip": {
+                "translate": "djzc.dialog.userbook.join_t.desc",
+                "fallback": "冬季战场的进攻方，占领全部四个战区（A、B、C、D）即可获胜。"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/tutorial_gui1"
+            }
+        },
+        {
+            "label": {
+                "translate": "djzc.dialog.userbook.type_choose",
+                "fallback": "兵种选择",
+                "color": "gold",
+                "underlined": true
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "djzc777:tutorial/tutorial_gui1"
+            }
+        }
+    ],
+    "exit_action": {
         "label": {
-            "translate": "djzc777.dialog.common.next",
+            "translate": "djzc.dialog.common.next",
             "fallback": "下一页",
             "color": "aqua"
         },

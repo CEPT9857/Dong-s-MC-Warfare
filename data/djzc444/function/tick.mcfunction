@@ -20,9 +20,9 @@ scoreboard players enable @a djzc.map
 
 function djzc444:game/game_teammsg
 function djzc444:game/game_userbook
-function djzc444:game/lib_books
-#步话机
-#成员用书
+function djzc777:tutorial/option
+execute as @a if score @s djzc.r_click7 >= 1 djzc.r_click7 run function djzc444:game/lib_books
+#步话机/成员用书/管理用书/新手教程按钮
 execute if score debug djzc.option matches 0 as @a[predicate=djzc444:height_under40] run function djzc444:game/game_type_choose
 #兵种选择系统
 execute if score debug djzc.option matches 1 as @a run function djzc444:game/game_type_choose

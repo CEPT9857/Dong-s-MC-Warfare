@@ -1,6 +1,5 @@
 #填写分数，表示结束
-execute if entity @s[team=T] run scoreboard players set @s djzc.tutorial -1
-execute if entity @s[team=CT] run scoreboard players set @s djzc.tutorial -1
+execute as @s run scoreboard players set @s djzc.tutorial -1
 #调整出生点，并传送到配装处
 execute if entity @s[team=T] run spawnpoint @s -397 30 -809
 execute if entity @s[team=CT] run spawnpoint @s -405 30 -809

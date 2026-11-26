@@ -6,10 +6,6 @@ execute as @s run function djzc444:type/suit/suit_ltjd
 give @s iron_sword[enchantments={sharpness:90,knockback:1,fire_aspect:2},unbreakable={},custom_name={translate:"djzc.type_ltjd.sword",fallback:"裁纸刀"}]
 function djzc444:weapon/wea_sanlian_fly
 give @s minecraft:golden_apple 32
-
-#function djzc444:weapon/missile_aa
-#function djzc444:weapon/missile_ag
-
 give @s minecraft:ender_pearl[custom_name={translate:"djzc.type_ltjd.ender_pearl",fallback:"（这是装置的一部分）"}] 16
 function djzc666:weapon/rocket_ltjd
 function djzc666:weapon/missile_ag
@@ -24,7 +20,8 @@ tag @s add AF
 tag @s add ltjd
 #tag相关操作
 
-function djzc444:music_af
+function djzc444:game/music_af
+#一阵强劲的音乐响起
 
 #发完装备、tag 就位后立刻同步一次，不等下一秒；second 仍在兜底
 function djzc444:game/lib_armor_sync

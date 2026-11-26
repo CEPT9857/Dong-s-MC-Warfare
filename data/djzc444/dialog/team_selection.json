@@ -75,7 +75,7 @@
         },
         {
             "label": {
-                "translate": "djzc777.dialog.tutorial_skip.start",
+                "translate": "djzc.dialog.tutorial_skip.start",
                 "fallback": "按错了，返回新手教程"
             },
             "action": {
