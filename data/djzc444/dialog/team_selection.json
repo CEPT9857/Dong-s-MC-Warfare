@@ -1,7 +1,7 @@
 {
      "title":{
         "translate": "djzc.dialog.team_selection.title",
-        "fallback":"跳过教程并选择阵营",
+        "fallback":"结束教程并选择阵营",
         "color":"yellow",
         "bold": true,
         "hover_event": {
@@ -54,7 +54,7 @@
             },
             "action": {
                 "type": "run_command",
-                "command": "trigger djzc.option set 9"
+                "command": "trigger djzc.option set 107"
             }
         },
         {
@@ -70,7 +70,7 @@
             },
             "action": {
                 "type": "run_command",
-                "command": "trigger djzc.option set 10"
+                "command": "trigger djzc.option set 108"
             }
         },
         {

@@ -49,7 +49,7 @@
                 "with": [
                     {
                         "translate": "djzc.spear_yqb",
-                        "fallback": "骑兵枪 MK.IV",
+                        "fallback": "骑兵枪MK.IV",
                         "color": "aqua",
                         "italic": true
                     },
@@ -86,7 +86,7 @@
                     "unbreakable": {},
                     "custom_name": {
                         "translate":"djzc.spear_yqb",
-                        "fallback":"骑兵枪 MK.IV",
+                        "fallback":"骑兵枪MK.IV",
                         "italic": true
                     },
                     "lore":[
@@ -97,7 +97,7 @@
                             "with": [
                                 {
                             "translate": "djzc.spear_yqb",
-                            "fallback": "骑兵枪 MK.IV",
+                            "fallback": "骑兵枪MK.IV",
                             "color": "aqua",
                             "italic": true
                                 },

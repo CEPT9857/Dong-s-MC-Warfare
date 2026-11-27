@@ -22,6 +22,20 @@
     },
     "body": [
         {
+        "type": "plain_message",
+        "contents":[
+            {
+                "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+                "font": "minecraft:default"
+            },
+            {
+                "text": "\uE004",
+                "font": "djzc444:djzc_illustration"
+            }
+        ],
+        "width": 256
+        },
+        {
             "type": "plain_message",
             "width": 420,
             "contents": {
@@ -40,7 +54,12 @@
             "width": 420,
             "contents": {
                 "translate": "djzc.dialog.tutorial_starter.body2",
-                "fallback": "当然，分几次转动启动器上物品展示框也是可以的",
+                "fallback": "当然，分几次转动启动器上%1$s也是可以的",
+                "with": [
+                    {
+                        "translate": "entity.minecraft.item_frame"
+                    }
+                ],
                 "strikethrough": true
             }
         },

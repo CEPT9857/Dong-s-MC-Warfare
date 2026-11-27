@@ -1,5 +1,4 @@
-#新手教程 dialog 按钮的 trigger 消费（djzc.option 100-199 号段）
-#每个号段匹配后一次性清 trigger、执行功能、推进阶段，避免清零后条件失效
+#新手教程的 trigger （djzc.option 100-199 号段）
 
 #100 一键占领A点：占领倒计时归零，交给 x_point 下个 tick 走正常占领流程
 execute as @a at @s if score @s djzc.option matches 100 run function djzc777:tutorial/option/a
@@ -13,3 +12,9 @@ execute as @a at @s if score @s djzc.option matches 103 run function djzc777:tut
 execute as @a at @s if score @s djzc.option matches 104 run function djzc777:tutorial/option/gui1
 #105 无视风险结束教程：调用 djzc777:tutorial/end
 execute as @a at @s if score @s djzc.option matches 105 run function djzc777:tutorial/option/finish
+#106 启动新手教程
+execute as @a at @s if score @s djzc.option matches 106 run function djzc777:tutorial/start
+#107 在team_selection选择CT
+execute as @a at @s if score @s djzc.option matches 107 run function djzc777:tutorial/option/join_ct
+#108 在team_selection选择T
+execute as @a at @s if score @s djzc.option matches 108 run function djzc777:tutorial/option/join_t

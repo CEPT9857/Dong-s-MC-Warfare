@@ -210,7 +210,7 @@
             "type": "plain_message",
             "contents": {
                 "translate": "djzc.dialog.wiki.credits.1_0_6_1st_test",
-                "fallback": "-v1.0.6 第一次测试光荣榜-",
+                "fallback": "-v1.0.6第一次测试光荣榜-",
                 "color": "yellow"
             },
             "width": 300
@@ -340,7 +340,7 @@
             "type": "plain_message",
             "contents": {
                 "translate": "djzc.dialog.wiki.credits.1_0_6_2nd_test",
-                "fallback": "-v1.0.6 第二次测试光荣榜-",
+                "fallback": "-v1.0.6第二次测试光荣榜-",
                 "color": "yellow"
             },
             "width": 300
@@ -442,7 +442,7 @@
             "type": "plain_message",
             "contents": {
                 "translate": "djzc.dialog.wiki.credits.1_0_6_81_test",
-                "fallback": "-v1.0.6 八一军演光荣榜-",
+                "fallback": "-v1.0.6八一军演光荣榜-",
                 "color": "yellow"
             },
             "width": 300

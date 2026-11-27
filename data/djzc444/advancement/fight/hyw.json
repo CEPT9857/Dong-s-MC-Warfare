@@ -1,0 +1,28 @@
+{
+    "parent": "djzc444:fight/root",
+    "display": {
+        "icon": {
+            "id": "minecraft:ender_eye"
+        },
+        "title": {
+            "translate": "djzc.advancement.hyw",
+            "fallback":"何意味……"
+        },
+        "description": {
+            "translate": "djzc.advancement.hyw.desc",
+            "fallback": "按理来说，很少会有人来这里"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "basic": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        ["basic"]
+    ]
+}

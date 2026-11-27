@@ -26,7 +26,7 @@
             "width": 420,
             "contents": {
                 "translate": "djzc.dialog.tutorial_gui1.body1",
-                "fallback": "加入 CT 或 T 是选择防守方或进攻方；兵种选择用于更换兵种与装备"
+                "fallback": "加入CT或T是选择防守方或进攻方；兵种选择用于更换兵种与装备"
             }
         }
     ],

@@ -335,7 +335,7 @@
             },\
             "tooltip": {\
                 "translate": "djzc.type_yqb.desc",\
-                "fallback": "拥有特色武器“骑兵枪”，重要的是，他很快",\
+                "fallback": "拥有特色武器%1$s，重要的是，他很快",\
                 "with": [\
                     {\
                         "translate": "djzc.spear_yqb",\

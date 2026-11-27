@@ -136,7 +136,7 @@
             "type":"plain_message",
             "contents":{
                 "translate": "djzc.dialog.eula_notice.body10",
-                "fallback":"· 想深入了解？ 资源包和数据包的根目录都附带了一份 README",
+                "fallback":"· 想深入了解？ 资源包和数据包的根目录都附带了一份README",
                 "color":"white"
             },
             "width": 300
@@ -244,7 +244,7 @@
             "type":"plain_message",
             "contents":{
                 "translate": "djzc.dialog.eula_notice.body21",
-                "fallback":"   知识共享署名-非商业性使用-相同方式共享 4.0 国际许可证",
+                "fallback":"   知识共享署名-非商业性使用-相同方式共享4.0国际许可证",
                 "color":"white",
                 "italic": true
             },

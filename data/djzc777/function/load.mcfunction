@@ -3,3 +3,5 @@ tellraw @a [{text:"[djzc777] ",color:"aqua"},{"translate":"djzc777.load.msg","fa
 #创建教程计分板
 #号段：[0,100),基础教程；[100,200),进阶教程
 scoreboard objectives add djzc.tutorial dummy {"translate":"djzc.tutorial","fallback":"教程阶段"}
+#等待占领D点时的滚动提示计时，挂在常驻时钟上
+scoreboard players set d_tip djzc.time2 0

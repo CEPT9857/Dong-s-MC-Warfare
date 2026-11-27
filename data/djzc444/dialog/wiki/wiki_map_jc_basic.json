@@ -360,7 +360,12 @@
                     "action": "show_text",
                     "value": {
                         "translate": "djzc.map.jc_basic.point_d3.desc",
-                        "fallback": "D点附近的命令方块旁边"
+                        "fallback": "D点附近的%1$s旁边",
+                        "with": [
+                            {
+                                "translate": "block.minecraft.command_block"
+                            }
+                        ]
                     }
                 }
             }

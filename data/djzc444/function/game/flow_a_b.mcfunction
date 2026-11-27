@@ -9,7 +9,7 @@ scoreboard players set B+ djzc.gameflow 1
 title @a subtitle [{translate:"djzc.msg.a_b",fallback:"A点和B点已被T方占领","color":"red"}]
 title @a[team=T] title [{translate:"djzc.msg.a_b.t",fallback:"进攻C点启动器","color":"dark_aqua"}]
 title @a[team=CT] title [{translate:"djzc.msg.a_b.ct",fallback:"防守C点启动器","color":"dark_aqua"}]
-tellraw @a {translate:"djzc.msg.a_b.desc",fallback:"C点启动器的位置已被高亮，旋转物品展示框会激活启动器。若启动器被全部激活，C点就可以被T阵营占领",color:"green"}
+tellraw @a {translate:"djzc.msg.a_b.desc",fallback:"C点启动器的位置已被高亮，旋转%1$s会激活启动器。若启动器被全部激活，C点就可以被T阵营占领",with:[{translate:"entity.minecraft.item_frame"}],color:"green"}
 #高亮启动器旁的盔甲架
 function djzc444:game/game_starter_display with storage djzc:map c1
 function djzc444:game/game_starter_display with storage djzc:map c2

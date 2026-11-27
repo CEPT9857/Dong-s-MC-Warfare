@@ -4,12 +4,12 @@
     "pause": false,\
     title:[\
     {\
-    "translate":"djzc.dialog.tp_system",\
+    "translate":"djzc.dialog.tp_system.title",\
     "fallback":"传送系统",\
     "hover_event": {\
     "action": "show_text",\
     "value": {\
-        "translate": "djzc.dialog.tp_system",\
+        "translate": "djzc.dialog.tp_system.title.desc",\
         "fallback": "去你想去的地方，如果某个地方被敌人控制/占领/激活，就去不了了"\
     }\
     }\
@@ -21,12 +21,12 @@
         "width": 500,\
         "contents":[\
             {\
-                "translate": "djzc.dialog.tp_system",\
+                "translate": "djzc.dialog.tp_system.body1",\
                 "fallback": "如果你是空军单位，可以选择从这里出发:",\
                 "hover_event": {\
                     "action": "show_text",\
                     "value": {\
-                        "translate": "djzc.dialog.tp_system",\
+                        "translate": "djzc.dialog.tp_system.body1.desc",\
                         "fallback":"其实陆军单位也可以",\
                         "color": "gray",\
                         "strikethrough": true\
@@ -160,7 +160,7 @@
     "actions": [\
         {\
             "label":{\
-                "translate": "djzc.dialog.tp_system",\
+                "translate": "djzc.dialog.tp_system.nearest_teammate",\
                 "fallback": "传送到最近的队友",\
                 "color":"gold"\
             },\
@@ -171,7 +171,7 @@
         },\
         {\
             "label":{\
-                "translate": "djzc.dialog.tp_system",\
+                "translate": "djzc.dialog.tp_system.random_teammate",\
                 "fallback": "传送到随机队友",\
                 "color":"green"\
             },\

@@ -1,0 +1,30 @@
+{
+    "parent": "djzc444:fight/root",
+    "display": {
+        "icon": {
+            "id": "minecraft:compass"
+        },
+        "title": {
+            "translate": "djzc.advancement.unusual",
+            "fallback": "不走寻常路"
+        },
+        "description": {
+            "translate": "djzc.advancement.unusual.desc",
+            "fallback": "在占领A点之前先占领了B点"
+        },
+        "frame": "challenge",
+        "show_toast": false,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "basic": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "basic"
+        ]
+    ]
+}

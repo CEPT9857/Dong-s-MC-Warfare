@@ -239,7 +239,7 @@
     "exit_action": {\
         "label": {\
             "translate": "djzc.dialog.tp_system",\
-            "fallback": "点击进入传送系统"\
+            "fallback": "点击访问传送系统"\
         },\
         "action": {\
                 "type": "run_command",\

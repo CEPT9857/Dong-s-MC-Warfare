@@ -35,7 +35,15 @@
         "contents":[
             {
                 "translate": "djzc.wiki_scj_2",
-                "fallback": "钓鱼佬设计的。他也有下界合金套。他也有盾牌。他还有近战兵没有的末影珍珠。"
+                "fallback": "钓鱼佬设计的。他也有下界合金套。他也有%1$s。他还有近战兵没有的%2$s。",
+                "with": [
+                    {
+                        "translate": "item.minecraft.shield"
+                    },
+                    {
+                        "translate": "item.minecraft.ender_pearl"
+                    }
+                ]
             }
         ]
         },
@@ -117,7 +125,12 @@
                     "unbreakable": {},
                     "custom_name": {
                         "translate":"djzc.trident_yzxf",
-                        "fallback":"三叉戟·雨战先锋",
+                        "fallback": "%1$s·雨战先锋",
+                        "with": [
+                            {
+                                "translate": "entity.minecraft.trident"
+                            }
+                        ],
                         "color": "dark_purple",
                         "italic": true
                     },

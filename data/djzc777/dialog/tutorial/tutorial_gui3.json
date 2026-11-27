@@ -62,8 +62,9 @@
                 "type": "show_dialog",
                 "dialog": "djzc777:tutorial/tutorial_gui3"
             }
-        },
-        {
+        }
+    ],
+    "exit_action": {
             "label": {
                 "translate": "djzc.dialog.userbook.type_choose",
                 "fallback": "兵种选择",
@@ -75,5 +76,4 @@
                 "dialog": "djzc444:type_choose"
             }
         }
-    ]
 }

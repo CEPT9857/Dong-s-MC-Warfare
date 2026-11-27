@@ -28,7 +28,7 @@ datapacks/djzc444/
 ├── pack.png                       数据包图标
 ├── README.md                      面向玩家和维护者的说明
 ├── CHANGELOG.md                   版本更新日志
-├── Developer Document.md          这份接口文档
+├── Developer_Document.md          这份接口文档
 ├── assets/                        数据包自带的备用翻译（四语言）
 └── data/
     ├── minecraft/
@@ -97,7 +97,7 @@ datapacks/djzc444/
     │   └── function/              game/ 导弹逻辑，option/ 模式开关，weapon/ 发放
     ├── djzc777/                   新手教程
     │   ├── dialog/tutorial/       教程主页、实境提示、成员用书说明、结束页
-    │   └── function/tutorial/     `start`、`end`、`advance`，以及 `option.mcfunction` + `option/` 六个按钮子函数
+    │   └── function/tutorial/     `start`、`end`、`advance`、`d_wait`（占 D 点时的滚动提示），以及 `option.mcfunction` + `option/` 按钮子函数
     └── djzc888/                   地图系统
         └── function/
             ├── map_swich.mcfunction    按 map djzc.map 选地图
@@ -484,13 +484,15 @@ function djzc444:weapon/book_opbook
 - `function djzc777:tutorial/start` 在 `game=1`（对局进行中）时用 `return run tellraw` 提前拒绝，提示「对局进行中，暂时不能进入新手教程。」。否则切地图到 `jc_basic`（`map djzc.map=2` → `map_swich` → `game/start`），把玩家加进 T 队，`djzc777.tutorial=1`，重生点和位置设 `(-434, 41, -709)`，发 `type_fkb` 装备，并清掉出口弹窗防重复标记。它会切图、改阵营和装备，只开对话框的别调这个。
 - `function djzc777:tutorial/end` 用 `as @s` 直接把执行玩家 `djzc777.tutorial` 设 `-1`，按队伍设重生点并传到 T `(-397, 30, -809)` / CT `(-405, 30, -809)`，发「点此准备开一局」的 tellraw（点击交 `djzc.prepare=1`）。执行者必须是玩家。
 - `djzc777:load` 创建 dummy 目标 `djzc777.tutorial`。阶段值：`1`/`3`/`5`/`7`/`9` 是各触发前的等待态，弹窗后推进到偶数 `2`/`4`/`6`/`8`/`10`，按钮再 +1 进入下一等待态；`-1` 主动结束、`-2` 已看过出口结束页（防重复弹）。目标不是 `trigger`，别用 `/trigger` 交。
-- 阶段推进链（由 `djzc888:jc_basic/unique.mcfunction` 事件触发 + `unique_tick.mcfunction` 区域触发）：进入 A 点（1→2）→ 进 B 点（3→4）→ 激活任意 C 启动器（5→6，`C1/C2/C3=1`）→ C123=3 全激活开放占领（7→8，`tutorial_c`）→ 占领 D 点 `D=2`（9→10，`tutorial_d`）。按钮 `advance` 统一 +1 并 `dialog clear`。
+- 阶段推进链（由 `djzc888:jc_basic/unique.mcfunction` 事件触发 + `unique_tick.mcfunction` 区域触发）：A/B 两页顺序自由——阶段 1 和 3 都能触发，用 `tutorial_a_seen` / `tutorial_b_seen` 两个 tag 记录已看过的页，先到先看、不重复弹。`show_a` / `show_b` 子函数一次完成弹窗、打 tag、阶段 +1（1→2 或 3→4），避免同 tick 内条件被前一条命令改掉；按钮 `advance` 统一 +1 并 `dialog clear`（2→3、4→5）。`start` 会清两个 tag 以便重播。之后是激活任意 C 启动器（5→6，`C1/C2/C3=1`）→ C123=3 全激活开放占领（7→8，`tutorial_c`）→ 占领 D 点 `D=2`（9→10，`tutorial_d`）。
 - 按钮走 `djzc.option` 的 `100-105` 号段，由 tick 里的 `djzc777:tutorial/option` 分发到 `option/` 六个子函数：`100` 一键占领 A（`T_SA=0`）、`101` 一键占领 B（`T_SB=0`）、`102` 进攻 C（广播步话机 `tmsg=11`）、`103` 进攻 D（广播 `tmsg=12` + `T_SC=0` 一键占领 C）、`104` 进入配装教学（传送 `(-380,20,-748)` → `advance` → 拉起 `tutorial_gui1`）、`105` 无视风险结束教程（`function djzc777:tutorial/end`）。一键占领靠把倒计时分数归零，交给每 tick 的 `x_point` 走正常占领流程，不绕过 gameflow。
 - 注意 `advance` 内含 `dialog clear`，需要在 `dialog show` **之前**调用；`gui1` 曾因顺序颠倒导致新开的页面被立刻关掉。
 - 对话框 ID 全在 `tutorial/` 子目录下，路径带 `tutorial/` 前缀。主页 `tutorial/root`、实境提示 `tutorial_a`/`tutorial_b`/`tutorial_starter`/`tutorial_c`/`tutorial_d`、成员用书说明 `tutorial_gui1`/`gui2`/`gui3`、结束页 `tutorial_end`、进阶占位 `tutorial_advanced`。原 `tutorial_win`、`tutorial_choose` 已删除，分别由 `tutorial_d`、`tutorial_gui3` 的「兵种选择」按钮接替。
 - 三个成员用书说明页是 `multi_action`：从 `djzc444:userbook` 按语义复制来的按钮（加入CT/T、兵种选择、步话机、重新部署、中止音乐、准备/取消准备），有 tooltip 的只有 join_ct/join_t/redeploy 三项，与 userbook 严格一致；gui1/gui2 翻页按钮在 `exit_action`，gui3 的 `exit_action` 已移除、兵种选择按钮放 `actions`。
 - `tutorial_starter` 现有三段 body：`body1` 教激活（含 `%1$s` keybind）、`body2` 说可分几次转动展示框、`body3` 说找不到就看定位栏。教程页翻译键从 `djzc777.dialog.*` 改名并入 `djzc.dialog.*`，条目仍在 `assets/djzc777/lang/`；dialog fallback 与 zh_cn 值已逐键对齐（37 处一致）。
 - 出口区域检测在 `unique_tick.mcfunction`：任意玩家进入 `x=-388..-386,y=19,z=-749..-751` 弹 `tutorial_end` 并把该玩家阶段置 `-2`，`unless matches -2` 挡住每 tick 重复弹；重播时 `start` 把阶段重置为 1，下次经过还能再触发。
+- 未同时占领 A/B 点前（教程阶段 `1..4`），`height_under40` 谓词命中的玩家会被 `tellraw` 提示后传回教程起点 `(-434, 41, -709, -505, 0)`，文案键 `djzc.msg.tutorial.area_locked`（放在 djzc444 语言体系，两侧四语言）。A/B 点在 y=41–42 不受影响，C/D 点在 y=18–19 会被挡住；阶段到 5 以后不再拦。
+- 等待占领 D 点时（`djzc.tutorial=9`、T 队、人在 `x=-424,y=18,z=-759,dx=6,dy=2,dz=-6`），`unique_tick` 每 tick 调 `tutorial/d_wait`，用 `djzc.time2` 的虚拟玩家 `d_tip` 每 100 刻（5 秒）换一条 actionbar 提示，10 条覆盖约 50 秒后循环。计时在 `unique_tick` 里全局走一次，不随在场人数累加；`start` 会归零。提示文案用 `djzc.dialog.tutorial_d.wait1`–`wait10`，四语言都在 `assets/djzc777/lang/`。
 - 旧版 `djzc777:tutorial/ch01` 至 `ch08` 已删。`tutorial/start` 和 `tutorial/end` 仍用固定地图坐标，迁移地图前核传送点、阵营和兵种效果。进阶页目前只是占位。
 
 ### 7.6 统计与其他系统
@@ -512,7 +514,7 @@ function djzc444:weapon/book_opbook
 | 目标/目标前缀 | 用途概览 | 接口级别 |
 | --- | --- | --- |
 | `djzc.gameflow` | 对局流程、战区和启动器状态 | 内部状态 |
-| `djzc.time`、`djzc.time2`、`djzc.time3` | 对局时钟、常驻时钟和占点计算 | 内部状态 |
+| `djzc.time`、`djzc.time2`、`djzc.time3` | 对局时钟、常驻时钟和占点计算。`time2` 上另有虚拟玩家 `d_tip`，用于教程占 D 点时的滚动提示计时 | 内部状态 |
 | `djzc.option` | 菜单请求，也存 boost/debug/harmony/missile_mode/track_type 等配置 | 玩家通过 trigger 交请求，配置分值属于内部状态 |
 | `djzc.type` | 兵种选择、启用状态、预设及相关常量 | 内部状态 |
 | `djzc.r_click2`、`djzc.r_click3`、`djzc.r_click4`、`djzc.r_click5`、`djzc.r_click6`、`djzc.r_click7` | 物品使用行为检测 | 内部状态，由 `minecraft.used:*` 准则驱动。`r_click5` 轰炸指示器，`r_click6` 雷枪，`r_click4`（棕色鸡蛋）当前无读写方 |
@@ -606,7 +608,7 @@ function djzc444:weapon/book_opbook
 
 | 成就组 | 用途 |
 | --- | --- |
-| `djzc444:fight/*` | 可见战斗统计与武器成就，`root` 在加载和对局开始时授予，`count_*` 记本局击杀/占点 |
+| `djzc444:fight/*` | 可见战斗统计与武器成就，`root` 在加载和对局开始时授予，`count_*` 记本局击杀/占点。`unusual`「不走寻常路」由 `advancement/detection` 在 B 点先于 A 点被占领时授予当时站在 B 点内的 T 队玩家；`hyw`「何意味……」是隐藏成就，进入 `x=-407..-401,y=41..44,z=-755..-752` 触发 |
 | `djzc444:intro/*` | 增益介绍成就，加载时从 `intro/root` 全部授予 |
 | `djzc444:tool/root`、`tool/hkb`、`tool/cl` | 隐藏工具成就，`hkb` 用于航空兵解锁，`cl` 用于刺雷 |
 | `djzc666:tool/*` | 隐藏发射/扫描触发器，奖励函数生成导弹或执行扫描后立刻撤销 |
@@ -616,8 +618,8 @@ function djzc444:weapon/book_opbook
 - 地图相关显示文本统一用 `djzc.map.<地图代码>.*`，例如 `djzc.map.dz_djzc.point_a`、`djzc.map.jc_basic.respawn_sky_ct`。
 - 百科地图页标题和简介用 `djzc.dialog.wiki.map_<地图代码>.title` / `.body1`。
 - 新增地图时一起补 `assets/djzc444/lang/*.json` 里的 `djzc.map.<code>.*` 键，`djzc.dialog.wiki.map_<code>.title` / `.body1` 键，`data/djzc444/dialog/wiki/wiki_map_<code>.json`，`wiki_map.json` 里的页面链接，以及 `djzc888:<code>/main.mcfunction` 和 `unique.mcfunction`。
-- 数据包内 `assets/djzc444/lang/` 提供备用翻译（当前 624 键 × 4 语言），`assets/minecraft/lang/` 另有 43 键 × 4 语言，配套资源包的 `assets/djzc444/lang/` 同为 624 键 × 4 语言（两侧逐字节一致）。对话框带 `fallback`，完整本地化还是得加载资源包。
-- 新手教程的翻译从 `djzc777.dialog.*` 改名并入通用体系，现为 `djzc.dialog.*`（教程页专属键），条目仍放在配套资源包的 `assets/djzc777/lang/`（47 键 × 4 语言）。`djzc777.load.msg`、`djzc777.tutorial.start.denied`、`djzc777.tutorial.end.complete` 三个键保留原命名空间不变。教程页 dialog 的 fallback 与 zh_cn 已对齐，改文案时两边一起维护。
+- 数据包内 `assets/djzc444/lang/` 提供备用翻译（当前 629 键 × 4 语言），`assets/minecraft/lang/` 另有 43 键 × 4 语言，配套资源包的 `assets/djzc444/lang/` 同为 629 键 × 4 语言（两侧逐字节一致）。对话框带 `fallback`，完整本地化还是得加载资源包。
+- 新手教程的翻译从 `djzc777.dialog.*` 改名并入通用体系，现为 `djzc.dialog.*`（教程页专属键），条目仍放在配套资源包的 `assets/djzc777/lang/`（57 键 × 4 语言）。`djzc777.load.msg`、`djzc777.tutorial.start.denied`、`djzc777.tutorial.end.complete` 三个键保留原命名空间不变。教程页 dialog 的 fallback 与 zh_cn 已对齐，改文案时两边一起维护。
 
 ### 8.9 实测注意事项
 
@@ -784,9 +786,23 @@ sleep 模式的结果要等若干 tick，后续逻辑写在 `djzc555:raycast/int
 
 ### CHANGELOG
 
+标题层级实测统计（截至 `1.0.7-1126`）：
+
+| 层级 | 用途 | 数量 | 命名范式 | 示例 |
+| --- | --- | --- | --- | --- |
+| `#` | 全文标题 | 1 | 固定文案 | `# 欢迎加入冬季战场！` |
+| `###` | 版本 / 发布线 | 28 | ① 日期制 `<版本>-<MMDD>-by-<作者>`，多作者用 `/` 分隔；② 主题制 `<版本>+<主题> for <MC版本>`；③ 代号制 `<版本>-<代号>[-<阶段>]`；④ 早期有自由标题 | ① `### 1.0.7-1123-by-CE_PT`<br>② `### 1.0.6+alpha_test for 1.21.11`<br>③ `### 1.0.6-【风起扬帆】-正式版`<br>④ `### 1.0.6-beta-test-相关改进` |
+| `####` | 版本内的主题分类 | 108 | 主题名，不加编号 | `#### BUG修复`<br>`#### 游戏逻辑优化`<br>`#### 在数据包之外` |
+| `#####` | 分类内的子模块 | 3 | 模块名 | `##### 机场补给系统`<br>`##### 雷枪` |
+
+`###` 下面紧跟一行日期，写法是 `start:` 加反引号包住的日期，`|` 分隔，再跟 `end:` 和日期。阶段节点可以用 `alpha_test`、`beta_test`、`release` 顶替 `end`。现行条目统一给日期加反引号，1.0.6 前半段没有。
+
+`####` 分类的高频前几名：`BUG修复`（25）、`游戏逻辑优化`（21）、`在数据包之外`（18）、`待定事项`（4）、`多语言支持`（4）、`冬战地图修改`（4）、`武器系统改动`（3）、`数据包结构优化`（3）、`冬战数据包化`（3）、`代码整理`（3），其余多为一次性主题名。
+
+
 - 文件名现在叫 `CHANGELOG.md`，README 已经改成引用这个名字，维护时别让两边对不上。
-- 标题层级用版本号和代号标发布线，用 `start`、测试和 `release` 日期记进度，下面按主题用 `####` 分类，比如「游戏逻辑优化」「数据包结构优化」「BUG 修复」「多语言支持」。
+- 标题层级和命名范式照上方表格来，新增分类尽量复用高频主题名，别每次现编一个。
 - 条目开头用动作词，说清改了什么、结果如何。功能调整写「增加」「移除」「将……改为……」「从……调整为……」，问题修复写原因和具体问题，别只留一句「已优化」「已修复」。
 - 每条项目符号记一项能核实的改动。一项改动带多个结果，用缩进子项展开。测试报告、阶段记录、正式版本变更分开写，按主题归类，别照抄 commit 列表。
-- 以中文为主，说人话，可以留点口语。重点对象和功能名加粗，命令、文件名、组件名、字段名用反引号。别整句加粗，也别拿夸张措辞代替实际结果。
+- 该文件面向玩家，**严禁**滥用Git Commit常用句式和计算机专有名词，也不要过度书写技术细节（如果你是人类，可以不受该条约束）
 - 模板，功能调整写 `- 将<对象>从<原行为>调整为<新行为>，<条件或结果>`，问题修复写 `- 修复了<场景>下因<原因>导致的<具体问题>`。结果多、条件绕的时候再补缩进子项。

@@ -22,6 +22,20 @@
     },
     "body": [
         {
+        "type": "plain_message",
+        "contents":[
+            {
+                "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+                "font": "minecraft:default"
+            },
+            {
+                "text": "\uE001",
+                "font": "djzc444:djzc_illustration"
+            }
+        ],
+        "width": 256
+        },
+        {
             "type": "plain_message",
             "width": 420,
             "contents": {
@@ -34,7 +48,12 @@
             "width": 420,
             "contents": {
                 "translate": "djzc.dialog.tutorial_b.body2",
-                "fallback": "相信你已经注意到，每个点位上方都有悬浮文字。在真正的对局中，你还可以通过信标光柱寻找点位，并判断它被哪一方占领。"
+                "fallback": "相信你已经注意到，每个点位上方都有悬浮文字。在真正的对局中，你还可以通过%1$s光柱寻找点位，并判断它被哪一方占领。",
+                "with": [
+                    {
+                        "translate": "block.minecraft.beacon"
+                    }
+                ]
             }
         }
     ],

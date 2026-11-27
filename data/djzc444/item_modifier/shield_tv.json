@@ -25,7 +25,12 @@
     ],
     "minecraft:custom_name": {
       "translate": "djzc.shield_tv",
-      "fallback": "小电视盾牌"
+      "fallback": "小电视%1$s",
+      "with": [
+          {
+              "translate": "item.minecraft.shield"
+          }
+      ]
     }
   }
 }

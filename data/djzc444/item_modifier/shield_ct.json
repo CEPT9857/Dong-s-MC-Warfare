@@ -13,7 +13,12 @@
     ],
     "minecraft:custom_name": {
       "translate": "djzc.shield_ct",
-      "fallback": "北极星盾牌"
+      "fallback": "北极星%1$s",
+      "with": [
+          {
+              "translate": "item.minecraft.shield"
+          }
+      ]
     }
   }
 }

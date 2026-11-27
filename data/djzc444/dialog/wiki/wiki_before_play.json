@@ -65,7 +65,7 @@
             "type":"plain_message",
             "contents":{
                 "translate": "djzc.dialog.wiki.before_play.body6",
-                "fallback": "· 战区 A、B 开局即可争夺；C、D 需要先激活对应的启动器才能占领。"
+                "fallback": "· 战区A、B开局即可争夺；C、D需要先激活对应的启动器才能占领。"
             },
             "width": 500
         },

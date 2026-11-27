@@ -22,6 +22,20 @@
     },
     "body": [
         {
+        "type": "plain_message",
+        "contents":[
+            {
+                "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+                "font": "minecraft:default"
+            },
+            {
+                "text": "\uE000",
+                "font": "djzc444:djzc_illustration"
+            }
+        ],
+        "width": 256
+        },
+        {
             "type": "plain_message",
             "width": 420,
             "contents": {

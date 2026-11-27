@@ -210,7 +210,12 @@
             },
             "tooltip": {
                 "translate": "djzc.type_scj.desc",
-                "fallback": "可能只是拿着三叉戟的近战兵而已"
+                "fallback": "可能只是拿着%1$s的近战兵而已",
+                "with": [
+                    {
+                        "translate": "entity.minecraft.trident"
+                    }
+                ]
             },
             "action": {
                 "type": "run_command",
@@ -229,7 +234,7 @@
                 "with": [
                     {
                         "translate": "djzc.spear_yqb",
-                        "fallback": "骑兵枪 MK.IV",
+                        "fallback": "骑兵枪MK.IV",
                         "color": "aqua",
                         "italic": true
                     }
