@@ -627,5 +627,7 @@
 	"djzc.advancement.unusual": "不走寻常路",
 	"djzc.advancement.unusual.desc": "在占领A点之前先占领了B点",
 	"djzc.advancement.hyw": "何意味……",
-	"djzc.advancement.hyw.desc": "按理来说，很少会有人来这里"
+	"djzc.advancement.hyw.desc": "按理来说，很少会有人来这里",
+	"djzc.msg.no_clever": "不要想着用我们的神奇喵喵工具一键胜利喵！捅似你喵！捅似你喵！",
+	"djzc.msg.no_clever_after": "捅似你了喵！下次不要再这么做了喵！"
 }

@@ -1,7 +1,8 @@
-#进攻D点：清教程 trigger + 触发 T 队步话机"进攻D点！"+ 一键占领C点 + 推进阶段
-#设置 djzc.tmsg=12，下一 tick 由 game_teammsg 消费，走标准步话机流程（tellraw + 音效）
+#103 进攻D点：清教程 清理trigger防止BUG
+#地图ID检测，防止玩家在正常游戏中使用该工具，下一级函数自动清trigger，不会有BUG
+execute unless score map djzc.map matches 2 as @s run return run function djzc444:option/no_clever
 scoreboard players reset @s djzc.option
 scoreboard players set @s djzc.tmsg 12
-#一键占领C点：T_SC 倒计时归零，交给每 tick 的 x_point(c_point) 走正常占领流程
+#一键占领C点，T_SC 倒计时归零
 scoreboard players set T_SC djzc.time3 0
 function djzc777:tutorial/advance

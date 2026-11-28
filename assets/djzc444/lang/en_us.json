@@ -627,5 +627,7 @@
 	"djzc.advancement.unusual": "The Unusual Path",
 	"djzc.advancement.unusual.desc": "Capture B Point before A Point",
 	"djzc.advancement.hyw": "What Does It Mean...",
-	"djzc.advancement.hyw.desc": "By all accounts, few people ever come here."
+	"djzc.advancement.hyw.desc": "By all accounts, few people ever come here.",
+	"djzc.msg.no_clever": "Don't even think about using our magic Meowketools to win in one click, meow! I'll stab you, meow! I'll stab you, meow!",
+	"djzc.msg.no_clever_after": "I stabbed you, meow! Don't do that again, meow!"
 }
